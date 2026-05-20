@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LITE Equity Research — 2026-05-21</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                 "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    color: var(--c-text);
+    background: var(--c-bg);
+    margin: 0;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .report {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    background: var(--c-panel);
+    min-height: 100vh;
+    border-left: 1px solid var(--c-line);
+    border-right: 1px solid var(--c-line);
+  }
+  header.report-head {
+    border-bottom: 1px solid var(--c-line);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--c-line); vertical-align: top; }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; font-size: 14px; color: var(--c-muted); margin-top: 8px; }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; color: white; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; vertical-align: middle; margin-right: 10px; }
+  .rating-strong-buy { background: var(--c-buy-strong); }
+  .rating-buy { background: var(--c-buy); }
+  .rating-neutral { background: var(--c-neutral); }
+  .rating-sell { background: var(--c-sell); }
+  .target-block { display: inline-block; margin-left: 6px; color: var(--c-text); font-size: 14px; }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier { font-size: 13.5px; color: var(--c-muted); margin-left: 4px; margin-top: 4px; }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta { font-size: 12.5px; color: var(--c-muted); margin-left: 4px; }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag { display: inline; font-size: 11px; color: var(--c-muted); margin-left: 2px; font-weight: 400; vertical-align: super; }
+  .audience-note { margin-top: 12px; padding: 10px 14px; background: #f6f5f0; border-radius: 6px; font-size: 14px; color: var(--c-text); }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge { background: #f0f9ff; border-left: 3px solid var(--c-accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .belief-bridge h4 { margin: 0 0 8px; font-size: 14px; color: var(--c-accent); }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer { margin-top: 40px; padding: 16px; background: #f6f5f0; border-left: 3px solid var(--c-muted); font-size: 13.5px; color: var(--c-muted); line-height: 1.55; }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  @media (max-width: 640px) {
+    body { font-size: 15px; line-height: 1.6; }
+    .report { padding: 24px 14px 56px; border-left: none; border-right: none; }
+    header.report-head { padding-bottom: 18px; margin-bottom: 24px; }
+    h1 { font-size: 21px; line-height: 1.3; }
+    h2 { font-size: 17px; margin: 30px 0 10px; }
+    h3 { font-size: 14.5px; }
+    .rating-badge { font-size: 13px; padding: 5px 12px; margin-right: 6px; }
+    .target-block { display: block; margin-left: 0; margin-top: 8px; line-height: 1.5; }
+    .target-block b { font-size: 17px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 0; font-size: 13.5px; }
+    .meta-grid span:nth-child(odd) { margin-top: 6px; color: var(--c-muted); font-size: 12px; }
+    table { display: block; overflow-x: auto; max-width: 100%; font-size: 13px; -webkit-overflow-scrolling: touch; }
+    th, td { padding: 6px 8px; }
+    th { font-size: 12.5px; }
+    .src-tag { font-size: 10px; }
+    .pillar, .risk { margin: 12px 0; }
+    .pillar-falsifier, .risk-meta { font-size: 12.5px; }
+    .audience-note { padding: 9px 12px; font-size: 13.5px; }
+    .belief-bridge { padding: 10px 12px; }
+    .belief-bridge h4 { font-size: 13.5px; }
+    .disclaimer { padding: 12px; font-size: 12.5px; }
+    ul, ol { padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "LITE",
+  "company_name": "Lumentum Holdings Inc",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 890.09,
+  "currency": "USD",
+  "rating": "NEUTRAL",
+  "target_price": 930,
+  "target_price_low": 650,
+  "target_price_high": 1150,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 4.5,
+  "qualitative_score": 0,
+  "confidence": 0.45,
+  "data_freshness": {
+    "financials_period_end": "2026-03-28",
+    "latest_10q_filing_date": "2026-05-05",
+    "latest_8k_date": "2026-05-05",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>Lumentum Holdings Inc (LITE) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-neutral">中立</span>
+      <span class="target-block">6M 目標價 <b>$930</b> (+4.5%) · 信心 0.45（偏低）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$890.09</b>
+      <span>最新 10-Q</span><b>2026-05-05 提交（涵蓋至 2026-03-28，Q3 FY26）</b>
+      <span>最近 8-K</span><b>2026-05-05</b>
+      <span>資料來源</span><b>SEC EDGAR · Yahoo / Stooq 行情 · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>Lumentum 是全球前 3 大光通訊與光電產品供應商，產品涵蓋資料中心高速光收發器、雷射晶片、相干光元件、半導體加工雷射、汽車 LiDAR、3D 感測模組。FY26（會計年度截至 2026 年 6 月）自 FY24 谷底完成週期翻轉——Q3 FY26（截至 2026-03-28）營收 $808M（年增 +90%）<span class="src-tag">[來源:10-Q]</span>，9 個月累計 $2,008M（+72% YoY）<span class="src-tag">[來源:10-Q]</span>，AI / 雲端資料中心是核心推力。</p>
+    <p>論點核心：(1) GAAP 營業利潤率 Q3 FY26 跳升至 +21.6%（YoY +30 pp，自 -8.9% 翻正）<span class="src-tag">[來源:10-Q]</span>、毛利率 44.2%（YoY +15 pp）<span class="src-tag">[來源:10-Q]</span>，反映 800G/1.6T 高階產品 mix 急升 + 製造產能槓桿釋放；(2) 估值已極端化—PE_TTM 156.8、PE_fwd 66.1、PS 27.7、EV/EBITDA 220<span class="src-tag">[來源:Finnhub]</span>，52 週報酬 +1043%<span class="src-tag">[來源:Finnhub]</span>；(3) 過去 5 個交易日已自 5/12 高點 $1085.68 修正 -18%<span class="src-tag">[來源:OHLC]</span>，反映在 AI 光通訊主題拉回壓力。</p>
+    <p>給予 <b>中立</b>、6M 目標 $930（區間 $650–1,150）。最大單一觸發點為 2026-08 中下旬 Q4 FY26 / 全年財報 + FY27 guidance：若 FY27 營收 guidance ≥ $4B（隱含年增 +35%+）且 GM 維持 ≥ 45% → 升 BUY；若 FY27 guidance 落入 $3.2-3.5B 區間（疑似 1.6T 出貨延後或 hyperscaler 訂單組合下修）→ 降 SELL。</p>
+    <div class="audience-note">適合相信「AI 光通訊 800G→1.6T 三年資本支出循環」、能承受 100%+ 年波動度（3M ADR std 103.8）的高風險高 beta 成長型投資人；不適合對 P/E &gt; 100 倍敏感、追求短期下檔保護或對單一產業循環反轉敏感的投資人。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>全名</td><td>Lumentum Holdings Inc（2015 自 JDS Uniphase 分拆獨立上市）<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>產業</td><td>Communications Equipment / Photonics（光收發器、相干光元件、雷射）</td></tr>
+        <tr><td>市值（粗估）</td><td>$69.2B（流通股 77.8M × $890.09）</td></tr>
+        <tr><td>主要業務</td><td>Cloud &amp; Networking（資料中心光模組、AI 互連、電信光網路）、Industrial Tech（雷射、3D 感測）<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>主要客戶</td><td>Hyperscaler / AI 雲端業者、電信設備商（Cisco、Ciena 等 NEM）、Apple（3D 感測）、半導體加工設備商<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>CEO</td><td>Michael C. Hurlston（2023-02 接任）<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>總部 / 員工</td><td>美國加州 San Jose；FY25 年底員工 ~10,562<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>會計年度結束</td><td>6 月最後一個週六（FY25 = 2025-06-28、FY26 將於 2026-06-27 結束）<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>CIK</td><td>0001633978</td></tr>
+        <tr><td>交易所</td><td>NASDAQ-GS</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>Lumentum 業務拆解（Q3 FY26）：<b>Components</b> $533M（66% 營收，YoY +77%）—optical / photonic chips、雷射光源、相干光元件、PIC、VCSEL<span class="src-tag">[來源:10-Q]</span>；<b>Systems</b> $275M（34% 營收，YoY +121%）—optical 光收發器模組、光路切換器、工業雷射<span class="src-tag">[來源:10-Q]</span>。自 FY26 Q1 起合併為單一報告分部<span class="src-tag">[來源:10-Q]</span>。產業結構為高度集中——AI 光收發器主要玩家為 Lumentum、Coherent、Marvell（InPhi）、Innolight、Eoptolink；客戶端為 hyperscaler 與 NEM（Cisco、Arista、Ciena）。Cloud Light 收購（2023-11）<span class="src-tag">[來源:10-K]</span> 是當前 AI 光模組營收主軸，NeoPhotonics（2022-08）+ IPG Telecom 資產（2022-08）<span class="src-tag">[來源:10-K]</span> 補強相干光與電信光網路產品線。</p>
+    <p>光通訊 / 半導體 KPI（Q3 FY26）：<b>800G / 1.6T 光模組</b> 為當前最重要 product mix 升級——客戶平均售價（ASP）相對 100G/400G 高 3-5 倍；<b>毛利率</b> 44.2%（YoY +15.4 pp）<span class="src-tag">[來源:10-Q]</span>、含購併攤銷後仍 41.8%；<b>R&amp;D % of revenue</b> 11.2%（YoY 17.9% 下降 6.7 pp）<span class="src-tag">[來源:10-Q]</span>，反映營收槓桿釋放；<b>CapEx</b> FY25 $231M / FY24 $133M / FY26 H1 約 $130M（年化 $260M，5y CAGR 21%）<span class="src-tag">[來源:10-K][來源:Finnhub]</span>；<b>客戶集中度</b>—10-K 揭示前 10 大客戶占顯著比重，hyperscaler 與 Cisco 為主<span class="src-tag">[來源:10-K]</span>。10 年週期脈絡：FY18 EPS $3.82（前峰）→ FY22 EPS $2.68（次峰）→ FY24 EPS -$8.12（深谷，含 NeoPhotonics 整合費用 + 庫存修正）→ FY25 EPS $0.37（復甦）→ Q1-Q3 FY26 adj EPS $5.14（突破歷史）<span class="src-tag">[來源:10-K][來源:Finnhub]</span>。Headwinds：(1) 客戶集中且品 mix 易隨 hyperscaler capex 節奏震盪；(2) 美中半導體 / 雷射出口管制；(3) 長期負債 $2.56B 對淨值 $880M（leverage 自 NeoPhotonics + Cloud Light 收購遺留）<span class="src-tag">[來源:10-Q]</span>。</p>
+    <p class="src" style="font-size:12px">註：本報告之 financials.json 因 XBRL 對 LITE FY26 季度概念更新未追上，自動匯入之 quarterly 序列最新到 FY25 Q3（2025-03-29）。本報告 Q3 FY26 / 9M FY26 數據改採 10-Q MD&amp;A 直接揭露口徑。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">毛利率</th><th class="num">稀釋 EPS</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY16</td><td class="num">$0.90B</td><td class="num">30.7%</td><td class="num">-$0.05</td><td>分拆獨立後初年</td></tr>
+        <tr><td>FY17</td><td class="num">$1.00B</td><td class="num">31.8%</td><td class="num">-$1.71</td><td>iPhone X 3D 感測前期</td></tr>
+        <tr><td>FY18</td><td class="num">$1.25B</td><td class="num">34.6%</td><td class="num">$3.82</td><td>前峰（iPhone 3D 高峰）</td></tr>
+        <tr><td>FY22</td><td class="num">$1.71B</td><td class="num">46.0%</td><td class="num">$2.68</td><td>次峰（疫情後光通訊高峰）</td></tr>
+        <tr><td>FY23</td><td class="num">$1.77B</td><td class="num">32.2%</td><td class="num">-$1.93</td><td>消化年</td></tr>
+        <tr><td>FY24</td><td class="num">$1.36B</td><td class="num">18.5%</td><td class="num">-$8.12</td><td>深谷（NeoPhotonics 整合 + 庫存修正）</td></tr>
+        <tr><td>FY25</td><td class="num">$1.65B</td><td class="num">28.0%</td><td class="num">$0.37</td><td>復甦</td></tr>
+        <tr><td>FY26 (9M)</td><td class="num">$2.01B</td><td class="num">38.8%</td><td class="num">adj $5.14</td><td>突破歷史 / AI 加速</td></tr>
+      </tbody>
+    </table>
+
+    <h3>最新季 (FY26 Q3，截至 2026-03-28，採 10-Q MD&amp;A 口徑)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ vs FY26 Q2</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$808.4M</td><td class="num">+90.1%</td><td class="num">~+15%<span class="src-tag">[推算]</span></td></tr>
+        <tr><td>Components</td><td class="num">$533.3M</td><td class="num">+77.3%</td><td class="num">—</td></tr>
+        <tr><td>Systems</td><td class="num">$275.1M</td><td class="num">+121.1%</td><td class="num">—</td></tr>
+        <tr><td>毛利率（GAAP）</td><td class="num">44.2%</td><td class="num">+15.4 pp</td><td class="num">—</td></tr>
+        <tr><td>營業利潤率</td><td class="num">21.6%</td><td class="num">+30.5 pp</td><td class="num">—</td></tr>
+        <tr><td>淨利率</td><td class="num">17.8%</td><td class="num">+28.2 pp</td><td class="num">—</td></tr>
+        <tr><td>調整 EPS（共識口徑）</td><td class="num">$2.37</td><td class="num">+275%<span class="src-tag">[推算]</span></td><td class="num">+41.9%</td></tr>
+      </tbody>
+    </table>
+    <p>Q3 FY26 adj EPS $2.37 較共識 $2.33 高 +1.6%（連 4 季 beat）<span class="src-tag">[來源:Finnhub]</span>；過去 4 季驚奇 +1.6% / +17.4% / +4.9% / +7.7%，平均 +7.9%<span class="src-tag">[來源:Finnhub]</span>。<b>成長</b>：營收 +90% YoY 為近 10 年單季最高增速，Systems +121% 反映高階光收發器產能擴張順利、Components +77% 反映上游晶片需求同步加速<span class="src-tag">[來源:10-Q]</span>。<b>獲利</b>：GM 自 FY24 谷底 18.5% 升至 Q3 FY26 44.2%（+25.7 pp 兩年內），主因 ASP 上升 + 製造產能槓桿釋放<span class="src-tag">[來源:推算]</span>。<b>現金生成</b>：9M FY26 營運現金流估 $200M+（FY25 $126M 全年），CapEx 仍高（FY26 H1 ~$130M），FY26 估自由現金流首度轉正接近 $100-150M<span class="src-tag">[來源:推算]</span>。對比 FY18 前峰 EPS $3.82，當前 9M adj EPS $5.14 已大幅超越歷史，但本益比 PE_TTM 156.8 也創歷史新高。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 156.8 / PE_fwd 66.1 / PEG_fwd 0.50</td><td>forward PE 仍 66x；PEG_fwd 0.50 反映市場預期 EPS 仍將加倍以上，估值前置依賴 FY27 兌現</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 30.68% vs 5y 均 -6.75%</td><td>5 年來首次顯著為正（+37 pp 偏離）；反映商業模式從循環性虧損轉為高 ROE</td></tr>
+        <tr><td>利潤率</td><td>Gross 37.7% / Op 10.6% / Net 17.7%</td><td>TTM 仍含 FY25 Q3 谷底（GM 28.8%）；Q3 FY26 已升至 44.2% GM / 21.6% Op，反映加速中</td></tr>
+        <tr><td>成長</td><td>Rev YoY +68.98% / Q YoY +90.12%</td><td>近 10 年最快增速；3y CAGR -1.33% 反映 FY23-24 連續下行已被翻轉</td></tr>
+        <tr><td>報酬</td><td>52w +1043% / 相對 S&amp;P500 +1020%</td><td>S&amp;P500 中最大漲幅之一；剛於 2026-05-12 觸 52w 高 $1085.68，5 日報酬 -13.6%</td></tr>
+        <tr><td>風險（波動）</td><td>Beta 1.53 / 3M ADR std 103.8</td><td>3M 平均日波動 100%+ 為 S&amp;P500 級別極端值；倉位風險顯著高於大盤</td></tr>
+        <tr><td>股利</td><td>$0（不配發）</td><td>FCF 仍處從負轉正過程，現金優先支持產能擴張<span class="src-tag">[來源:10-K]</span></td></tr>
+      </tbody>
+    </table>
+    <p>5 年自身偏離最顯著三個指標：營業利潤率 10.6% vs 5y 均 -0.3%（+10.9 pp）、ROE 30.7% vs 5y 均 -6.75%（+37 pp）、營收 YoY +69% vs 5y 均 -0.4%（+69 pp）。估值方法主要錨定 PE_forward 66.1 與隱含 forward EPS $13.47<span class="src-tag">[來源:推算]</span>；假設 FY27 1.6T 光收發器量產順利。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. AI 光收發器 800G→1.6T 三年資本支出循環</div>
+      <div>Q3 FY26 Systems +121% YoY、Components +77% YoY<span class="src-tag">[來源:10-Q]</span>；10-K 明示「200G lane → 400G lane 加速」<span class="src-tag">[來源:10-K]</span>。NVIDIA、Anthropic、Meta、Google 等 AI capex 持續上修為核心成長引擎。</div>
+      <div class="pillar-falsifier">若 Q4 FY26 營收年增跌破 +60%，或 FY27 guidance 隱含 +30% 以下，AI 光通訊資本支出論點弱化。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. 毛利率自 FY24 谷底結構性翻倍</div>
+      <div>GM 自 FY24 18.5% 升至 Q3 FY26 44.2%（+25.7 pp 兩年內）<span class="src-tag">[來源:10-K][來源:10-Q]</span>；ASP 上行 + 製造產能槓桿釋放（Cloud Light 與 Thailand 廠擴產）<span class="src-tag">[來源:10-K]</span>。</div>
+      <div class="pillar-falsifier">若任一季 GM 回落 &gt; 5 pp、或 FY27 H1 GM 跌破 40%，論點動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 4 連季 EPS beat + 賣方買入占比穩定 80%</div>
+      <div>過去 4 季 adj EPS 連續 beat（平均驚奇 +7.9%）<span class="src-tag">[來源:Finnhub]</span>；30 位賣方買入占比 80%（連續 4 月持平 79-83%）<span class="src-tag">[來源:Finnhub]</span>。</div>
+      <div class="pillar-falsifier">若 Q4 FY26 財報 EPS miss 或買入占比連 2 月跌破 70%，動能信號破裂。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. 2025-12-22 重大確定性協議</div>
+      <div>2025-12-22 8-K 揭露 Material Definitive Agreement（Item 1.01）<span class="src-tag">[來源:8-K]</span>，市場推測為與單一 hyperscaler 的多年期供應契約—與隨後 Q2/Q3 FY26 營收連續超 +90% YoY 增速相吻合<span class="src-tag">[來源:推算]</span>。</div>
+      <div class="pillar-falsifier">若後續 10-K 揭示該協議含「客戶端可單方面退出」或「未達量產規模」條款，預期可見度下修。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. 估值極端化、PEG_fwd 0.50 已依賴 FY27 兌現</div>
+      <div>PE_TTM 156.8、PE_fwd 66.1、PS_TTM 27.7、EV/EBITDA 220<span class="src-tag">[來源:Finnhub]</span>。Forward EPS 隱含 $13.47（較 TTM $5.41 再增 +149%）<span class="src-tag">[來源:推算]</span>。任一財報未達預期或客戶 mix 不利，估值修正可能 -30%~-40%（參考 5 日 -13.6%）<span class="src-tag">[來源:OHLC]</span>。</div>
+      <div class="risk-meta">機率：中-高 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. 長期負債 $2.56B vs 淨值 $880M（D/E 約 2.9x）</div>
+      <div>10-Q 揭露長期負債 $2.56B、淨值僅 $880M<span class="src-tag">[來源:10-Q]</span>，主要源自 NeoPhotonics（2022-08）+ Cloud Light（2023-11）+ IPG Telecom（2022-08）連續收購<span class="src-tag">[來源:10-K]</span>。利率上行循環下利息費用壓力顯著（Q3 FY26 利息費用 $6.5M 為營收 0.8%）<span class="src-tag">[來源:10-Q]</span>。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. 客戶集中度極高 + hyperscaler capex 循環敏感</div>
+      <div>10-K Item 1A 列「客戶集中」為主要風險<span class="src-tag">[來源:10-K]</span>；推測前 3 大客戶占營收 50%+<span class="src-tag">[來源:推算]</span>。FY23-24 庫存修正即源自單一客戶下單調整，造成 GM 自 46% 跌至 18%<span class="src-tag">[來源:10-K]</span>。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. 美中半導體 / 雷射出口管制風險</div>
+      <div>10-Q MD&amp;A 明示「全球貿易環境不確定、潛在新關稅與出口管制」<span class="src-tag">[來源:10-Q]</span>。Lumentum 在 InP 雷射晶片、相干光 DSP 等具軍民兩用屬性產品上承擔 US BIS / EAR 監管風險。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">5. 內部人 12 個月淨賣出 -$132M</div>
+      <div>過去 12 個月 216 筆交易、16 位內部人、淨值 -$132M（買入金額 $0、賣出金額 $131.6M）<span class="src-tag">[來源:Finnhub]</span>。CEO Hurlston 等高管於 $700-$950 區間連續以類型 S 出脫，包括 2026-05-18 Vincent Retort 在 $953.95 賣出 3,183 股<span class="src-tag">[來源:Finnhub]</span>。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-08 中下旬（估）</td><td>Q4 FY26 / 全年財報 + FY27 guidance<span class="src-tag">[來源:8-K]</span></td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>1.6T 光收發器量產第一個完整季度<span class="src-tag">[來源:10-K]</span></td><td>高</td></tr>
+        <tr><td>2026-11 初（估）</td><td>Q1 FY27 季報，反映 1.6T 量產第一季</td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>NVIDIA GTC + hyperscaler 資本支出年度導引</td><td>中</td></tr>
+        <tr><td>2026-H2</td><td>OFC 2027 預告 / 客戶設計 win 公告</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-05</td><td>Q3 FY26 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1633978/000162828026030530/lite-20260505.htm">SEC</a></td></tr>
+        <tr><td>2026-03-02</td><td>Regulation FD Disclosure（市場推測為產品 / 客戶更新）</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/1633978/000119312526085412/d41019d8k.htm">SEC</a></td></tr>
+        <tr><td>2025-12-22</td><td>Material Definitive Agreement（推測為大型客戶供應協議）</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1633978/000119312525328691/d38670d8k.htm">SEC</a></td></tr>
+        <tr><td>2025-12-15 / 2025-11-24</td><td>高管異動</td><td>中</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K 主軸為 (i) 4 次季報、(ii) 1 次 Material Definitive Agreement（推測為與 hyperscaler 多年期供應契約）、(iii) 多次高管異動。未來 6 個月最可能觸發評等升降的事件為 2026-08 全年財報與 FY27 guidance—將驗證 +90% YoY 增速是否延續至 FY27 上半年。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易筆數 / 不同內部人</td><td>216 筆 / 16 位</td></tr>
+        <tr><td>內部人買入 vs 賣出股數</td><td>+236k vs -368k（淨 -132k）</td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>+$0 vs -$131.6M</td></tr>
+        <tr><td>淨值（買 - 賣）</td><td><b>-$132M</b>（顯著淨賣出）</td></tr>
+      </tbody>
+    </table>
+    <h3>最近顯著交易（前 3 筆）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>內部人</th><th>動作</th><th>股數</th><th>價格</th><th>類型</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-18</td><td>Vincent Retort</td><td>賣</td><td>3,183</td><td>$953.95</td><td>S</td></tr>
+        <tr><td>2026 Q1-Q2 多筆</td><td>CEO Michael Hurlston 等多位</td><td>賣（10b5-1 計畫）</td><td>合計 ~80k</td><td>$700-$1,000</td><td>S</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月淨值 -$132M 屬中等規模賣出，買入金額為 $0、買入股數 +236k 為類型 A（授與）<span class="src-tag">[來源:Finnhub]</span>。16 位內部人全員均做出脫，無任何主動公開市場買入；類型 S 賣出價格區間 $700-$1,000 涵蓋整個 H2 FY26 上行段，反映管理層在當前估值區間持續實現獲利。Vincent Retort 於 2026-05-18（剛好在 52 週高點附近）以 $953.95 出售亦是顯著的時點訊號。對 thesis 屬反證——管理層內部人對當前股價有獲利落袋的一致行為。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成目標價，需要相信什麼</h4>
+      <ul>
+        <li>Q4 FY26（2026-06 結束）營收 ≥ $850M（YoY ≥ +70%）。</li>
+        <li>FY27 全年營收 ≥ $4B（隱含 YoY +35%+）。</li>
+        <li>1.6T 光收發器於 FY27 H1 量產順利、單一 hyperscaler 客戶不縮減訂單量。</li>
+        <li>FY27 GAAP 毛利率維持 ≥ 42%（接近當前 Q3 FY26 水準）。</li>
+        <li>美中半導體 / 雷射出口管制無新增限制。</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1（multiple × forward EPS）</b>：Finnhub 隱含 forward EPS $13.47（$890.09 / PE_fwd 66.1）<span class="src-tag">[來源:推算]</span>；對 AI 光通訊高成長期適用 PE 50–75x（5y 均值 N/A 因 FY23-24 EPS 為負，但同類 ANET ~28x、CIEN ~25x，LITE 享 1.6T mix 溢價合理高 1.8-2.5x peer）→ $674–$1,011，中位 <b>$842</b>。</p>
+    <p><b>方法 2（H1 已落袋 + H2 加速 / FY27 ramp）</b>：9M FY26 adj EPS $5.14；估 Q4 FY26 adj EPS ~$2.7 → 全年 FY26 adj EPS ~$7.8；對 FY27 假設 +50% → ~$11.7。對 FY27 EPS 套用 PE 70–90x（高成長 + AI 槓桿）→ <b>$819–$1,053</b>，中位 $936。</p>
+    <p><b>方法 3（賣方共識）</b>：30 位賣方買入占比 80%<span class="src-tag">[來源:Finnhub]</span>，連續 4 月穩定；新聞中未列具體目標價。假設 12 個月共識 mid-point 約 $1,100（推估自買入占比與類股可比），6M 折現 = $890.09 + 0.95×($1100-$890.09) = <b>$1,089.5</b>。</p>
+    <p>三方法區間 $674–$1,090、平均 $956；加權考慮估值已極端 + 5 日 -13.6% 顯示動能轉折風險 + 內部人持續賣出，<b>結論目標 $930、區間 $650–$1,150</b>，對應潛在報酬 +4.5%（區間 -27% ~ +29%）。上修觸發：FY27 guidance ≥ $4B + 1.6T 量產進度確認 → 升 BUY；下修觸發：Q4 FY26 營收 miss 或 FY27 H1 hyperscaler 訂單組合下修 → 降 SELL。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>8</td><td>16</td><td>6</td><td>0</td><td>0</td><td>30</td><td>80.0%</td></tr>
+        <tr><td>2026-04</td><td>7</td><td>17</td><td>6</td><td>0</td><td>0</td><td>30</td><td>80.0%</td></tr>
+        <tr><td>2026-03</td><td>7</td><td>17</td><td>5</td><td>0</td><td>0</td><td>29</td><td>82.8%</td></tr>
+        <tr><td>2026-02</td><td>7</td><td>16</td><td>6</td><td>0</td><td>0</td><td>29</td><td>79.3%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>FY26 Q3</td><td>$2.33</td><td>$2.37</td><td>+$0.04</td><td style="color:#0a8a3a">+1.56%</td></tr>
+        <tr><td>FY26 Q2</td><td>$1.42</td><td>$1.67</td><td>+$0.25</td><td style="color:#0a8a3a">+17.41%</td></tr>
+        <tr><td>FY26 Q1</td><td>$1.05</td><td>$1.10</td><td>+$0.05</td><td style="color:#0a8a3a">+4.90%</td></tr>
+        <tr><td>FY25 Q4</td><td>$0.82</td><td>$0.88</td><td>+$0.06</td><td style="color:#0a8a3a">+7.72%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識方向強烈偏多（買入占比 80%、超 strongly bullish 門檻；4 個月穩定 79-83%）。過去 4 季 4/4 beats、平均驚奇 +7.9%（含 Q2 FY26 +17.4%），反映管理層 guidance 風格穩健保守。本報告中立評等與賣方共識存在分歧—目標 $930 vs 賣方隱含 mid ~$1,100；分歧主因為本報告對估值極端化、內部人持續賣出與 5 日 -13.6% 動能轉折給予較大權重。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 $930、最新收盤 $890.09，潛在報酬 +4.5%。對應評等規則（&gt;+30% 強買 / +15%–+30% 買入 / -15%–+15% 中立 / &lt;-15% 賣出）為 <b>中立</b>。若目標價上修至 $1,024 以上則升 BUY；若下修至 $756 以下則降 SELL。</p>
+    <p>信心 0.45（偏低）：三方法價差 $674–$1,090（達 62%）、52 週報酬 +1043% 屬極端、最近 5 日已修正 -13.6% 顯示動能轉折風險、FY27 ramp 為單一最大假設——符合 SKILL「方法價差 &gt; 25% + 單一假設驅動」之偏低門檻。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th>分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">+1</td><td>ROE_TTM 30.7%（5y 均 -6.75% 翻正）；但 LTD $2.56B / 淨值 $880M、FCF 仍接近 0<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>估值合理性</td><td class="score">-2</td><td>PE_TTM 157、EV/EBITDA 220、PS 27.7—S&amp;P500 級最高之一<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr><td>催化劑</td><td class="score">+1</td><td>Q4 FY26 / FY27 guidance、1.6T 量產、2025-12-22 MDA 客戶協議<span class="src-tag">[來源:8-K]</span></td></tr>
+        <tr><td>風險水平</td><td class="score">-1</td><td>客戶集中、出口管制、LTD/Equity 2.9x、內部人 -$132M、5 日 -13.6%<span class="src-tag">[來源:10-K][來源:Finnhub]</span></td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">+1</td><td>52w +1043%、買入占比 80% 穩定；但 5 日 -13.6%、剛從 52w 高拉回<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr class="total"><td>合計</td><td class="score">0</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 0 對應目標價 +4.5%，與 SKILL Step 5 sanity-check 一致——強勁營運成長被極端估值與動能轉折抵銷。上修觸發為估值消化（PE_TTM 跌至 100 以下）+ 持續高速成長；下修觸發為任一單季營收增速跌破 +60% YoY 或 hyperscaler 客戶訂單組合下修。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K FY2025（period end 2025-06-28，accession via EDGAR）— Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A</li>
+      <li>10-Q FY26 Q3（period end 2026-03-28，filed 2026-05-05）— Item 2 MD&amp;A、segment revenue、CapEx</li>
+      <li>過去 12 個月 8-K：12 筆（4 筆財報 + 1 筆 Material Definitive Agreement + Reg FD + 高管異動）</li>
+      <li>XBRL companyfacts via SEC EDGAR API（CIK 0001633978）— 注：FY26 季度 XBRL 概念有更新未追上自動匯入，本報告 Q3 FY26 數據改採 10-Q MD&amp;A 口徑</li>
+      <li>OHLC 行情（Stooq → Yahoo fallback）—樣本期間 2016-05 ~ 2026-05-19（2,515 個交易日）</li>
+      <li>新聞合成：Finnhub /company-news（snapshot 2026-05-21，60 articles）</li>
+      <li>Finnhub /stock/profile2、/stock/peers、/stock/recommendation、/stock/earnings、/stock/insider-transactions、/stock/metric?metric=all（snapshot 2026-05-21）</li>
+      <li>analyst_consensus.json（4 個月 recommendation_trends + 4 季 EPS surprise）</li>
+      <li>ownership.json（lookback 2025-05-14 ~ 2026-05-21，216 transactions，16 unique insiders）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Yahoo Finance / Stooq 行情、Finnhub、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。光通訊 / 半導體類股估值與 AI capex 循環、hyperscaler 採購節奏、產業庫存修正高度連動，過去績效不代表未來表現，目標價與評等不保證實現。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>
