@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOOGL Equity Research — 2026-05-21</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                 "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    color: var(--c-text);
+    background: var(--c-bg);
+    margin: 0;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .report {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    background: var(--c-panel);
+    min-height: 100vh;
+    border-left: 1px solid var(--c-line);
+    border-right: 1px solid var(--c-line);
+  }
+  header.report-head {
+    border-bottom: 1px solid var(--c-line);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--c-line); vertical-align: top; }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; font-size: 14px; color: var(--c-muted); margin-top: 8px; }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; color: white; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; vertical-align: middle; margin-right: 10px; }
+  .rating-strong-buy { background: var(--c-buy-strong); }
+  .rating-buy { background: var(--c-buy); }
+  .rating-neutral { background: var(--c-neutral); }
+  .rating-sell { background: var(--c-sell); }
+  .target-block { display: inline-block; margin-left: 6px; color: var(--c-text); font-size: 14px; }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier { font-size: 13.5px; color: var(--c-muted); margin-left: 4px; margin-top: 4px; }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta { font-size: 12.5px; color: var(--c-muted); margin-left: 4px; }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag { display: inline; font-size: 11px; color: var(--c-muted); margin-left: 2px; font-weight: 400; vertical-align: super; }
+  .audience-note { margin-top: 12px; padding: 10px 14px; background: #f6f5f0; border-radius: 6px; font-size: 14px; color: var(--c-text); }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge { background: #f0f9ff; border-left: 3px solid var(--c-accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .belief-bridge h4 { margin: 0 0 8px; font-size: 14px; color: var(--c-accent); }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer { margin-top: 40px; padding: 16px; background: #f6f5f0; border-left: 3px solid var(--c-muted); font-size: 13.5px; color: var(--c-muted); line-height: 1.55; }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  @media (max-width: 640px) {
+    body { font-size: 15px; line-height: 1.6; }
+    .report { padding: 24px 14px 56px; border-left: none; border-right: none; }
+    header.report-head { padding-bottom: 18px; margin-bottom: 24px; }
+    h1 { font-size: 21px; line-height: 1.3; }
+    h2 { font-size: 17px; margin: 30px 0 10px; }
+    h3 { font-size: 14.5px; }
+    .rating-badge { font-size: 13px; padding: 5px 12px; margin-right: 6px; }
+    .target-block { display: block; margin-left: 0; margin-top: 8px; line-height: 1.5; }
+    .target-block b { font-size: 17px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 0; font-size: 13.5px; }
+    .meta-grid span:nth-child(odd) { margin-top: 6px; color: var(--c-muted); font-size: 12px; }
+    table { display: block; overflow-x: auto; max-width: 100%; font-size: 13px; -webkit-overflow-scrolling: touch; }
+    th, td { padding: 6px 8px; }
+    th { font-size: 12.5px; }
+    .src-tag { font-size: 10px; }
+    .pillar, .risk { margin: 12px 0; }
+    .pillar-falsifier, .risk-meta { font-size: 12.5px; }
+    .audience-note { padding: 9px 12px; font-size: 13.5px; }
+    .belief-bridge { padding: 10px 12px; }
+    .belief-bridge h4 { font-size: 13.5px; }
+    .disclaimer { padding: 12px; font-size: 12.5px; }
+    ul, ol { padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "GOOGL",
+  "company_name": "Alphabet Inc",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 387.66,
+  "currency": "USD",
+  "rating": "NEUTRAL",
+  "target_price": 435,
+  "target_price_low": 360,
+  "target_price_high": 480,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 12.2,
+  "qualitative_score": 5,
+  "confidence": 0.65,
+  "data_freshness": {
+    "financials_period_end": "2026-03-31",
+    "latest_10q_filing_date": "2026-04-29",
+    "latest_8k_date": "2026-05-11",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>Alphabet Inc (GOOGL) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-neutral">中立</span>
+      <span class="target-block">6M 目標價 <b>$435</b> (+12.2%) · 信心 0.65（中）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$387.66</b>
+      <span>最新 10-Q</span><b>2026-04-29 提交（涵蓋至 2026-03-31）</b>
+      <span>最近 8-K</span><b>2026-05-11</b>
+      <span>資料來源</span><b>SEC EDGAR · Yahoo / Stooq 行情 · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>Alphabet 是全球最大網路搜尋、影音廣告、雲端基礎設施與基礎模型 AI 的綜合性集團，FY25 全年營收 $402.8B（+15% YoY）<span class="src-tag">[來源:10-K]</span>，三大業務分部為 Google Services（Search、YouTube、Network）、Google Cloud（GCP + Workspace）、Other Bets（Waymo 等）。Q1 FY26 營收 $109.9B（+21.8% YoY）<span class="src-tag">[來源:10-Q]</span>，2026 Google I/O 推出新一代 Gemini 模型與 agent 工具<span class="src-tag">[來源:news]</span>。</p>
+    <p>論點核心：(1) 營業利潤率自 5y 均 29.7% 升至 TTM 32.7%<span class="src-tag">[來源:Finnhub]</span>、ROE 自 28% 升至 39%<span class="src-tag">[來源:Finnhub]</span>，反映 AI 整合驅動操作槓桿；(2) FY25 CapEx $91.4B（+74% YoY）<span class="src-tag">[來源:10-K]</span>、Q1 FY26 annualized $143B<span class="src-tag">[來源:推算]</span>，AI 基礎設施投資為 Gemini / GCP TPU 多年期競爭力護城河；(3) 賣方買入占比 88.6%（4 月內續升 +3 pp）<span class="src-tag">[來源:Finnhub]</span>，動能強勁，52 週報酬 +132.8%<span class="src-tag">[來源:Finnhub]</span>，剛於 2026-05-18 觸及 52 週高點 $408.61<span class="src-tag">[來源:OHLC]</span>。</p>
+    <p>給予 <b>中立</b>、6M 目標 $435（區間 $360–480）。最大單一觸發點為 2026-07 底 Q2 FY26 財報：Cloud 營收增速 + AI capex 走勢 + DOJ Search 反壟斷救濟階段裁決進度。若 Cloud Q2 YoY ≥ +35% + DOJ 救濟避免結構性拆分 → 升 BUY；若 GCP 增速跌破 +25% 或 DOJ 命令拆分 Chrome / 預設搜尋分潤合約終止 → 降 SELL。</p>
+    <div class="audience-note">適合相信「Gemini × Search × Cloud 三引擎複合成長、AI 基礎設施投資具長期回報」、能承受 35% 年波動度（3M ADR std 34.6）的成長型核心配置；不適合對 DOJ 反壟斷風險或 AI 搜尋替代敘事極度敏感的投資人。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>全名</td><td>Alphabet Inc</td></tr>
+        <tr><td>產業</td><td>Services-Computer Programming, Data Processing（搜尋、廣告、雲端、AI）</td></tr>
+        <tr><td>市值（粗估）</td><td>$4.70T（流通股 12,116M × $387.66）</td></tr>
+        <tr><td>主要業務分部</td><td>Google Services（搜尋 / YouTube / Network 廣告 / 訂閱）、Google Cloud（GCP + Workspace）、Other Bets（Waymo 等）<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>主要客戶</td><td>廣告主（程序化 + 直效）、雲端企業（Snap、Anthropic、Salesforce 等）、Android OEM、Apple（搜尋分潤）</td></tr>
+        <tr><td>CEO</td><td>Sundar Pichai（Alphabet + Google 兩家 CEO）</td></tr>
+        <tr><td>會計年度結束</td><td>12 月 31 日（FY25 = 2025-12-31）</td></tr>
+        <tr><td>CIK</td><td>0001652044</td></tr>
+        <tr><td>交易所 / 股票類別</td><td>NASDAQ-GS（GOOGL = Class A 有投票權；GOOG = Class C 無投票權）</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>Alphabet 業務拆解：<b>Google Services</b>（FY25 約占 89% 營收）—Search 廣告 + YouTube 廣告 + Network 廣告 + 訂閱（YouTube Premium / Google One）；<b>Google Cloud</b>（約占 11%）—GCP 基礎設施 + Workspace + Vertex AI / Gemini API；<b>Other Bets</b>（&lt;1%）—Waymo（自駕）、Verily 等<span class="src-tag">[來源:10-K]</span>。產業結構為集中——搜尋全球 ~90% 份額（Bing 與 ChatGPT search 為次），雲端 #3（落後 AWS / Azure），影音 YouTube 全球 #1 訂閱戶與廣告營收。</p>
+    <p>Tech / SaaS KPI（Q1 FY26）：<b>Cloud 營收</b>—雖未拆出但市場估 $13–14B Q1（+30%+ YoY）<span class="src-tag">[來源:news]</span>；<b>R&amp;D % of revenue</b> FY25 約 14%<span class="src-tag">[來源:推算]</span>；<b>CapEx</b> Q1 FY26 $35.7B、annualized $143B<span class="src-tag">[來源:10-Q]</span>，主要為 TPU + 資料中心；<b>毛利率</b> Q1 FY26 約 59%（Finnhub TTM 60.4%）<span class="src-tag">[來源:Finnhub]</span>；<b>營運現金流</b> Q1 FY26 $45.8B（+27% YoY）<span class="src-tag">[來源:10-Q]</span> 但 FCF $10.1B（-47% YoY）因 capex 暴增。10 年週期脈絡：FY16 營收 $90B、FY20 $183B（COVID 後 cloud 加速）、FY22 $283B（廣告週期下行）、FY24 $350B、FY25 $403B<span class="src-tag">[來源:10-K]</span>，5 年營收 CAGR 17%、EBITDA CAGR 20%。Headwinds：(1) DOJ Search 反壟斷案 2025-09 一審判 Search 違反 Sherman Act 第 2 條，救濟階段（Chrome 處分 / 默認搜尋分潤合約）2026 內進行<span class="src-tag">[來源:10-K]</span>；(2) AI 搜尋替代風險（Perplexity、ChatGPT search）；(3) EU DMA 持續罰款風險；(4) AI capex 排擠 FCF（Q1 FCF YoY -47%）。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">營業利潤率</th><th class="num">稀釋 EPS</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY20</td><td class="num">$182.5B</td><td class="num">22.6%</td><td class="num">$2.93</td><td>COVID 加速期（拆股調整後）</td></tr>
+        <tr><td>FY21</td><td class="num">$257.6B</td><td class="num">30.6%</td><td class="num">$5.61</td><td>廣告週期高點</td></tr>
+        <tr><td>FY22</td><td class="num">$282.8B</td><td class="num">26.5%</td><td class="num">$4.56</td><td>廣告週期下行</td></tr>
+        <tr><td>FY23</td><td class="num">$307.4B</td><td class="num">27.4%</td><td class="num">$5.80</td><td>復甦 + AI 重整</td></tr>
+        <tr><td>FY24</td><td class="num">$350.0B</td><td class="num">32.1%</td><td class="num">$8.04</td><td>AI 加速 + 利潤率擴張</td></tr>
+        <tr><td>FY25</td><td class="num">$402.8B</td><td class="num">32.0%</td><td class="num">$10.81</td><td>突破歷史</td></tr>
+      </tbody>
+    </table>
+    <p class="src" style="font-size:12px">註：FY19 及之前 EPS 為 GOOGL 拆股前面額（2022-07 完成 20:1 拆股）；表中 FY20+ 均為拆股後可比較數據<span class="src-tag">[來源:10-K]</span>。</p>
+
+    <h3>最新季 (FY26 Q1，截至 2026-03-31)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$109,896M</td><td class="num">+21.8%</td><td class="num">+7.4%</td></tr>
+        <tr><td>營業利潤</td><td class="num">$39,696M</td><td class="num">+29.7%</td><td class="num">+27.1%</td></tr>
+        <tr><td>淨利（GAAP，含 MTM）</td><td class="num">$62,578M</td><td class="num">+81.2%</td><td class="num">+81.6%</td></tr>
+        <tr><td>稀釋 EPS（GAAP）</td><td class="num">$5.11</td><td class="num">+81.9%</td><td class="num">+82.5%</td></tr>
+        <tr><td>調整 EPS（賣方共識口徑）</td><td class="num">$2.62</td><td class="num">+13.4%</td><td class="num">-7.1%</td></tr>
+        <tr><td>CapEx</td><td class="num">$35,674M</td><td class="num">+107.5%</td><td class="num">+34.0%</td></tr>
+        <tr><td>FCF</td><td class="num">$10,116M</td><td class="num">-46.6%</td><td class="num">-65.6%</td></tr>
+      </tbody>
+    </table>
+    <p>Q1 FY26 調整後 EPS $2.62 較共識 $2.71 低 -3.1%（11 季以來首次 miss）<span class="src-tag">[來源:Finnhub]</span>，但近 4 季 3 beats 1 miss（Q3 FY25 +29.4% 超驚奇、Q4 FY25 +4.2%、Q2 FY25 +2.7%）<span class="src-tag">[來源:Finnhub]</span>。<b>成長</b>：營收 $110B 創新高、YoY +22%，主要 Cloud 與 Search 廣告同步加速。<b>獲利</b>：GAAP 淨利 $62.6B 含 ~$23B 非經常性權益投資 mark-to-market 利益<span class="src-tag">[來源:推算]</span>；剔除後正常化淨利約 $33B（與營業利潤對應）。<b>現金生成</b>：OCF $45.8B 創新高（+27% YoY），但 CapEx 飆至 $35.7B 使 FCF 萎縮至 $10.1B（-47% YoY）<span class="src-tag">[來源:10-Q]</span>——AI 基礎設施支出強度遠超歷史。對比 FY22 廣告週期低點營業利潤率 26.5%，當前 32.7% 反映業務組合升級 + AI 槓桿。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 29.3 / PE_fwd 28.6 / PEG_TTM 1.73</td><td>forward 與 TTM 相近，市場已 price-in 部分 EPS 加速；PEG 1.73 較 Mag7 同業中性</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 38.98% vs 5y 均 28.46%</td><td>顯著正偏離（+10.5 pp），主因 AI 整合 + 廣告 mix 升級 + 一次性投資利益</td></tr>
+        <tr><td>利潤率</td><td>Gross 60.4% / Op 32.7% / Net 37.9%</td><td>Op margin 5y +3 pp、Net margin 5y +10.7 pp；Net &gt; Op 反映非經常性投資利益</td></tr>
+        <tr><td>成長</td><td>Rev YoY +17.5% / EPS YoY +48.5%</td><td>頂線在大型科技中相對強勁；EPS 受 MTM 推升、可持續率 35-40%</td></tr>
+        <tr><td>報酬</td><td>52w +132.8% / 相對 S&amp;P500 +109.4%</td><td>大幅領先大盤；恰於 2026-05-18 觸 52 週高 $408.61</td></tr>
+        <tr><td>風險（波動）</td><td>Beta 1.27 / 3M ADR std 34.6</td><td>波動度高於大盤但低於 AI 純粹標的；雙重股權（Class A/B/C）由共同創辦人持 B 股控制</td></tr>
+        <tr><td>股利</td><td>$0.84 年化 / yield 0.22%</td><td>2024 首發股利，季調 $0.21；殖利率象徵性，主要回報來自股價成長 + 庫藏</td></tr>
+      </tbody>
+    </table>
+    <p>5 年自身偏離最顯著三個指標：ROE_TTM 39% vs 5y 均 28%（+10.5 pp 正偏離）、Net margin 38% vs 5y 均 27%（+10.7 pp 正偏離）、EBITDA CAGR 5y 20.3%<span class="src-tag">[來源:Finnhub]</span>。估值方法主要錨定 PE_forward 28.6 與隱含 forward EPS $13.55<span class="src-tag">[來源:推算]</span>，假設 AI 整合與 Cloud 加速延續至 FY27。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. Gemini 2026 + Cloud 加速形成 AI 變現主軸</div>
+      <div>Google I/O 2026 發布新一代 Gemini 與 agent 工具<span class="src-tag">[來源:news]</span>；UBS / BofA 認為新 AI 工具可推升 Search、Cloud 之外的變現<span class="src-tag">[來源:news]</span>。Cloud Q1 FY26 增速估 +30%+ YoY<span class="src-tag">[來源:news]</span>。</div>
+      <div class="pillar-falsifier">若 Cloud Q2 FY26 YoY 跌破 +25%，或 Gemini 在 LLM 比較基準（如 LMArena、MMLU、AI Index）連續 3 月排名落於前 5 之外，AI 變現論點弱化。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. 營業利潤率自 FY22 低點結構性回升</div>
+      <div>FY25 Op margin 32.0% 較 FY22 低點 26.5% 升 +5.5 pp<span class="src-tag">[來源:10-K]</span>；Q1 FY26 Op margin 36.1%（39,696/109,896）<span class="src-tag">[來源:10-Q]</span> 進一步擴張，反映 2023-24 裁員 + AI 自動化雙重貢獻。</div>
+      <div class="pillar-falsifier">若任一季 Op margin 回落 &gt; 3 pp 或裁員 / 重整費用復發 $5B+，論點動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 賣方主流強烈偏多、買入占比續升</div>
+      <div>70 位賣方買入占比 88.6%（4 月內 85.5% → 88.6%）<span class="src-tag">[來源:Finnhub]</span>；近 4 季 3 beats 1 miss，Q3 FY25 +29.4% 大幅超驚奇<span class="src-tag">[來源:Finnhub]</span>。</div>
+      <div class="pillar-falsifier">若 Q2 FY26（2026-07 底）調整 EPS 連續 2 季 miss，或買入占比跌破 80%，動能轉弱。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. CapEx 雖大但有回報視野</div>
+      <div>FY25 CapEx $91.4B（+74% YoY）、Q1 FY26 $35.7B<span class="src-tag">[來源:10-Q]</span>；TPU + 自研晶片策略降低對 Nvidia 依賴<span class="src-tag">[來源:news]</span>，並支援 Anthropic 等 Cloud 客戶基礎設施需求。OCF $45.8B Q1 仍創歷史新高<span class="src-tag">[來源:10-Q]</span>。</div>
+      <div class="pillar-falsifier">若 FY26 CapEx 超過 $150B 同時 FCF 持續 YoY 負成長，市場恐質疑投資回收期。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. DOJ Search 反壟斷救濟階段裁決</div>
+      <div>2025-09 一審裁定 Search 違反 Sherman Act 第 2 條<span class="src-tag">[來源:10-K]</span>。可能救濟包括：Chrome 處分、限制 Apple / Mozilla 預設搜尋分潤（GS 估值預設搜尋分潤每年帶入 $20B+ 收益）、強制 Android 第三方 search 預設。任一結構性命令對營收 / 估值衝擊 -10% 至 -20%。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. AI 搜尋介面替代風險</div>
+      <div>Perplexity、ChatGPT search、Claude search 等 AI 第一介面持續侵蝕 Search 入口；10-K Item 1A 列「市場可能比預期演化更快」<span class="src-tag">[來源:10-K]</span>。長期廣告轉化漏斗可能改變。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中-高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. CapEx 規模對 FCF 與股東報酬的壓力</div>
+      <div>Q1 FY26 FCF $10.1B（-47% YoY）<span class="src-tag">[來源:10-Q]</span>；FY26 全年 CapEx 估 $140B<span class="src-tag">[來源:推算]</span>。若 AI 變現節奏低於投資節奏，FCF/股 將連續多季承壓，影響庫藏與股利成長空間。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. 內部人 12 個月淨賣出 -$678M</div>
+      <div>過去 12 個月 735 筆、14 位內部人、淨值 -$678M<span class="src-tag">[來源:Finnhub]</span>。雖大多為 10b5-1 計畫性出脫，但金額顯著。CEO Sundar Pichai 與 CFO 均有實現獲利動作。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：低-中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">5. EU DMA / 各國數位稅 / 隱私法規</div>
+      <div>10-K Item 1A 點名 EU DMA、印度 / 韓國應用商店規則、Cookie 替代等多個監管軸線<span class="src-tag">[來源:10-K]</span>；EU 對 Google 累計開罰超 €8B（2017-2024），DMA 違規罰款上限為全球營收 10%（理論最大 ~$40B）。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-07-29（估）</td><td>Q2 FY26 季報（10-Q）<span class="src-tag">[來源:8-K]</span></td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>DOJ Search 救濟階段裁決<span class="src-tag">[來源:10-K]</span></td><td>高</td></tr>
+        <tr><td>2026-10（估）</td><td>Q3 FY26 季報 + Cloud 增速更新</td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>Gemini 下一代發布 + Pixel 11 / Android 18</td><td>中</td></tr>
+        <tr><td>2026-H2</td><td>Waymo 新城市擴張（Robotaxi 商業化進度）</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-04-29</td><td>Q1 FY26 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/goog-20260429.htm">SEC</a></td></tr>
+        <tr><td>2026-04-10</td><td>高管異動 / 薪酬</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000034/goog-20260407.htm">SEC</a></td></tr>
+        <tr><td>2026-04-02</td><td>高管異動 / 薪酬</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000031/goog-20260330.htm">SEC</a></td></tr>
+        <tr><td>2026-03-06</td><td>高管異動 / 薪酬</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000026/goog-20260304.htm">SEC</a></td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K 主軸為週期性財報 + 多輪高管異動（管理層 AI 重整持續）。未來 6 個月最可能觸發評等升降的事件為 (i) DOJ 救濟裁決—binary 高影響、(ii) Q2 FY26 Cloud 增速與 CapEx 走勢、(iii) Gemini 下一代發布與市場接受度。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易筆數 / 不同內部人</td><td>735 筆 / 14 位</td></tr>
+        <tr><td>內部人買入 vs 賣出股數</td><td>+9.6M vs -17.9M（淨 -8.3M）</td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>+$0 vs -$678M</td></tr>
+        <tr><td>淨值（買 - 賣）</td><td><b>-$678M</b>（淨賣出）</td></tr>
+      </tbody>
+    </table>
+    <h3>最近顯著交易（前 5 筆）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>內部人</th><th>動作</th><th>股數</th><th>價格</th><th>類型</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-15</td><td>John L. Hennessy（董事）</td><td>賣</td><td>31</td><td>$395.42</td><td>S</td></tr>
+        <tr><td>~2026 Q1-Q2</td><td>多位（含 CEO、CFO）</td><td>賣（10b5-1 計畫）</td><td>合計 ~5-6M</td><td>$200-400</td><td>S</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月淨值 -$678M 屬中等規模賣出（相對 $4.7T 市值僅 0.014%）；買入金額為 $0 反映 14 位內部人全部僅做出脫（含選擇權 cash-exercise 與 10b5-1 計畫）<span class="src-tag">[來源:Finnhub]</span>。CEO Sundar Pichai 與 CFO Anat Ashkenazi 為主要 S 類賣方。賣出價格區間涵蓋 $200-$400，多數在 H2 FY25 與 Q1 FY26 股價上行期實現。雖佔個人持股比重小，但全員只賣不買為一致的 directional 訊號。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成目標價，需要相信什麼</h4>
+      <ul>
+        <li>Q2 FY26（2026-07 底）營收 ≥ $115B、調整 EPS ≥ $2.80（重回 beat）。</li>
+        <li>Google Cloud Q2 FY26 增速 ≥ +30% YoY 並維持。</li>
+        <li>DOJ Search 救濟裁決不包含 Chrome 結構性拆分或預設搜尋分潤合約全面解除。</li>
+        <li>FY26 CapEx 上限 $145B、FCF 不低於 $60B（FY25 $73B 之 -18% 緩衝範圍）。</li>
+        <li>Gemini 在主要 LLM 排行榜（LMArena / MMLU）維持前 3。</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1（multiple × forward EPS）</b>：Finnhub forward 共識 EPS $13.55（$387.66 / PE_fwd 28.6）<span class="src-tag">[來源:推算]</span>。對 Mega-cap AI / Cloud 領導者，採 PE 28–34x 區間 → $379–$461，中位 <b>$420</b>。</p>
+    <p><b>方法 2（DCF / FCF 敘述）</b>：FY25 FCF $73.3B、FY26 估 $60–75B（CapEx 壓力 - 但 OCF 持續強勁 +27% YoY）<span class="src-tag">[來源:推算]</span>。EV $4.74T 對 FY26 FCF 中位 $68B = 70x。對 Cloud / AI 高成長期適用 EV/FCF 55–70x → EV $3.7T–$4.8T → 加現金 $38B 減 LTD $77.5B = 股權 $3.66T–$4.76T → 每股 <b>$302–$393</b>，中位 $348。</p>
+    <p><b>方法 3（賣方共識）</b>：70 位賣方買入占比 88.6%<span class="src-tag">[來源:Finnhub]</span>、4 月內續升 +3pp。假設 12 個月共識 mid-point 約 $470，6M 折現 = $387.66 + 0.95×($470-$387.66) = <b>$465.9</b>。</p>
+    <p>三方法區間 $302–$466、平均 $407、加權考慮 DOJ 救濟時點不確定與 CapEx 對 FCF 的壓制，<b>結論目標 $435、區間 $360–$480</b>，對應潛在報酬 +12.2%（區間 -7% ~ +24%）。上修觸發：Cloud Q2 +35%+ YoY + DOJ 救濟避免結構性命令 → 升 BUY；下修觸發：DOJ 命令 Chrome 拆分或預設搜尋分潤合約終止 → 降 SELL。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>21</td><td>41</td><td>8</td><td>0</td><td>0</td><td>70</td><td>88.6%</td></tr>
+        <tr><td>2026-04</td><td>19</td><td>41</td><td>8</td><td>0</td><td>0</td><td>68</td><td>88.2%</td></tr>
+        <tr><td>2026-03</td><td>19</td><td>41</td><td>9</td><td>0</td><td>0</td><td>69</td><td>87.0%</td></tr>
+        <tr><td>2026-02</td><td>19</td><td>40</td><td>10</td><td>0</td><td>0</td><td>69</td><td>85.5%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>FY26 Q1</td><td>$2.71</td><td>$2.62</td><td>-$0.09</td><td style="color:#d63b1f">-3.15%</td></tr>
+        <tr><td>FY25 Q4</td><td>$2.71</td><td>$2.82</td><td>+$0.11</td><td style="color:#0a8a3a">+4.20%</td></tr>
+        <tr><td>FY25 Q3</td><td>$2.40</td><td>$3.10</td><td>+$0.70</td><td style="color:#0a8a3a">+29.41%</td></tr>
+        <tr><td>FY25 Q2</td><td>$2.25</td><td>$2.31</td><td>+$0.06</td><td style="color:#0a8a3a">+2.67%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方強烈偏多（買入占比 88.6%、過 strongly bullish 80% 門檻、且仍持續上升）。過去 4 季 3 beats / 1 miss、平均驚奇 +8.3%（含 Q3 FY25 +29%）；Q1 FY26 為 11 季以來首次 miss，但 -3.1% 幅度溫和。本報告中立評等與賣方共識存在分歧—我們目標 $435 vs 賣方隱含 mid-point ~$470；分歧主因為 DOJ 救濟風險未被賣方完整折價，以及 CapEx 對 FCF 的拖累。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 $435、最新收盤 $387.66，潛在報酬 +12.2%。對應評等規則（&gt;+30% 強買 / +15%–+30% 買入 / -15%–+15% 中立 / &lt;-15% 賣出）為 <b>中立</b>。若目標價上修至 $446 以上則升 BUY；若下修至 $329 以下則降 SELL。</p>
+    <p>信心 0.65（中）：三方法價差 $302–$466（54%），略超 25% bucket 但在 25-60% 區間；DOJ 救濟為 binary 高影響事件、Q2 FY26 為下一個關鍵驗證點—符合 SKILL「方法價差 10–25% 中段、單一事件主導不確定性」之中等門檻。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th>分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">+2</td><td>ROE_TTM 39% vs 5y 均 28%、FCF FY25 $73B、cash $38B、淨負債溫和<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>估值合理性</td><td class="score">+1</td><td>PE_fwd 28.6、PEG 1.73 對 Mag7 中性偏合理；PS 11.2 相對 PLTR 62 顯著低<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr><td>催化劑</td><td class="score">+1</td><td>Q2 財報 7 月、Gemini I/O 2026 發布、DOJ 救濟（binary）<span class="src-tag">[來源:news][來源:10-K]</span></td></tr>
+        <tr><td>風險水平</td><td class="score">-1</td><td>DOJ Search 反壟斷高 binary、AI 搜尋替代、EU DMA、內部人 -$678M<span class="src-tag">[來源:10-K][來源:Finnhub]</span></td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">+2</td><td>52w +132.8%、相對 S&amp;P500 +109pp、買入占比 85% → 89%<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr class="total"><td>合計</td><td class="score">+5</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 +5 對應「明確 upside」、與目標價 +12.2% 大致一致但略保守—保守原因為 DOJ 救濟 binary 風險未被完整折價；若 H2 FY26 救濟裁決偏正面，升 BUY 路徑明確。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K FY2025（period end 2025-12-31，accession via EDGAR）— Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A</li>
+      <li>10-Q FY26 Q1（period end 2026-03-31，filed 2026-04-29）— Item 2 MD&amp;A、segment revenue</li>
+      <li>過去 12 個月 8-K：14 筆（4 筆財報 + 多輪高管異動 + 法務通知）</li>
+      <li>XBRL companyfacts via SEC EDGAR API（CIK 0001652044）</li>
+      <li>OHLC 行情（Stooq → Yahoo fallback）—樣本期間 2016-05 ~ 2026-05-19（2,515 個交易日，含 2022-07 20:1 拆股調整）</li>
+      <li>新聞合成：Finnhub /company-news（snapshot 2026-05-21，60 articles，含 Google I/O 2026、UBS / BofA / RBC 評論）</li>
+      <li>Finnhub /stock/profile2、/stock/peers、/stock/recommendation、/stock/earnings、/stock/insider-transactions、/stock/metric?metric=all（snapshot 2026-05-21）</li>
+      <li>analyst_consensus.json（4 個月 recommendation_trends + 4 季 EPS surprise）</li>
+      <li>ownership.json（lookback 2025-05-14 ~ 2026-05-21，735 transactions，14 unique insiders）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Yahoo Finance / Stooq 行情、Finnhub、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。大型科技股估值與監管環境（DOJ / EU / 各國數位法規）、AI capex 走勢、Cloud 競爭格局高度連動，過去績效不代表未來表現，目標價與評等不保證實現。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>

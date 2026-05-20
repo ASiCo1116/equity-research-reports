@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRCL Equity Research — 2026-05-21</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                 "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    color: var(--c-text);
+    background: var(--c-bg);
+    margin: 0;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .report {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    background: var(--c-panel);
+    min-height: 100vh;
+    border-left: 1px solid var(--c-line);
+    border-right: 1px solid var(--c-line);
+  }
+  header.report-head {
+    border-bottom: 1px solid var(--c-line);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--c-line); vertical-align: top; }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; font-size: 14px; color: var(--c-muted); margin-top: 8px; }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; color: white; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; vertical-align: middle; margin-right: 10px; }
+  .rating-strong-buy { background: var(--c-buy-strong); }
+  .rating-buy { background: var(--c-buy); }
+  .rating-neutral { background: var(--c-neutral); }
+  .rating-sell { background: var(--c-sell); }
+  .target-block { display: inline-block; margin-left: 6px; color: var(--c-text); font-size: 14px; }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier { font-size: 13.5px; color: var(--c-muted); margin-left: 4px; margin-top: 4px; }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta { font-size: 12.5px; color: var(--c-muted); margin-left: 4px; }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag { display: inline; font-size: 11px; color: var(--c-muted); margin-left: 2px; font-weight: 400; vertical-align: super; }
+  .audience-note { margin-top: 12px; padding: 10px 14px; background: #f6f5f0; border-radius: 6px; font-size: 14px; color: var(--c-text); }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge { background: #f0f9ff; border-left: 3px solid var(--c-accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .belief-bridge h4 { margin: 0 0 8px; font-size: 14px; color: var(--c-accent); }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer { margin-top: 40px; padding: 16px; background: #f6f5f0; border-left: 3px solid var(--c-muted); font-size: 13.5px; color: var(--c-muted); line-height: 1.55; }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  @media (max-width: 640px) {
+    body { font-size: 15px; line-height: 1.6; }
+    .report { padding: 24px 14px 56px; border-left: none; border-right: none; }
+    header.report-head { padding-bottom: 18px; margin-bottom: 24px; }
+    h1 { font-size: 21px; line-height: 1.3; }
+    h2 { font-size: 17px; margin: 30px 0 10px; }
+    h3 { font-size: 14.5px; }
+    .rating-badge { font-size: 13px; padding: 5px 12px; margin-right: 6px; }
+    .target-block { display: block; margin-left: 0; margin-top: 8px; line-height: 1.5; }
+    .target-block b { font-size: 17px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 0; font-size: 13.5px; }
+    .meta-grid span:nth-child(odd) { margin-top: 6px; color: var(--c-muted); font-size: 12px; }
+    table { display: block; overflow-x: auto; max-width: 100%; font-size: 13px; -webkit-overflow-scrolling: touch; }
+    th, td { padding: 6px 8px; }
+    th { font-size: 12.5px; }
+    .src-tag { font-size: 10px; }
+    .pillar, .risk { margin: 12px 0; }
+    .pillar-falsifier, .risk-meta { font-size: 12.5px; }
+    .audience-note { padding: 9px 12px; font-size: 13.5px; }
+    .belief-bridge { padding: 10px 12px; }
+    .belief-bridge h4 { font-size: 13.5px; }
+    .disclaimer { padding: 12px; font-size: 12.5px; }
+    ul, ol { padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "CRCL",
+  "company_name": "Circle Internet Group Inc",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 111.03,
+  "currency": "USD",
+  "rating": "NEUTRAL",
+  "target_price": 115,
+  "target_price_low": 75,
+  "target_price_high": 150,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 3.6,
+  "qualitative_score": -1,
+  "confidence": 0.40,
+  "data_freshness": {
+    "financials_period_end": "2026-03-31",
+    "latest_10q_filing_date": "2026-05-11",
+    "latest_8k_date": "2026-05-18",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>Circle Internet Group Inc (CRCL) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-neutral">中立</span>
+      <span class="target-block">6M 目標價 <b>$115</b> (+3.6%) · 信心 0.40（低）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$111.03</b>
+      <span>最新 10-Q</span><b>2026-05-11 提交（涵蓋至 2026-03-31）</b>
+      <span>最近 8-K</span><b>2026-05-18</b>
+      <span>資料來源</span><b>SEC EDGAR · Yahoo / Stooq 行情 · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>Circle 是美元穩定幣 USDC 發行商與全端區塊鏈金融基礎設施供應商，FY25 全年總營收與儲備收益 $2.7B（年增 +64%）<span class="src-tag">[來源:10-K]</span>，其中 96% 來自 USDC/EURC 儲備資產（以 SOFR 為基準計息）的利息收入<span class="src-tag">[來源:10-K]</span>。FY25 GAAP 淨損 -$70M 主因 IPO 觸發 SBC 一次性費用 $424M<span class="src-tag">[來源:10-K]</span>；剔除 SBC 的調整 EBITDA $582M（+104% YoY）<span class="src-tag">[來源:10-K]</span>。USDC 流通量 Q1 FY26 達 $77B（+28% YoY）<span class="src-tag">[來源:10-Q]</span>，已自 Q4 FY25 +72% YoY 顯著減速。</p>
+    <p>論點核心：(1) 商業模式高度槓桿於 Fed funds / SOFR 利率—96% 營收來自儲備利息，每 -100 bp 對 FY26 營收衝擊估 ~$300M+<span class="src-tag">[來源:推算]</span>；(2) Arc Layer-1 區塊鏈 testnet 已處理 2.44 億筆交易<span class="src-tag">[來源:10-Q]</span>，2026-05-08 ARC Token 私募完成 $222M（a16z crypto 領投，FDV $3B）<span class="src-tag">[來源:10-Q]</span>，主網上線是 H2 FY26 關鍵單一變數；(3) 估值 PS_TTM 9.6 / PE_forward 122.8<span class="src-tag">[來源:Finnhub]</span> 屬高，且 USDC 成長明顯減速。</p>
+    <p>給予 <b>中立</b>、6M 目標 $115（區間 $75–150）。最大單一觸發點為 2026-08 Q2 FY26 財報 + Arc 主網上線進度。若 USDC 流通量 Q2 重新加速至 +35%+ YoY，且 Arc mainnet 如期 H2 上線 → 升 BUY；若 USDC 季增 &lt; 5% 或 Fed 開啟降息循環 → 降 SELL。</p>
+    <div class="audience-note">適合相信「穩定幣將成為內網支付主軌、美國 GENIUS Act 利好監管框架」、能承受 120% 年波動度（3M ADR std 123）的高風險成長型投資人；不適合對利率敏感、追求短期穩定報酬或對加密相關標的有合規限制的投資人。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>全名</td><td>Circle Internet Group Inc</td></tr>
+        <tr><td>產業</td><td>Finance Services / 穩定幣發行與區塊鏈基礎設施</td></tr>
+        <tr><td>市值（粗估）</td><td>$27.6B（流通股 248.6M × $111.03）</td></tr>
+        <tr><td>主要產品</td><td>USDC（$77B 流通量）、EURC、USYC 代幣化貨幣基金、Arc Layer-1、CPN 支付網路<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>主要客戶 / 通路</td><td>Coinbase（分潤夥伴）、Binance、機構交易商、銀行、清算所、AI agent 平台<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>共同創辦人 / 共同 CEO</td><td>Jeremy Allaire（共同創辦人，2013 創立）</td></tr>
+        <tr><td>會計年度結束</td><td>12 月 31 日（FY25 = 2025-12-31）</td></tr>
+        <tr><td>CIK</td><td>0001876042</td></tr>
+        <tr><td>交易所</td><td>NYSE（IPO 2025-06-05 @$31，2025-08 follow-on @$130）<span class="src-tag">[來源:10-K]</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>Circle 業務拆解：<b>儲備收益</b>（USDC + EURC 反 backed 的美國國庫券與現金回購利息）為 FY25 全年營收的 96.0%<span class="src-tag">[來源:10-K]</span>、Q1 FY26 為 94.0%<span class="src-tag">[來源:10-Q]</span>；<b>其他產品</b>（Arc / CPN / StableFX / USYC / Circle Mint）合計約 4-6%，是策略性轉型收入來源<span class="src-tag">[來源:10-K]</span>。產業結構為高度集中——全球穩定幣市場 Tether（USDT，$130B+ 流通量）與 USDC（$77B）合占 95%+ 份額<span class="src-tag">[來源:推算]</span>，但 USDC 在美國監管合規上具優勢（受 NYDFS、OCC 監管，2025 取得 conditional OCC 國家信託銀行批准）<span class="src-tag">[來源:10-K]</span>。</p>
+    <p>金融 / 區塊鏈 KPI（Q1 FY26）：<b>USDC 流通量</b> $77.0B（YoY +28%、Q4 FY25 +72%、明顯減速）<span class="src-tag">[來源:10-Q]</span>；<b>USDC 鏈上交易量</b> Q1 FY26 達 $21.5T（+263% YoY，反映 AI agent 與 DeFi 採用加速）<span class="src-tag">[來源:10-Q]</span>；<b>儲備回報率</b>與 SOFR 同步、目前約 4.3%；<b>Arc testnet</b> 自 2025-10 上線以來 2.44 億筆交易、160 萬月活錢包<span class="src-tag">[來源:10-Q]</span>。3 年週期脈絡：FY23 NI $268M（高利率紅利）→ FY24 NI $157M（利率下修預期 + 合規費用上升）→ FY25 NI -$70M（IPO SBC 一次性）→ Q1 FY26 NI $55M（業務本質獲利已回正）<span class="src-tag">[來源:10-K]</span>。Headwinds：(1) Coinbase 分潤條款（合約預估約 50% 儲備收益分至 Coinbase 與其他發行夥伴，10-K Item 1A 列為主要風險）<span class="src-tag">[來源:10-K]</span>；(2) Tether 在新興市場滲透力強且推 USAT 美國變體；(3) 美國 GENIUS Act / Lummis-Gillibrand 等監管立法仍待最終定案。</p>
+    <p class="src" style="font-size:12px">註：本報告之 financials.json 因 XBRL 中 Circle 將「Reserve Income」歸於 InterestAndDividendIncomeOperating 概念（非 Revenues 標籤），導致自動抓取的營收僅含「Other Products」一段。本報告所列營收、淨利、Adj EBITDA 數據改採 10-K MD&amp;A 與 10-Q MD&amp;A 揭露之口徑。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角（採 MD&amp;A 口徑）</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">總營收+儲備收益</th><th class="num">Adj EBITDA</th><th class="num">GAAP 淨利</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY23</td><td class="num">~$1.45B<span class="src-tag">[推算]</span></td><td class="num">n/a</td><td class="num">+$268M</td><td>高利率紅利</td></tr>
+        <tr><td>FY24</td><td class="num">~$1.65B<span class="src-tag">[推算]</span></td><td class="num">$285M</td><td class="num">+$157M</td><td>消化年（合規投入）</td></tr>
+        <tr><td>FY25</td><td class="num">$2.70B</td><td class="num">$582M</td><td class="num">-$70M</td><td>IPO 年（SBC $424M 一次性）</td></tr>
+      </tbody>
+    </table>
+    <p class="src" style="font-size:12px">註：FY23 / FY24 總營收為自 FY25 +64% 反推；Adj EBITDA FY24 自「FY25 Adj EBITDA $582M / +104%」反推。</p>
+
+    <h3>最新季 (FY26 Q1，截至 2026-03-31，MD&amp;A 口徑)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ vs Q4 FY25</th></tr></thead>
+      <tbody>
+        <tr><td>總營收+儲備收益</td><td class="num">$694M</td><td class="num">+20.0%</td><td class="num">-9.9%</td></tr>
+        <tr><td>USDC 流通量（季末）</td><td class="num">$77.0B</td><td class="num">+28.0%</td><td class="num">+2.3%</td></tr>
+        <tr><td>USDC 鏈上交易量</td><td class="num">$21.5T</td><td class="num">+263.0%</td><td class="num">+80.7%</td></tr>
+        <tr><td>GAAP 淨利</td><td class="num">$55M</td><td class="num">-15.0%</td><td class="num">-58.6%</td></tr>
+        <tr><td>Adj EBITDA</td><td class="num">$151M</td><td class="num">+24.0%</td><td class="num">-9.6%</td></tr>
+        <tr><td>現金與約當現金</td><td class="num">$1,517M</td><td class="num">+78.8%</td><td class="num">-0.6%</td></tr>
+      </tbody>
+    </table>
+    <p>Q1 FY26 調整後 EPS $0.21 較共識 $0.20 微幅高 +4.7%<span class="src-tag">[來源:Finnhub]</span>，過去 4 季 3 beats / 1 miss（Q4 FY25 +43.4%、Q2 FY25 +244%、Q3 FY25 -12.2%）<span class="src-tag">[來源:Finnhub]</span>。<b>成長</b>：USDC 流通量年增由 Q4 +72% 顯著減速至 Q1 +28% 為核心關注<span class="src-tag">[來源:10-Q]</span>；鏈上交易量 +263% 顯示活躍度提升但未必直接轉化為儲備收益。<b>獲利</b>：淨利 YoY -15% 反映儲備回報率較 Q1 FY25 略低（隨 SOFR 走勢）；Adj EBITDA +24% 仍維持。<b>現金生成</b>：Q1 FY26 OCF $21M 較低（運營現金流分散在儲備資產內），但現金 $1.5B + ARC Token 私募預計 $222M 後續到帳<span class="src-tag">[來源:10-Q]</span>。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM n/a / PE_fwd 122.8 / PS_TTM 9.6</td><td>PE_TTM 因 FY25 GAAP 淨損為負而 n/a；PS 接近 SaaS 級但 Circle 屬利差類業務，PS 框架偏離常規</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM -2.6%</td><td>受 IPO SBC 影響轉負；剔除一次性 SBC 之 normalized ROE 估 ~10-12%<span class="src-tag">[來源:推算]</span></td></tr>
+        <tr><td>利潤率</td><td>Gross 39.8% / Op -5.0% / Net -2.8%</td><td>Gross 反映 Coinbase 等分潤後之毛利；Op / Net 為負為 SBC 一次性</td></tr>
+        <tr><td>成長</td><td>Rev YoY +51.5% / Q YoY +20.0%</td><td>頂線減速明顯：TTM YoY +51% vs 最新季 +20%，反映利率與基期雙重壓力</td></tr>
+        <tr><td>報酬</td><td>YTD +40% / 13w +80% / 26w +13%</td><td>IPO 後波動劇烈：上市 18 日衝至 $298（高點 +864%），FY26 Q1 跌至 $50；當前 $111 處於回檔反彈</td></tr>
+        <tr><td>風險（波動）</td><td>Beta 0.73 / 3M ADR std 123.3</td><td>Beta 偏低反映短交易史 + 與大盤相關性低；但 ADR std 為 S&amp;P500 級別最高之一</td></tr>
+        <tr><td>股利</td><td>$0（不配發）</td><td>FCF 用於儲備管理、Arc 開發、ARC Token 預售投入</td></tr>
+      </tbody>
+    </table>
+    <p>5 年自身均值不適用（IPO 不足 1 年）；估值方法主要錨定 EV/Adj EBITDA FY26E 35-50x 與 PS 6-10x，假設 SOFR 維持 4%+ 至 2026 年底。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. 穩定幣監管框架轉為實質正面</div>
+      <div>10-K 揭示 Circle 取得 OCC 國家信託銀行 conditional approval<span class="src-tag">[來源:10-K]</span>，是首批受聯邦監管的穩定幣發行人。美國 GENIUS Act 通過將為合規型 USDC 建立顯著護城河（10-K Item 1 列為主要 thesis 之一）<span class="src-tag">[來源:10-K]</span>。</div>
+      <div class="pillar-falsifier">若 GENIUS Act 在 2026 立法窗口未通過，或最終條文未給予銀行 / 受監管發行人優勢，論點失效。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. USDC 流通量結構性擴張至 $100B 級</div>
+      <div>Q1 FY26 USDC 流通 $77B（+28% YoY）<span class="src-tag">[來源:10-Q]</span>；鏈上交易量 +263% 顯示活躍度持續提升<span class="src-tag">[來源:10-Q]</span>。AI agent / agentic payments 採用為新成長軸<span class="src-tag">[來源:10-K]</span>。</div>
+      <div class="pillar-falsifier">若 Q2/Q3 FY26 USDC 流通量年增跌破 +20%，或單季淨贖回，擴張論破裂。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. Arc Layer-1 + ARC Token 構成第二成長曲線</div>
+      <div>2025-10 Arc testnet 上線、累計 2.44 億筆交易<span class="src-tag">[來源:10-Q]</span>；2026-05-08 ARC Token 私募 740M 顆 @$0.30、$222M 資金到位（a16z crypto 領投、FDV $3B、1 年鎖定期）<span class="src-tag">[來源:10-Q]</span>。Arc mainnet 預計 2026 內上線。</div>
+      <div class="pillar-falsifier">若 Arc mainnet 在 2027 之前未上線，或主網上線 6 個月內 TVL &lt; $1B，第二曲線敘事弱化。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. Adj EBITDA 持續高速擴張</div>
+      <div>FY25 Adj EBITDA $582M（+104% YoY）<span class="src-tag">[來源:10-K]</span>；Q1 FY26 Adj EBITDA $151M（+24% YoY）<span class="src-tag">[來源:10-Q]</span>。剔除 SBC 的核心獲利能力為正且高速成長。</div>
+      <div class="pillar-falsifier">若任一季 Adj EBITDA YoY 轉負、或 Adj EBITDA margin 跌破 15%，獲利論點動搖。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. 利率敏感度極高：Fed 降息將直接衝擊獲利</div>
+      <div>96% FY25 營收來自儲備利息（USDC + EURC 反 backed）<span class="src-tag">[來源:10-K]</span>。粗估每 -100 bp SOFR 對年度營收衝擊約 $300M+（USDC $77B × 1% × 0.40 留存比例）<span class="src-tag">[來源:推算]</span>。Fed funds 目前 4.25–4.50%，若 H2 FY26 開啟降息週期，Adj EBITDA 直接收縮。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. USDC 流通量成長急減速</div>
+      <div>Q4 FY25 USDC YoY +72% vs Q1 FY26 +28%<span class="src-tag">[來源:10-Q]</span>。減速主因 USDT 在新興市場滲透 + 基期高 + 高利率使機構直接持有國庫券（非 USDC）。若減速延續，PS 9.6 倍數有壓縮空間。</div>
+      <div class="risk-meta">機率：中-高 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. Coinbase 分潤條款限制 unit economics</div>
+      <div>10-K 揭示與 Coinbase 之分潤協議—USDC 儲備收益按特定公式分配，使 Circle gross margin 受限於 ~40%<span class="src-tag">[來源:10-K]</span>。若 Coinbase 重新議價或市占擴張，毛利進一步壓縮。</div>
+      <div class="risk-meta">機率：低-中 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. Tether（USDT）競爭與美國變體 USAT 推出</div>
+      <div>USDT 流通量 $130B+（USDC 之 1.7x）、新興市場滲透深。Tether 已宣布 USAT 美國變體計畫，將直接挑戰 USDC 在合規賽道的相對優勢<span class="src-tag">[來源:news]</span>。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中-高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">5. 內部人 12 個月淨賣出 -$276M</div>
+      <div>過去 12 個月 373 筆交易、14 位內部人、淨值 -$276M<span class="src-tag">[來源:Finnhub]</span>。大部分為 IPO 後選擇權行使（M 類）配合 follow-on 發行（次級出售），但類型 S 規模仍顯著。Lock-up 解禁區間還有後續釋出風險。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-08（估）</td><td>Q2 FY26 季報 + USDC 流通量更新</td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>Arc mainnet 上線（10-Q 明示「expect to launch this year」）<span class="src-tag">[來源:10-Q]</span></td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>美國 GENIUS Act / Lummis-Gillibrand 立法進度<span class="src-tag">[來源:10-K]</span></td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>Fed 利率政策—9 月與 12 月 FOMC</td><td>高</td></tr>
+        <tr><td>2026-11（估）</td><td>Q3 FY26 季報，反映 Arc mainnet 第一個完整季</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-11</td><td>Q1 FY26 財報發布 + Other Material Event（ARC Token 私募）</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000148/crcl-20260511.htm">SEC</a></td></tr>
+        <tr><td>2026-02-25</td><td>Q4/FY25 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000032/crcl-20260225.htm">SEC</a></td></tr>
+        <tr><td>2025-11-12</td><td>Q3 FY25 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1876042/000187604225000045/crcl-20251112.htm">SEC</a></td></tr>
+        <tr><td>2025-08-12</td><td>Q2 FY25 財報發布（含 follow-on 募資公告）</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1876042/000162828025039749/crcl-20250812.htm">SEC</a></td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K 主軸為 IPO + 4 次季報 + 高管異動。未來 6 個月最可能觸發評等升降的事件為 (i) Q2 FY26 財報的 USDC 流通量趨勢、(ii) Arc mainnet 實際上線日期與 TVL 表現、(iii) Fed 利率政策。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易筆數 / 不同內部人</td><td>373 筆 / 14 位</td></tr>
+        <tr><td>內部人買入 vs 賣出股數</td><td>+3.1M vs -5.4M（淨 -2.3M）</td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>+$8.7M vs -$284.8M</td></tr>
+        <tr><td>淨值（買 - 賣）</td><td><b>-$276M</b>（顯著淨賣出）</td></tr>
+      </tbody>
+    </table>
+    <h3>最近顯著交易（前 3 筆）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>內部人</th><th>動作</th><th>股數</th><th>價格</th><th>類型</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-15</td><td>Bradley Horowitz（董事）</td><td>授與</td><td>2,018</td><td>—</td><td>A</td></tr>
+        <tr><td>2026-05-15</td><td>Kirk James Koenigsbauer（董事）</td><td>授與</td><td>2,018</td><td>—</td><td>A</td></tr>
+        <tr><td>2025-08</td><td>多位（follow-on 期間）</td><td>賣（次級出售）</td><td>~7-8M（合計）</td><td>$130</td><td>S</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月淨值 -$276M 屬顯著賣出，主因為 IPO 之後 2025-08 follow-on offering 中之次級出售部分（特定 selling stockholders 出售 8M 股 @$130）<span class="src-tag">[來源:10-K]</span>。剔除 follow-on 一次性事件，2026 Q1 後純市場 S 類賣出趨於緩和；近 1 個月 A 類授與多於 S 類賣出，方向訊號略中性。但雙重股權結構（共同創辦人持 Class B）與 lock-up 解禁時程仍是後續潛在賣壓來源。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成目標價，需要相信什麼</h4>
+      <ul>
+        <li>Q2 FY26 USDC 流通量 ≥ $80B（年增 ≥ +25%）。</li>
+        <li>Fed funds 在 H2 FY26 未啟動降息週期（SOFR ≥ 4.0%）。</li>
+        <li>Arc mainnet 於 2026 Q4 之前正式上線且首月日活地址 ≥ 50k。</li>
+        <li>美國 GENIUS Act 或同等聯邦穩定幣監管框架在 2026 內通過。</li>
+        <li>Coinbase 分潤條款維持現行版本至 2027 中。</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1（PS multiple × forward revenue）</b>：TTM 總營收 + 儲備收益約 $2.66B<span class="src-tag">[來源:Finnhub]</span>；FY26E 估 $3.0B（假設 USDC 流通 +15% + 鏈上活躍度補償）。適用 PS 6–10x（介於 SaaS 30x 與銀行 1-2x 之間，反映利差業務但有區塊鏈成長溢價）→ 市值 $18–30B → 每股 <b>$72–$121</b>，中位 $96。</p>
+    <p><b>方法 2（EV/Adj EBITDA）</b>：FY25 Adj EBITDA $582M、Q1 FY26 $151M 年化 $604M。假設 FY26E Adj EBITDA $700M（保守增長 +20%）。適用 EV/Adj EBITDA 35–50x（高利潤率 + 加密金融溢價，但低於 PLTR 100x+）→ EV $24.5–35B → 加現金 - 債務 = 股權 $26–37B → 每股 <b>$104–$148</b>，中位 $126。</p>
+    <p><b>方法 3（賣方共識）</b>：33 位賣方買入占比 54.5%<span class="src-tag">[來源:Finnhub]</span>（mildly bullish，4 月內持平）。假設 12 個月共識 mid-point 約 $135，6M 折現 = $111.03 + 0.95×($135-$111.03) = <b>$133.8</b>。</p>
+    <p>三方法區間 $72–$148、中位 $115，加權考慮 USDC 成長減速 + Fed 政策不確定的時間風險，<b>結論目標 $115、區間 $75–$150</b>，對應潛在報酬 +3.6%（區間 -32% ~ +35%）。上修觸發：USDC Q2 +35%+ YoY + Arc mainnet 明確 H2 → 升 BUY；下修觸發：USDC Q2 &lt; +20% YoY 或 Fed Sep / Dec 開啟降息 → 降 SELL。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>8</td><td>10</td><td>13</td><td>0</td><td>2</td><td>33</td><td>54.5%</td></tr>
+        <tr><td>2026-04</td><td>8</td><td>10</td><td>14</td><td>0</td><td>1</td><td>33</td><td>54.5%</td></tr>
+        <tr><td>2026-03</td><td>8</td><td>9</td><td>15</td><td>0</td><td>1</td><td>33</td><td>51.5%</td></tr>
+        <tr><td>2026-02</td><td>8</td><td>9</td><td>13</td><td>0</td><td>2</td><td>32</td><td>53.1%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>FY26 Q1</td><td>$0.20</td><td>$0.21</td><td>+$0.01</td><td style="color:#0a8a3a">+4.69%</td></tr>
+        <tr><td>FY25 Q4</td><td>$0.25</td><td>$0.36</td><td>+$0.11</td><td style="color:#0a8a3a">+43.43%</td></tr>
+        <tr><td>FY25 Q3</td><td>$0.23</td><td>$0.20</td><td>-$0.03</td><td style="color:#d63b1f">-12.17%</td></tr>
+        <tr><td>FY25 Q2</td><td>-$0.71</td><td>$1.02</td><td>+$1.73</td><td style="color:#0a8a3a">+244.33%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識方向中性偏多（買入占比穩定 51-55%、4 月平均略升 +3pp、未到 60% 門檻）。過去 4 季 3 beats / 1 miss、平均驚奇 +70%（含 Q2 FY25 IPO 季巨大正驚奇）；剔除 Q2 FY25 仍為 +12% 正平均。本報告中立評等與賣方共識方向一致，但目標價低於賣方共識 mid-point（$135 vs $115）—分歧主因為本報告對 Fed 降息與 USDC 減速給予較大風險折扣。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 $115、最新收盤 $111.03，潛在報酬 +3.6%。對應評等規則（&gt;+30% 強買 / +15%–+30% 買入 / -15%–+15% 中立 / &lt;-15% 賣出）為 <b>中立</b>。若目標價上修至 $128 以上則升 BUY；若下修至 $94 以下則降 SELL。</p>
+    <p>信心 0.40（低）：三方法價差達 105%（$72–$148）、上市未滿 12 個月、5y 均值不適用、商業模式高度仰賴 Fed 利率政策、Arc mainnet 上線時點為 binary 變數—符合 SKILL「方法價差遠超 25% + 多重關鍵假設驅動」之低門檻。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th>分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">0</td><td>Adj EBITDA $582M FY25、cash $1.5B、零長期負債；但 GAAP 淨損與 USDC 減速並存<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>估值合理性</td><td class="score">-1</td><td>PE_fwd 122.8、PS 9.6 對利差業務偏高；PE_TTM n/a 因 SBC 損抹<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr><td>催化劑</td><td class="score">+1</td><td>Arc mainnet、ARC Token 私募完成、GENIUS Act、Q2 財報<span class="src-tag">[來源:10-Q][來源:10-K]</span></td></tr>
+        <tr><td>風險水平</td><td class="score">-2</td><td>利率敏感度極高（96% 利息收入）、USDC 減速、Tether 競爭、內部人 -$276M<span class="src-tag">[來源:10-K][來源:Finnhub]</span></td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">+1</td><td>13w +80%、YTD +40%、買入占比 51% → 54%；但 52w 高點 $298 vs 當前 $111 = -63%<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr class="total"><td>合計</td><td class="score">-1</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 -1 對應「modest downside bias」，目標價 +3.6% 略偏正反映 Arc mainnet + GENIUS Act 上行非對稱選擇權。上修觸發為利率不降 + Arc 提早上線；下修觸發為 Fed 任一次降息或 USDC 任一單季淨贖回。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K FY2025（period end 2025-12-31，accession via EDGAR）— Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A</li>
+      <li>10-Q FY26 Q1（period end 2026-03-31，filed ~2026-05-11）— Item 2 MD&amp;A、Non-GAAP Reconciliations</li>
+      <li>過去 12 個月 8-K：9 筆（4 筆財報 + Q1 FY26 ARC Token 私募 + 高管異動）</li>
+      <li>XBRL companyfacts via SEC EDGAR API（CIK 0001876042）— 注：Reserve Income 不在 Revenues 標籤下，financials.json 自動抓取數據僅含「Other Products」，本報告改採 MD&amp;A 口徑</li>
+      <li>OHLC 行情（Stooq → Yahoo fallback）—樣本期間 2025-06-05（IPO 首日）~ 2026-05-19（241 個交易日）</li>
+      <li>新聞合成：Finnhub /company-news（snapshot 2026-05-21，60 articles）</li>
+      <li>Finnhub /stock/profile2、/stock/peers、/stock/recommendation、/stock/earnings、/stock/insider-transactions、/stock/metric?metric=all（snapshot 2026-05-21）</li>
+      <li>analyst_consensus.json（4 個月 recommendation_trends + 4 季 EPS surprise）</li>
+      <li>ownership.json（lookback 2025-05-14 ~ 2026-05-21，373 transactions，14 unique insiders）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Yahoo Finance / Stooq 行情、Finnhub、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。穩定幣 / 加密金融類股估值與 Fed 利率政策、USDC 流通量、區塊鏈監管環境之變化高度連動，過去績效不代表未來表現，目標價與評等不保證實現。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>
