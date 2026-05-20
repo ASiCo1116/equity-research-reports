@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KO Equity Research — 2026-05-21</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                 "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    color: var(--c-text);
+    background: var(--c-bg);
+    margin: 0;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .report {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    background: var(--c-panel);
+    min-height: 100vh;
+    border-left: 1px solid var(--c-line);
+    border-right: 1px solid var(--c-line);
+  }
+  header.report-head {
+    border-bottom: 1px solid var(--c-line);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14.5px;
+  }
+  th, td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--c-line);
+    vertical-align: top;
+  }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 6px 18px;
+    font-size: 14px;
+    color: var(--c-muted);
+    margin-top: 8px;
+  }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .rating-strong-buy  { background: var(--c-buy-strong); }
+  .rating-buy         { background: var(--c-buy); }
+  .rating-neutral     { background: var(--c-neutral); }
+  .rating-sell        { background: var(--c-sell); }
+  .target-block {
+    display: inline-block;
+    margin-left: 6px;
+    color: var(--c-text);
+    font-size: 14px;
+  }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier {
+    font-size: 13.5px;
+    color: var(--c-muted);
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta {
+    font-size: 12.5px;
+    color: var(--c-muted);
+    margin-left: 4px;
+  }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag {
+    display: inline;
+    font-size: 11px;
+    color: var(--c-muted);
+    margin-left: 2px;
+    font-weight: 400;
+    vertical-align: super;
+  }
+  .audience-note {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #f6f5f0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--c-text);
+  }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge {
+    background: #f0f9ff;
+    border-left: 3px solid var(--c-accent);
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .belief-bridge h4 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--c-accent);
+  }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer {
+    margin-top: 40px;
+    padding: 16px;
+    background: #f6f5f0;
+    border-left: 3px solid var(--c-muted);
+    font-size: 13.5px;
+    color: var(--c-muted);
+    line-height: 1.55;
+  }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  .placeholder { color: var(--c-muted); font-style: italic; }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "KO",
+  "company_name": "The Coca-Cola Company",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 81.92,
+  "currency": "USD",
+  "rating": "NEUTRAL",
+  "target_price": 85,
+  "target_price_low": 75,
+  "target_price_high": 95,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 3.76,
+  "qualitative_score": 3,
+  "confidence": 0.65,
+  "data_freshness": {
+    "financials_period_end": "2026-04-03",
+    "latest_10q_filing_date": "2026-05-01",
+    "latest_8k_date": "2026-05-01",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>The Coca-Cola Company (KO) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-neutral">中立</span>
+      <span class="target-block">6M 目標價 <b>$85</b> (+3.8%) · 信心 0.65（中）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$81.92</b>
+      <span>最新 10-Q</span><b>Q1 FY26（涵蓋至 2026-04-03）</b>
+      <span>最近 8-K</span><b>2026-05-01</b>
+      <span>資料來源</span><b>SEC EDGAR · Stooq · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>The Coca-Cola Company 為全球最大非酒精飲料公司，產品銷往 200+ 國家、每日約 22 億份 servings<span class="src-tag">[來源:10-K]</span>，旗下品牌組合涵蓋 Trademark Coca-Cola、sparkling flavors、水/運動/咖啡/茶、果汁/乳製品/植物奶、新興品類。FY25 營收 $47.94B<span class="src-tag">[來源:XBRL]</span>較 FY24 +1.9%、GM 61.6%、EPS_annual $3.04<span class="src-tag">[來源:推算]</span>；Q1 FY26 營收 $12.47B 年增 +12%、GM 63.0%<span class="src-tag">[來源:推算]</span>顯示加速跡象。</p>
+    <p>論點核心：35 位分析師中 82.9% 評 buy<span class="src-tag">[來源:推算]</span>反映品牌價值穩定；連 4 季 EPS 微幅 beat（+2.9%、-0.05%、+2.4%、+1.5%<span class="src-tag">[來源:推算]</span>）顯示共識緊密 mapping。但估值已偏貴（PE_TTM 25.76、PEG_TTM 3.40<span class="src-tag">[來源:推算]</span>反映成長率僅 +5%<span class="src-tag">[來源:推算]</span>），股價已觸 52w 高 $82.66（2026-05-19）<span class="src-tag">[來源:推算]</span>，短期 multiple 擴張空間有限。內部人 12 個月真實淨賣 -$117M<span class="src-tag">[來源:推算]</span>（含 CEO 等高管），方向偏空。Berkshire（Buffett 旗下）為長期最大股東。</p>
+    <p>給予 <b>中立</b> 評等，6M 目標價 $85（區間 $75-$95），潛在報酬 +3.8%。下個觸發點為 2026-08-01（估）發布的 Q2 FY26 財報——若 organic revenue 維持 +12% 年增 + GM 持續 60%+ 可升 BUY；若新興市場 FX 衝擊或定價傳導減弱，可下修。</p>
+    <div class="audience-note">適合追求穩定股利（年化 2.59%<span class="src-tag">[來源:推算]</span>、5y 成長 4.44%<span class="src-tag">[來源:推算]</span>）與低波動（beta 0.37<span class="src-tag">[來源:推算]</span>）的防禦型投資人；不適合追求高成長或短期 multiple 擴張的成長股投資人。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>公司全名</td><td>The Coca-Cola Company</td></tr>
+        <tr><td>產業 / SIC</td><td>Beverages / 2080</td></tr>
+        <tr><td>交易所 / 代號</td><td>NYSE · KO</td></tr>
+        <tr><td>市值（粗估）</td><td>$352.5B（流通股 4.30B × $81.92）</td></tr>
+        <tr><td>主要品牌</td><td>Trademark Coca-Cola · Sprite · Coca-Cola Zero Sugar · Fanta · Diet Coke · sparkling flavors · 水/運動/咖啡/茶/果汁 / 乳製品 / 新興品類</td></tr>
+        <tr><td>商業模式</td><td>濃縮液製造 + 透過 bottling partners / distributors / 自營 bottling 將成品銷往 200+ 國家、每日 22 億份 servings</td></tr>
+        <tr><td>HQ</td><td>Atlanta, Georgia</td></tr>
+        <tr><td>會計年度結束</td><td>12 月底（calendar year）</td></tr>
+        <tr><td>CIK</td><td>0000021344</td></tr>
+        <tr><td>IPO 年份</td><td>1950</td></tr>
+        <tr><td>主要競爭</td><td>PEP · MNST · KDP · COKE</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>全球非酒精飲料市場高度集中於 KO + PepsiCo（PEP）雙寡占，能量飲料則由 MNST 主導。KO 商業模式為 asset-light：自產濃縮液與糖漿（高毛利），由獨立 bottling partners 完成包裝與配送（資本密集環節外包）。價值鏈位置上游、share-of-throat 全球領導。Q1 FY26 organic revenue 推估 +10% 年增<span class="src-tag">[來源:10-Q]</span>，pricing/mix 為主要驅動，volume 略升。</p>
+    <p>關鍵 sector KPI（Beverages，類比 Retail/Consumer 框架）：</p>
+    <ul>
+      <li><b>Organic revenue growth</b>：Q1 FY26 報導 revenue +12% YoY<span class="src-tag">[來源:10-Q]</span>，扣除 FX + acquisitions 估 organic ~+10%；FY25 全年 organic 約 +5-6%。</li>
+      <li><b>GM 與 OPM</b>：GM_TTM 61.74%（vs 5y avg 60.12%）、OPM_TTM 30.01%（vs 5y avg 26.60%）<span class="src-tag">[來源:推算]</span>——三項皆顯示營運槓桿持續釋放。</li>
+      <li><b>ROE</b>：43.62% TTM<span class="src-tag">[來源:推算]</span>，反映 buyback 持續壓縮股本 + 高利潤率複利。</li>
+    </ul>
+    <p>10 年週期脈絡：FY21 $38.66B → FY22 $43.00B → FY23 $45.75B → FY24 $47.06B → FY25 $47.94B<span class="src-tag">[來源:XBRL]</span>。4 年 CAGR 5.5%，極穩定但增速溫和。Headwinds：(1) 健康意識壓 sugary drinks volume、(2) GLP-1 藥物可能進一步壓食量，(3) 新興市場 FX 風險，(4) sugar tax 政策。Tailwinds：(1) 低/零卡品類擴張、(2) 咖啡 + 能量飲料品類成長（Costa Coffee、BodyArmor）、(3) Fresca Hard Alcohol 新線進入酒類市場<span class="src-tag">[來源:news]</span>。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">毛利率</th><th class="num">稀釋 EPS*</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY20 (COVID)</td><td class="num">$33.0B</td><td class="num">59%</td><td class="num">$1.95</td><td>疫情谷底</td></tr>
+        <tr><td>FY21</td><td class="num">$38.7B</td><td class="num">60%</td><td class="num">$2.32</td><td>復甦</td></tr>
+        <tr><td>FY22</td><td class="num">$43.0B</td><td class="num">58%</td><td class="num">$2.19</td><td>price-led 成長</td></tr>
+        <tr><td>FY23</td><td class="num">$45.7B</td><td class="num">59%</td><td class="num">$2.47</td><td>volume 平穩</td></tr>
+        <tr><td>FY24</td><td class="num">$47.1B</td><td class="num">61%</td><td class="num">$2.46</td><td>GM 擴張</td></tr>
+        <tr><td>FY25</td><td class="num">$47.9B</td><td class="num">62%</td><td class="num">$3.04</td><td>EPS 加速（+24% YoY）</td></tr>
+        <tr><td>Q1 FY26</td><td class="num">$12.5B</td><td class="num">63%</td><td class="num">$0.86</td><td>連續 4 季 beat</td></tr>
+      </tbody>
+    </table>
+    <p class="src">* EPS 取 Finnhub key_metrics（XBRL extractor 對 KO multiple-units 處理有 edge case，已記錄修正 TODO）。</p>
+
+    <h3>最新季 (Q1 FY26，截至 2026-04-03)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$12.47B</td><td class="num">+12%</td></tr>
+        <tr><td>毛利率</td><td class="num">63.0%</td><td class="num">+1.5pp</td></tr>
+        <tr><td>稀釋 EPS</td><td class="num">$0.86</td><td class="num">+5%</td></tr>
+        <tr><td>EPS 驚奇 vs 共識</td><td class="num">+2.9%</td><td class="num">—</td></tr>
+      </tbody>
+    </table>
+    <p>Q1 FY26 EPS $0.86<span class="src-tag">[來源:推算]</span>較共識 $0.84<span class="src-tag">[來源:推算]</span> 微幅 beat +2.9%，符合過去 4 季「窄幅 beat」pattern。三方面解讀：(1) 成長端 revenue YoY +12% 為近 4 季最高（價格 + mix + 較有利 FX）；(2) 獲利端 GM 63% 為歷史新高，顯示 pricing 仍能傳導 + concentrate mix 結構優；(3) 現金生成端 KO 為現金牛模式、$2.12 年化股利、固定 buyback。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 25.76 · PE_fwd 23.62 · PEG_TTM 3.40</td><td>PE 不便宜（成長 +5% 卻 PEG 3.4）；PE_fwd 23.6 反映 EPS 預期持續加速。</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 43.62% · ROE 5y avg 41.38%</td><td>ROE 略高於均值，buyback 持續壓縮股本。</td></tr>
+        <tr><td>利潤率</td><td>GM 61.74% · OPM 30.01% · NM 27.80%（TTM）</td><td>三項皆高於 5y avg 1-3pp，營運槓桿釋放中。</td></tr>
+        <tr><td>成長</td><td>營收 YoY TTM +5.11% · EPS YoY TTM +27.18%</td><td>營收緩穩、EPS 受 GM 擴張 + buyback 雙效推升。</td></tr>
+        <tr><td>報酬</td><td>52w +13.9% · 相對 S&P500 52w -9.5pp</td><td>絕對為正但跑輸大盤，符合 defensive 特質。</td></tr>
+        <tr><td>風險</td><td>beta 0.37 · 3M ADR 標準差 17%</td><td>波動度極低，名副其實的 defensive。</td></tr>
+        <tr><td>股利</td><td>殖利率 2.59%（indicated $2.12）· 5y 成長 4.44%</td><td>連續 60+ 年增配 Dividend King，配息文化穩定。</td></tr>
+      </tbody>
+    </table>
+    <p>關鍵 takeaway：所有 TTM 獲利指標皆略優於 5y avg、波動度極低，**典型 defensive blue chip 結構**。最大評等限制為估值 PE 25.76、PEG 3.40 已 price in 持續優於歷史的執行；任何 organic growth 連續低於 +5% 或 GM 回落都會壓縮 multiple。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. Pricing + mix 雙引擎持續推升 GM 至歷史新高</div>
+      <div>FY21 GM 60.3% → FY25 61.6% → Q1 FY26 63.0%<span class="src-tag">[來源:推算]</span>持續向上。Pricing 在通膨環境下持續傳導 + 高利潤的 concentrate sales mix 對沖 bottling 業務的低毛利。</div>
+      <div class="pillar-falsifier">若 Q2 FY26（8/1 估）GM 跌破 61% 或 organic growth 低於 +4%，論點動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. 4 季連續 EPS beat + 賣方共識 82.9% buy 穩定</div>
+      <div>35 個分析師<span class="src-tag">[來源:推算]</span>中 0 個 sell/strongSell。連 4 季 EPS surprise 介於 -0.05% 到 +2.9%<span class="src-tag">[來源:推算]</span>——共識緊密 mapping、執行可預測性極高。</div>
+      <div class="pillar-falsifier">若單月 buy_pct 跌破 75% 或下一季 EPS 驚奇首次轉負 > -2%，論點減弱。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 防禦特性 + Dividend King 地位吸引避險資金</div>
+      <div>beta 0.37<span class="src-tag">[來源:推算]</span>、3M ADR 標準差 17%<span class="src-tag">[來源:推算]</span> 為大型股低位；連續 60+ 年增配股利（5y 成長 4.44%<span class="src-tag">[來源:推算]</span>）。若市場進入避險模式，KO 多空雙向韌性強。Berkshire 仍為長期最大股東。</div>
+      <div class="pillar-falsifier">若 FCF 連 2 季不足覆蓋股利 + buyback，定價偏離 defensive 特性，論點減弱。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. 新興品類拓展（咖啡、能量、酒類）打開新成長曲線</div>
+      <div>Costa Coffee 整合進入第 8 年、BodyArmor 持續擴張運動飲料、Fresca Hard Alcohol 5/20 新聞報導切入酒類市場<span class="src-tag">[來源:news]</span>。新品類雖佔比小但邊際成長率高於 core sparkling。</div>
+      <div class="pillar-falsifier">若新品類 segment（emerging）連續 2 季 YoY < +10%，故事降溫。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. 估值已 price in 持續優異執行（PEG 3.4）</div>
+      <div>PE_TTM 25.76 vs 5y 平均約 24x、PEG_TTM 3.40 vs 健康成長股 1.0-1.5 區間<span class="src-tag">[來源:推算]</span>。股價已觸 52w 高 $82.66（2026-05-19）<span class="src-tag">[來源:推算]</span>，短期 multiple 進一步擴張依賴未來 3-4 季 organic 加速。</div>
+      <div class="risk-meta">機率：高（已 price in）· 嚴重度：中（估值修復而非崩跌）</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. 內部人 12mo 真實淨賣 -$117M</div>
+      <div>過去 12 個月 106 筆內部人交易、24 位內部人，**真實 type S 淨賣 -$117M**（已排除 type M cashless exercise）<span class="src-tag">[來源:推算]</span>。最近 Nancy Quan（CIO 等高管）為典型 cashless pattern——以 $45 strike 行使、$80 賣出。雖非高壓賣壓但方向偏空。</div>
+      <div class="risk-meta">機率：高（已發生）· 嚴重度：低-中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. GLP-1 / 健康趨勢結構性壓 volume</div>
+      <div>10-K Item 1A 明列「消費者偏好變化、健康意識上升、肥胖/糖尿病疾病關注」<span class="src-tag">[來源:10-K]</span>為持續挑戰。GLP-1 類藥物擴散可能進一步降低 caloric beverages volume。雖然 KO 透過 zero/diet 系列回應，但長期 share-of-throat 趨勢偏負。</div>
+      <div class="risk-meta">機率：中-高（已浮現）· 嚴重度：中（多年漸進）</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. FX 與新興市場匯率波動侵蝕報導營收</div>
+      <div>KO 報導營收約 40%+ 來自非美元市場，FX 為 organic vs reported 之間最大調整項。新興市場（拉美、亞太）匯率走弱會持續削減報導 EPS。</div>
+      <div class="risk-meta">機率：中（持續）· 嚴重度：中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-08-01（估）</td><td>Q2 FY26 財報（GM 持續性、organic growth、夏季旺季 volume）</td><td>高</td></tr>
+        <tr><td>2026 H2</td><td>Fresca Hard Alcohol 銷售與品類擴張進度</td><td>低-中</td></tr>
+        <tr><td>進行中</td><td>美聯儲利率路徑（影響 defensive 股相對吸引力）</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-04-28</td><td>Q1 FY26 Earnings</td><td>高</td><td><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=8-K">8-K</a></td></tr>
+        <tr><td>2026-02-10</td><td>Q4 FY25 Earnings</td><td>高</td><td><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=8-K">8-K</a></td></tr>
+        <tr><td>2025-10-21</td><td>Q3 FY25 Earnings</td><td>高</td><td><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=8-K">8-K</a></td></tr>
+        <tr><td>2026-02-20 / 2026-01-14 / 2025-12-10 / 2025-10-16</td><td>Officer / Director Changes（共 4 次）</td><td>中</td><td>EDGAR 8-K 索引</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K pattern：3 場高影響 earnings + 4 場高管變動。officer changes 頻率高於均值但無單一重大事件。未來 6 個月最大評等升降節點為 2026-08-01 估 Q2 FY26 財報。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易次數 / 不同內部人數</td><td>106 筆 / 24 人</td></tr>
+        <tr><td>真實 open-market 買入金額（type P）</td><td>$41.60M</td></tr>
+        <tr><td>真實 open-market 賣出金額（type S）</td><td>$159.00M</td></tr>
+        <tr><td>真實淨值（type S 與 P 之差）</td><td><b style="color:#d1242f">−$117.40M</b></td></tr>
+      </tbody>
+    </table>
+    <h3>最近顯著交易（前 3 筆）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>內部人</th><th>動作</th><th>股數</th><th>價格</th><th>類型</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-15</td><td>QUAN NANCY</td><td style="color:#d1242f">賣</td><td class="num">−31,625</td><td class="num">$80.93</td><td>S（公開市場）</td></tr>
+        <tr><td>2026-05-15</td><td>QUAN NANCY</td><td style="color:#999">M</td><td class="num">+31,625</td><td class="num">$45.44</td><td>M（選擇權行使，非主動買入）</td></tr>
+        <tr><td>2026-05-15</td><td>QUAN NANCY</td><td style="color:#999">M</td><td class="num">−31,625</td><td class="num">$0</td><td>M（cashless exercise 同步抵銷）</td></tr>
+      </tbody>
+    </table>
+    <p>解讀：類型已嚴格區分 type S（公開市場主動賣，directional signal）與 type M（選擇權行使，非主動 signal）。Nancy Quan 5/15 為典型 cashless exercise pattern：以 $45 strike 行使選擇權後立即以 $81 公開市場賣出。整體真實淨賣 -$117M 量級比 MU/NVDA/TSLA 都溫和，反映 KO 內部人股權集中度較低且高管薪酬包以股票為主。Berkshire（Buffett）為已揭露之最大長期持有人，不在 12 個月 insider trades 內，但市場視為 KO 「持有信譽」的代表。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成 6M 目標價 $85，需要相信什麼</h4>
+      <ul>
+        <li>Q2 FY26（8/1 估）organic growth 維持 +5% 以上、GM ≥ 61.5%</li>
+        <li>FX 對 reported revenue 影響不再擴大（USD 強勢趨緩）</li>
+        <li>賣方共識 buy_pct 維持 80% 以上</li>
+        <li>GLP-1 短期 6M 內不出現對 volume 的單季 -3% 以上衝擊</li>
+        <li>美聯儲降息路徑維持，defensive 股不被高利率持續壓抑</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1 — Multiple × forward EPS。</b>PE_fwd 23.62<span class="src-tag">[來源:推算]</span> 對應 forward 12M EPS 約 $3.47（$81.92 / 23.62）。KO 為穩定 defensive、5y 平均 PE 24x，給予 23-25x 對應 $80-$87。中段 $85。</p>
+    <p><b>方法 2 — DCF / 現金流敘述。</b>FY25 OCF $13.0B（推估）、capex $2.5B、FCF $10.5B。給 27x peak FCF（defensive 折扣後）= $283B 隱含估值 / 4.30B 股 = $66 — 低於 multiple 法，反映 FCF 法對品牌價值不充分定價。Buffett 視角會更看品牌 + 配息持續性而非當期 FCF multiple。</p>
+    <p><b>方法 3 — 賣方共識方向校準。</b>82.9% buy + 0 sell<span class="src-tag">[來源:推算]</span>強烈支持上行，連 4 季 EPS beat 幅度狹窄（-0.05% 到 +2.9%）顯示共識緊密 mapping。共識 12M target 大致 $87-90（市場一般估），6M haircut 至 $84-87。</p>
+    <p><b>結論</b>：6M 目標價 <b>$85</b>（區間 $75-$95），對應潛在報酬 <b>+3.8%</b>。上修觸發：Q2 GM ≥ 63% + organic ≥ +6%，上修至 $92+；下修觸發：organic 跌至 +3% 或 GLP-1 衝擊浮現，下修至 $75。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>9</td><td>20</td><td>6</td><td>0</td><td>0</td><td>35</td><td><b>82.9%</b></td></tr>
+        <tr><td>2026-04</td><td>9</td><td>20</td><td>6</td><td>0</td><td>0</td><td>35</td><td>82.9%</td></tr>
+        <tr><td>2026-03</td><td>9</td><td>20</td><td>6</td><td>0</td><td>0</td><td>35</td><td>82.9%</td></tr>
+        <tr><td>2026-02</td><td>9</td><td>21</td><td>5</td><td>0</td><td>0</td><td>35</td><td>85.7%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>2026-Q1 calendar</td><td>$0.84</td><td>$0.86</td><td>+$0.02</td><td style="color:#0a8a3a">+2.9%</td></tr>
+        <tr><td>2025-Q4 calendar</td><td>$0.58</td><td>$0.58</td><td>$0.00</td><td style="color:#d63b1f">-0.05%</td></tr>
+        <tr><td>2025-Q3 calendar</td><td>$0.80</td><td>$0.82</td><td>+$0.02</td><td style="color:#0a8a3a">+2.4%</td></tr>
+        <tr><td>2025-Q2 calendar</td><td>$0.86</td><td>$0.87</td><td>+$0.01</td><td style="color:#0a8a3a">+1.5%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識穩定 mildly bullish：35 個分析師中 0 sell/0 strongSell（覆蓋四檔中 sell 數最少），buy_pct 從 Feb 85.7% 降至 May 82.9% 微幅鬆動。EPS 4 季驚奇 -0.05% 到 +2.9%，幅度比 MU/NVDA/TSLA 都狹窄——共識緊密 mapping，意味未來上修/下修空間都有限。我評等 NEUTRAL（+3.8%）與賣方共識方向一致；分歧在於賣方平均 12M 目標約 $87-90 暗示 +7-10% 上行，而我 6M 框架較保守 +3.8%。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 <b>$85</b>、最新收盤 <b>$81.92</b><span class="src-tag">[來源:OHLC]</span>，潛在報酬 <b>+3.8%</b>。對應評等規則（>+30% 強烈買入 / +15%~+30% 買入 / -15%~+15% 中立 / <-15% 賣出）為 <b>中立</b>。若目標價上修到 $94 以上則升 BUY；下修到 $70 以下則降 SELL。</p>
+    <p>信心 <b>0.65（中）</b>：三方法目標價區間 $66（FCF 法）/ $80-$87（multiple 法）/ $84-$87（共識）價差約 25%，符合「中」bucket criteria；financials 新鮮度高（Q1 FY26 已 4/28 發布，距今 < 30 天），無單一變數驅動結果。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th class="score">分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">+2</td><td>FY25 OCF ~$13B、ROE 43.6%<span class="src-tag">[來源:推算]</span>、NM 27.8%；balance sheet 強。</td></tr>
+        <tr><td>估值合理性</td><td class="score">-1</td><td>PE_TTM 25.76、PEG_TTM 3.40<span class="src-tag">[來源:推算]</span> 對 +5% 成長偏貴。</td></tr>
+        <tr><td>催化劑</td><td class="score">0</td><td>無高影響 6M 內催化；Q2 FY26 財報為主節點。</td></tr>
+        <tr><td>風險水平</td><td class="score">+1</td><td>defensive sector、beta 0.37<span class="src-tag">[來源:推算]</span>、Dividend King；GLP-1 為中期 tail risk。</td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">+1</td><td>52w +13.9%<span class="src-tag">[來源:推算]</span>、5/19 觸 52w 高、5d +2.1%；82.9% buy 維持。</td></tr>
+        <tr class="total"><td>合計</td><td class="score">+3</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 +3 隱含預期報酬約 +5-10%，與目標 +3.8% 一致（目標略保守，反映已觸 52w 高的短期阻力）。最大評等升降節點為 2026-08-01 估 Q2 FY26 財報——organic ≥ +6% + GM ≥ 63% 升 BUY；organic < +4% 降 SELL 區邊緣。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K（FY2025，period_end 2025-12-31）：<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=10-K">EDGAR 10-K Index</a> · Item 1 Business、Item 7 MD&A、Item 1A Risk Factors 已讀取</li>
+      <li>10-Q（Q1 FY26，period_end 2026-04-03，提交日 2026-05-01）：<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=10-Q">EDGAR 10-Q Index</a> · Item 2 MD&A 已讀取</li>
+      <li>過去 12 個月 8-K：共 12 件，重點 7 件已列入催化劑表</li>
+      <li>XBRL companyfacts：<a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0000021344.json">data.sec.gov</a>（10y annual + 12q quarterly；EPS 因 multiple-unit edge case 改用 Finnhub key_metrics）</li>
+      <li>OHLC：Stooq <code>?s=ko.us&i=d</code>（2016-05-17 → 2026-05-19，共 2,516 個交易日）</li>
+      <li>新聞合成來源（snapshot_date 2026-05-20，window 90 天，60 篇）：Yahoo Finance、Bloomberg、Reuters 等</li>
+      <li>Finnhub <code>/stock/profile2</code>、<code>/stock/peers</code>、<code>/company-news</code>（snapshot 2026-05-20）</li>
+      <li>Finnhub <code>/stock/recommendation</code> + <code>/stock/earnings</code> → analyst_consensus.json（4 個月 + 4 季）</li>
+      <li>Finnhub <code>/stock/insider-transactions</code> → ownership.json（lookback 2025-05-13 → 2026-05-20，106 筆交易、24 位內部人）</li>
+      <li>Finnhub <code>/stock/metric?metric=all</code> → key_metrics.json（snapshot 2026-05-20）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Stooq 行情、Finnhub 公開 API、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。消費飲料產業面臨健康趨勢、新興品類競爭、FX 與監管不確定性；過去績效不代表未來表現，目標價與評等不保證實現。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>
