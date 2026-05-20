@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STX Equity Research — 2026-05-21</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; color: var(--c-text); background: var(--c-bg); margin: 0; line-height: 1.65; font-size: 16px; }
+  .report { max-width: 760px; margin: 0 auto; padding: 48px 32px 80px; background: var(--c-panel); min-height: 100vh; border-left: 1px solid var(--c-line); border-right: 1px solid var(--c-line); }
+  header.report-head { border-bottom: 1px solid var(--c-line); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--c-line); vertical-align: top; }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; font-size: 14px; color: var(--c-muted); margin-top: 8px; }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; color: white; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; vertical-align: middle; margin-right: 10px; }
+  .rating-strong-buy { background: var(--c-buy-strong); }
+  .rating-buy { background: var(--c-buy); }
+  .rating-neutral { background: var(--c-neutral); }
+  .rating-sell { background: var(--c-sell); }
+  .target-block { display: inline-block; margin-left: 6px; color: var(--c-text); font-size: 14px; }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier { font-size: 13.5px; color: var(--c-muted); margin-left: 4px; margin-top: 4px; }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta { font-size: 12.5px; color: var(--c-muted); margin-left: 4px; }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag { display: inline; font-size: 11px; color: var(--c-muted); margin-left: 2px; font-weight: 400; vertical-align: super; }
+  .audience-note { margin-top: 12px; padding: 10px 14px; background: #f6f5f0; border-radius: 6px; font-size: 14px; color: var(--c-text); }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge { background: #f0f9ff; border-left: 3px solid var(--c-accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .belief-bridge h4 { margin: 0 0 8px; font-size: 14px; color: var(--c-accent); }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer { margin-top: 40px; padding: 16px; background: #f6f5f0; border-left: 3px solid var(--c-muted); font-size: 13.5px; color: var(--c-muted); line-height: 1.55; }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  @media (max-width: 640px) {
+    body { font-size: 15px; line-height: 1.6; }
+    .report { padding: 24px 14px 56px; border-left: none; border-right: none; }
+    header.report-head { padding-bottom: 18px; margin-bottom: 24px; }
+    h1 { font-size: 21px; line-height: 1.3; }
+    h2 { font-size: 17px; margin: 30px 0 10px; }
+    h3 { font-size: 14.5px; }
+    .rating-badge { font-size: 13px; padding: 5px 12px; margin-right: 6px; }
+    .target-block { display: block; margin-left: 0; margin-top: 8px; line-height: 1.5; }
+    .target-block b { font-size: 17px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 0; font-size: 13.5px; }
+    .meta-grid span:nth-child(odd) { margin-top: 6px; color: var(--c-muted); font-size: 12px; }
+    table { display: block; overflow-x: auto; max-width: 100%; font-size: 13px; -webkit-overflow-scrolling: touch; }
+    th, td { padding: 6px 8px; }
+    th { font-size: 12.5px; }
+    .src-tag { font-size: 10px; }
+    .pillar, .risk { margin: 12px 0; }
+    .pillar-falsifier, .risk-meta { font-size: 12.5px; }
+    .audience-note { padding: 9px 12px; font-size: 13.5px; }
+    .belief-bridge { padding: 10px 12px; }
+    .belief-bridge h4 { font-size: 13.5px; }
+    .disclaimer { padding: 12px; font-size: 12.5px; }
+    ul, ol { padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "STX",
+  "company_name": "Seagate Technology Holdings plc",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 733.35,
+  "currency": "USD",
+  "rating": "NEUTRAL",
+  "target_price": 780,
+  "target_price_low": 580,
+  "target_price_high": 950,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 6.4,
+  "qualitative_score": 1,
+  "confidence": 0.55,
+  "data_freshness": {
+    "financials_period_end": "2026-04-03",
+    "latest_10q_filing_date": "2026-04-30",
+    "latest_8k_date": "2026-05-06",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>Seagate Technology Holdings plc (STX) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-neutral">中立</span>
+      <span class="target-block">6M 目標價 <b>$780</b> (+6.4%) · 信心 0.55（偏低）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$733.35</b>
+      <span>最新 10-Q</span><b>2026-04-30 提交（涵蓋至 2026-04-03，Q3 FY26）</b>
+      <span>最近 8-K</span><b>2026-05-06</b>
+      <span>資料來源</span><b>SEC EDGAR · Yahoo / Stooq 行情 · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>Seagate 是全球前 2 大 HDD（硬碟機）製造商（另一家為 Western Digital），主力產品為高容量近線（nearline）HDD，銷售給雲端 hyperscaler 與企業資料中心；FY26 起更新為兩終端市場呈報：<b>Data Center</b>（為營收大宗）與 <b>Edge IoT</b><span class="src-tag">[來源:10-Q]</span>。Q3 FY26（截至 2026-04-03）營收 $3,112M（+44% YoY）、出貨 199 EB（exabyte）儲存容量、GAAP GM 46.5%、營業利潤 $998M、淨利 $748M<span class="src-tag">[來源:10-Q]</span>，HAMR（Heat-Assisted Magnetic Recording）30TB+ 高容量機種開始量產為核心成長引擎。</p>
+    <p>論點核心：(1) Op margin 自 FY24 6.9% 升至 Q3 FY26 32.1%（5y 均 12.1% 之 +20pp 正偏離）<span class="src-tag">[來源:Finnhub]</span>；(2) 連 4 季 adj EPS beat（平均驚奇 +9.7%）、買入占比 86.2% 連續升至 strongly bullish<span class="src-tag">[來源:Finnhub]</span>；(3) 52 週報酬 +572.6%、剛於 2026-05-11 觸 52 週高 $841.31<span class="src-tag">[來源:Finnhub]</span>，過去 5 日已修正 -10.3%。估值 PE_TTM 69.1 / PE_fwd 29.8 / PB 85.5<span class="src-tag">[來源:Finnhub]</span> 反映 HDD 循環頂峰 + 多年股票回購使淨值大幅縮減（FY24 淨值 -$1.49B、Q3 FY26 已回正至 $1.10B<span class="src-tag">[來源:10-Q]</span>）。</p>
+    <p>給予 <b>中立</b>、6M 目標 $780（區間 $580–950）。最大單一觸發點為 2026-07 底 Q4 FY26 + FY27 guidance：若 FY27 營收 ≥ $14B（+10%+）+ HAMR 30TB+ 出貨占比突破 25% → 升 BUY；若 FY27 guidance 隱含 YoY 持平或營業利潤率回落 &gt; 4 pp → 降 SELL。</p>
+    <div class="audience-note">適合相信「AI/雲端時代 HDD nearline 容量需求多年期擴張、HAMR 為新一代技術護城河」、能承受 65% 年波動度（3M ADR std 66.3）的循環股投資人；不適合對淨值為近零、PB 85x 結構性敏感或追求歷史估值錨點的價值投資人。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>全名</td><td>Seagate Technology Holdings plc（愛爾蘭註冊）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>產業</td><td>Computer Storage Devices（HDD + SSD 為輔）</td></tr>
+        <tr><td>市值（粗估）</td><td>$165B（流通股 224.4M × $733.35）</td></tr>
+        <tr><td>主要產品</td><td>HDD nearline（雲端 / 企業大容量）、HAMR 30TB+、消費 / 客戶 HDD、SSD<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>終端市場</td><td>Data Center（雲端、企業、CDN 大宗）、Edge IoT（消費、商用、NAS、Mission Critical、SSD）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>主要客戶</td><td>Hyperscaler 雲端業者（AWS、Azure、Google Cloud、Meta、Alibaba）、企業伺服器 OEM（Dell、HPE）<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>CEO</td><td>William D. (Dave) Mosley</td></tr>
+        <tr><td>會計年度結束</td><td>6 月底最近週五（FY26 將於 2026-07-03 結束）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>CIK</td><td>0001137789</td></tr>
+        <tr><td>交易所</td><td>NASDAQ-GS</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>STX 屬高度集中之 HDD 寡占產業：全球僅 3 家 HDD 製造商（Seagate、Western Digital、Toshiba），STX 與 WDC 合計占 hyperscaler 大容量近線需求 90%+<span class="src-tag">[來源:推算]</span>。10-Q MD&amp;A 明示「Data Center 為大宗、強勁需求環境、HAMR 容量在 cloud 客戶間擴大採用」<span class="src-tag">[來源:10-Q]</span>。當前 HDD 循環受 AI 雲端基礎設施擴張驅動——AI 模型訓練資料集 + 推論結果儲存 + 模型完整性維護全部需要大容量、低成本的 nearline HDD（取代昂貴的 SSD）。</p>
+    <p>HDD 半導體 KPI（Q3 FY26）：<b>HDD exabyte 出貨</b> 199 EB（單季創新高）<span class="src-tag">[來源:10-Q]</span>；<b>HAMR 30TB+ 出貨占比</b>—估約 15-20%、預計 FY27 達 35%+<span class="src-tag">[來源:推算]</span>；<b>nearline capacity ASP</b>—市場估 QoQ +8-12%<span class="src-tag">[來源:推算]</span>；<b>capex intensity</b>—FY25 capex $265M / 營收 $9.1B = 2.9%，5y CAGR -14.7%<span class="src-tag">[來源:Finnhub]</span>（capex 紀律是 HDD 寡占獲利的關鍵）；<b>OCF</b>—Q3 FY26 $1.1B、9M $1.6B+<span class="src-tag">[來源:10-Q]</span>。10 年週期脈絡：FY19 NI $2.01B 前峰 → FY22 NI $1.65B 次峰 → FY23 NI -$529M 深谷（HDD 大跌價 + 雲端 CapEx 暫停）→ FY24 NI $335M（復甦初期）→ FY25 NI $1.47B（+339% YoY）→ Q3 FY26 NI $748M（單季已超 FY24 全年）<span class="src-tag">[來源:10-K][來源:10-Q]</span>。Headwinds：(1) NAND SSD 在企業階儲存的長期替代風險（成本曲線交叉）；(2) 過去 5 年大幅股票回購使淨值 FY24 跌至 -$1.49B、Q3 FY26 才回正至 $1.10B<span class="src-tag">[來源:10-Q]</span>，財務結構脆弱；(3) Trump Administration 關稅政策不確定<span class="src-tag">[來源:10-Q]</span>。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">營業利潤率</th><th class="num">稀釋 EPS</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY18</td><td class="num">$11.18B</td><td class="num">14.6%</td><td class="num">$4.05</td><td>peak（PC HDD + 早期雲端）</td></tr>
+        <tr><td>FY19</td><td class="num">$10.39B</td><td class="num">14.3%</td><td class="num">$7.06</td><td>前峰</td></tr>
+        <tr><td>FY20</td><td class="num">$10.51B</td><td class="num">12.4%</td><td class="num">$3.79</td><td>中段</td></tr>
+        <tr><td>FY21</td><td class="num">$10.68B</td><td class="num">14.0%</td><td class="num">$5.36</td><td>加速</td></tr>
+        <tr><td>FY22</td><td class="num">$11.66B</td><td class="num">16.8%</td><td class="num">$7.36</td><td>次峰</td></tr>
+        <tr><td>FY23</td><td class="num">$7.38B</td><td class="num">-4.6%</td><td class="num">-$2.56</td><td>深谷（HDD 大跌價）</td></tr>
+        <tr><td>FY24</td><td class="num">$6.55B</td><td class="num">6.9%</td><td class="num">$1.58</td><td>復甦初期</td></tr>
+        <tr><td>FY25</td><td class="num">$9.10B</td><td class="num">20.8%</td><td class="num">$6.77</td><td>突破歷史</td></tr>
+        <tr><td>FY26 (9M)</td><td class="num">$8.57B</td><td class="num">29.4%<span class="src-tag">[推算]</span></td><td class="num">$8.30</td><td>加速 / AI ramp</td></tr>
+      </tbody>
+    </table>
+
+    <h3>最新季 (FY26 Q3，截至 2026-04-03)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ vs FY26 Q2</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$3,112M</td><td class="num">+44.1%</td><td class="num">+10.2%</td></tr>
+        <tr><td>HDD 出貨</td><td class="num">199 EB</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>毛利率（GAAP）</td><td class="num">46.5%</td><td class="num">+11.6 pp</td><td class="num">+4.9 pp</td></tr>
+        <tr><td>營業利潤</td><td class="num">$998M</td><td class="num">+131.6%</td><td class="num">+18.4%</td></tr>
+        <tr><td>淨利</td><td class="num">$748M</td><td class="num">+120.0%</td><td class="num">+26.1%</td></tr>
+        <tr><td>稀釋 EPS（GAAP）</td><td class="num">$3.27</td><td class="num">+108.3%</td><td class="num">+25.8%</td></tr>
+        <tr><td>調整 EPS（共識口徑）</td><td class="num">$4.10</td><td class="num">+126.5%<span class="src-tag">[推算]</span></td><td class="num">+31.8%</td></tr>
+        <tr><td>OCF / 自由現金流</td><td class="num">$1.1B / ~$0.94B</td><td class="num">+340%<span class="src-tag">[推算]</span></td><td class="num">—</td></tr>
+      </tbody>
+    </table>
+    <p>Q3 FY26 adj EPS $4.10 較共識 $3.54 高 +15.7%（連 4 季 beat，平均驚奇 +9.7%）<span class="src-tag">[來源:Finnhub]</span>。<b>成長</b>：Q3 營收 +44% YoY、QoQ +10%；HDD 199 EB 創新高<span class="src-tag">[來源:10-Q]</span>，反映 hyperscaler nearline 容量擴張 + HAMR 30TB+ 高 ASP 機種開始量產雙重貢獻。<b>獲利</b>：GM 46.5% 為 STX 歷史新高（FY22 前峰約 36%）<span class="src-tag">[來源:推算]</span>，主因 HAMR 高 ASP + HDD 寡占 capex 紀律維持。<b>現金生成</b>：Q3 OCF $1.1B 為單季新高、9M $1.6B+<span class="src-tag">[來源:10-Q]</span>；2026-Q3 提前清償 $641M 長期負債 + 股利 $161M<span class="src-tag">[來源:10-Q]</span>，財務結構持續修復。對比 FY23 深谷 NI -$529M，當前 Q3 單季 NI $748M 反映 HDD 自完整循環底部跳升至 AI ramp 階段。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 69.15 / PE_fwd 29.78 / PEG_fwd 0.44</td><td>PE_fwd 30x 對 HDD 循環頂部偏高；PEG_fwd 0.44 顯示市場預期 EPS 持續加速</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 172.6% vs 5y 均 388%</td><td>因 LTD/Equity 結構失真（持續股票回購 + FY23-24 虧損），ROE 不適合作為主要錨點</td></tr>
+        <tr><td>利潤率</td><td>Gross 41.6% / Op 27.0% / Net 21.6% (TTM)</td><td>大幅優於 5y 均 26.8% / 12.1% / 8.1%；Q3 FY26 已升至 GM 46.5% / Op 32.1%</td></tr>
+        <tr><td>成長</td><td>Rev YoY +28.92% / Q YoY +44.07%</td><td>3y CAGR -7.94% 反映 FY23 跌價，但 Q YoY 加速可視為循環翻轉</td></tr>
+        <tr><td>報酬</td><td>52w +572.5% / 相對 S&amp;P500 +549 pp</td><td>剛於 5/11 觸 52w 高 $841，5 日 -10.3% 為動能轉折訊號</td></tr>
+        <tr><td>風險（波動）</td><td>Beta 2.04 / 3M ADR std 66.3</td><td>高 beta；P/B 85.5 反映淨值幾乎清零（多年股票回購）</td></tr>
+        <tr><td>股利</td><td>$2.96 年化 / yield 0.40%</td><td>5y dividend growth +2.08%，象徵性殖利率</td></tr>
+      </tbody>
+    </table>
+    <p>5 年自身偏離最顯著三個指標：Op margin 27% vs 5y 均 12%（+15 pp）、Net margin 21.6% vs 5y 均 8.1%（+13.5 pp）、Q YoY +44%；估值方法主要錨定 PE_forward 29.78 與隱含 forward EPS $24.63<span class="src-tag">[來源:推算]</span>，假設 HAMR 量產順利至 FY27。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. AI 雲端 nearline HDD 容量需求多年期擴張</div>
+      <div>10-Q MD&amp;A 明示「AI 應用驅動資料生成 + 訓練/推論/維護均需 HDD 儲存」<span class="src-tag">[來源:10-Q]</span>；Q3 FY26 199 EB 出貨為單季新高<span class="src-tag">[來源:10-Q]</span>。BofA / Citi 估 nearline HDD TAM 2030 達 $40B+<span class="src-tag">[來源:news]</span>。</div>
+      <div class="pillar-falsifier">若 Q4 FY26 出貨 EB 跌破 200，或 hyperscaler 任一家公布 HDD capex 預算下修，需求論動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. HAMR 30TB+ 提供 ASP 護城河</div>
+      <div>HAMR（heat-assisted magnetic recording）為新一代技術，使單碟容量自 24TB → 36TB → 50TB+ 升級<span class="src-tag">[來源:10-K]</span>；STX 為 HAMR 首先量產商家，較 WDC 領先 6-12 個月<span class="src-tag">[來源:推算]</span>。Q3 FY26 GM 46.5% 創歷史新高反映 HAMR ASP 溢價。</div>
+      <div class="pillar-falsifier">若 WDC ePMR / HAMR 量產時點縮短至 6 個月以內、或 STX HAMR yield 出問題，論點動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 寡占 + capex 紀律雙重支撐</div>
+      <div>HDD 全球僅 3 家供應商<span class="src-tag">[來源:10-K]</span>；STX 5y capex CAGR -14.7%<span class="src-tag">[來源:Finnhub]</span>，反映業界自律。CapEx / 營收 FY25 僅 2.9%，Q3 OCF $1.1B 對應 capex $161M = FCF $940M<span class="src-tag">[來源:10-Q]</span>。</div>
+      <div class="pillar-falsifier">若 STX 或 WDC 任一方公告擴大 capex &gt; 5% 營收，自律論點失效。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. 4 連季 EPS beat、買入占比續升</div>
+      <div>近 4 季 4/4 beat（平均驚奇 +9.7%）<span class="src-tag">[來源:Finnhub]</span>；買入占比 4 月內 80% → 86%、+6 pp 上升<span class="src-tag">[來源:Finnhub]</span>。</div>
+      <div class="pillar-falsifier">若 Q4 FY26 EPS miss 或買入占比連 2 月跌破 75%，動能信號破裂。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. HDD 循環頂部風險</div>
+      <div>10-K Item 1A 將 HDD 循環性列為主要風險<span class="src-tag">[來源:10-K]</span>；過去 3 個循環頂峰維持 4-6 季。當前 GM 46.5% 顯著超 FY22 前峰 36%<span class="src-tag">[來源:推算]</span>，統計上接近頂部。Q4 FY26 / FY27 H1 為頂部驗證關鍵。</div>
+      <div class="risk-meta">機率：中-高 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. PB 85.5、淨值僅 $1.1B 結構脆弱</div>
+      <div>過去 5 年累計回購使 FY24 淨值 -$1.49B<span class="src-tag">[來源:10-K]</span>；Q3 FY26 才回正至 $1.10B<span class="src-tag">[來源:10-Q]</span>。LTD $3.47B / 淨值 $1.10B = 3.2x leverage<span class="src-tag">[來源:推算]</span>。任一單季虧損即可能再度倒退入負淨值。</div>
+      <div class="risk-meta">機率：低-中 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. SSD/QLC NAND 在企業階儲存的長期替代</div>
+      <div>10-K Item 1A 列「替代技術風險」<span class="src-tag">[來源:10-K]</span>。當 NAND $/GB 跌破 HDD 之 5x（目前 ~10x），會在 Tier 3 / Cold Storage 層產生替代壓力<span class="src-tag">[來源:推算]</span>。Pure Storage、VAST Data 等 all-flash 廠商已在 hyperscaler 取得部分階儲存份額。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中-高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. 美中關稅 + BIS 出口管制</div>
+      <div>10-Q 列關稅政策不確定<span class="src-tag">[來源:10-Q]</span>；STX 於 2023 與 BIS 達成 settlement agreement，禁止對 Huawei 出口 HDD<span class="src-tag">[來源:10-K]</span>。中國 hyperscaler（阿里、騰訊、字節）若被加列管制清單，可能 -5% 至 -10% 營收。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">5. 內部人 12 個月淨賣出 -$207M</div>
+      <div>過去 12 個月 664 筆、14 位內部人、淨值 -$207M<span class="src-tag">[來源:Finnhub]</span>。賣出價格區間 $100-$800 涵蓋大部分 H2 FY25 上行段，反映管理層在當前估值區間持續實現獲利。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：低-中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-07 底（估）</td><td>Q4 FY26 / 全年財報 + FY27 guidance<span class="src-tag">[來源:8-K]</span></td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>HAMR 36TB / 50TB 高容量機種出貨 ramp<span class="src-tag">[來源:10-K]</span></td><td>高</td></tr>
+        <tr><td>2026-10（估）</td><td>Q1 FY27 季報，反映 HAMR 出貨第一個完整季</td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>WDC（OTC: WDC）HAMR 量產進度公告</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-06</td><td>高管異動 / 薪酬</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/1137789/000113778926000093/stx-20260505.htm">SEC</a></td></tr>
+        <tr><td>2026-04-28</td><td>Q3 FY26 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1137789/000113778926000084/stx-20260428.htm">SEC</a></td></tr>
+        <tr><td>2026-02-19</td><td>Unregistered Sale of Equity + Reg FD（推測為可轉債發行）</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/1137789/000119312526059681/d112160d8k.htm">SEC</a></td></tr>
+        <tr><td>2026-02-12</td><td>Unregistered Sale of Equity + Reg FD</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/1137789/000119312526047755/d49215d8k.htm">SEC</a></td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K 主軸為 4 次季報 + 2 月內 2 次未登記股權發行（推測為融資 / 可轉債）+ 多次高管異動。未來 6 個月最可能觸發評等升降的事件為 2026-07 底全年財報 + FY27 guidance—將驗證 HAMR 36TB+ ramp 是否如期、毛利率能否守住 ≥ 44%。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易筆數 / 不同內部人</td><td>664 筆 / 14 位</td></tr>
+        <tr><td>內部人買入 vs 賣出股數</td><td>—（買 1.4M / 賣 1.8M）<span class="src-tag">[推算]</span></td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>+$0 vs -$207M</td></tr>
+        <tr><td>淨值（買 - 賣）</td><td><b>-$207M</b>（顯著淨賣出）</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月淨值 -$207M 屬中等規模賣出；買入金額為 $0 反映 14 位內部人全部僅做出脫（含選擇權行使 cash-exercise 與 10b5-1 計畫）<span class="src-tag">[來源:Finnhub]</span>。賣出價格區間 $100-$800 涵蓋整段 H2 FY25 - FY26 上行段，CEO Mosley、CFO 等高管均有實現獲利動作。對 thesis 屬中性偏負——14 位內部人全員只賣不買為一致的 directional 訊號，但相對 $165B 市值僅占 0.13%。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成目標價，需要相信什麼</h4>
+      <ul>
+        <li>Q4 FY26（2026-04~2026-07）營收 ≥ $3.3B（QoQ ≥ +6%）。</li>
+        <li>FY27 全年營收 ≥ $14B（YoY ≥ +15%）、HAMR 30TB+ 出貨占比突破 25%。</li>
+        <li>FY27 GAAP 毛利率維持 ≥ 44%（接近當前 Q3 FY26 水準）。</li>
+        <li>WDC 在 FY27 H1 前 HAMR 量產進度顯著落後（≥ 6 個月）。</li>
+        <li>美中 nearline HDD 出口管制無新增限制。</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1（multiple × forward EPS）</b>：Finnhub 隱含 forward EPS $24.63<span class="src-tag">[來源:推算]</span>。對 HDD 循環高峰適用 PE 25–32x（高於歷史 12-15x 因 AI 雲端需求重塑投資人對 HDD 評價）→ $616–$788，中位 <b>$702</b>。</p>
+    <p><b>方法 2（H1 落袋 + H2 加速 / FY27 ramp）</b>：9M FY26 GAAP EPS $8.30；估 Q4 FY26 GAAP EPS ~$3.5 → 全年 FY26 GAAP EPS $11.8；對 FY27 假設 +30% → $15.4。對 FY27 EPS 套用 PE 45–60x（cyclical peak）→ <b>$693–$924</b>，中位 $808。</p>
+    <p><b>方法 3（賣方共識）</b>：29 位賣方買入占比 86.2%<span class="src-tag">[來源:Finnhub]</span>；新聞未列具體目標。假設 12 個月共識 mid-point 約 $880，6M 折現 = $733.35 + 0.95×($880-$733.35) = <b>$873</b>。</p>
+    <p>三方法區間 $616–$924、平均 $794；加權考慮 HDD 循環頂部位置 + PB 85x 結構性偏離 + 5 日 -10.3% 顯示動能轉折，<b>結論目標 $780、區間 $580–$950</b>，對應潛在報酬 +6.4%（區間 -21% ~ +30%）。上修觸發：FY27 guidance ≥ $14B + HAMR 30TB+ 占比 25%+ → 升 BUY；下修觸發：Q4 GM 跌破 44% 或 FY27 guidance 隱含 YoY 持平 → 降 SELL。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>7</td><td>18</td><td>4</td><td>0</td><td>0</td><td>29</td><td>86.2%</td></tr>
+        <tr><td>2026-04</td><td>7</td><td>17</td><td>5</td><td>0</td><td>0</td><td>29</td><td>82.8%</td></tr>
+        <tr><td>2026-03</td><td>7</td><td>16</td><td>6</td><td>0</td><td>0</td><td>29</td><td>79.3%</td></tr>
+        <tr><td>2026-02</td><td>7</td><td>17</td><td>6</td><td>0</td><td>0</td><td>30</td><td>80.0%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>FY26 Q3</td><td>$3.54</td><td>$4.10</td><td>+$0.56</td><td style="color:#0a8a3a">+15.69%</td></tr>
+        <tr><td>FY26 Q2</td><td>$2.84</td><td>$3.11</td><td>+$0.27</td><td style="color:#0a8a3a">+9.41%</td></tr>
+        <tr><td>FY26 Q1</td><td>$2.40</td><td>$2.61</td><td>+$0.21</td><td style="color:#0a8a3a">+8.88%</td></tr>
+        <tr><td>FY25 Q4</td><td>$2.47</td><td>$2.59</td><td>+$0.12</td><td style="color:#0a8a3a">+4.67%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識強烈偏多（買入占比 86.2%、超 strongly bullish 80% 門檻、4 月內 +6 pp 上升）。過去 4 季 4/4 beats、平均驚奇 +9.7% 且逐季放大，反映管理層 guidance 風格穩健保守 + HAMR ramp 持續超預期。本報告中立評等與賣方共識存在分歧—目標 $780 vs 賣方隱含 mid ~$880；分歧主因為本報告對 HDD 循環頂部位置 + PB 結構性偏離給予較大風險折扣。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 $780、最新收盤 $733.35，潛在報酬 +6.4%。對應評等規則為 <b>中立</b>。若目標價上修至 $843 以上則升 BUY；若下修至 $623 以下則降 SELL。</p>
+    <p>信心 0.55（偏低）：三方法價差 $616–$924（50%）、淨值與 PB 結構性偏離、HAMR ramp 為單一最大假設、5 日 -10.3% 顯示動能轉折——符合 SKILL「方法價差 25-60% + 單一假設驅動」之偏低門檻。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th>分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">0</td><td>OCF $1.1B Q3 創新高、零增 capex 紀律；但 LTD $3.47B / 淨值 $1.10B = 3.2x、PB 85.5 結構脆弱<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>估值合理性</td><td class="score">-1</td><td>PE_TTM 69、PE_fwd 30、PB 85.5；PEG_fwd 0.44 看似合理但仰賴 HAMR ramp 兌現<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr><td>催化劑</td><td class="score">+2</td><td>Q4 FY26 + FY27 guidance、HAMR 30TB+/36TB 量產、AI 雲端 nearline 需求<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>風險水平</td><td class="score">-1</td><td>HDD 循環頂部、SSD 替代、淨值結構、出口管制、內部人 -$207M<span class="src-tag">[來源:10-K][來源:Finnhub]</span></td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">+1</td><td>52w +572%、買入占比 80% → 86%；但 5 日 -10.3% 為轉折訊號<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr class="total"><td>合計</td><td class="score">+1</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 +1 對應目標價 +6.4%，反映「強勁營運與資本紀律 vs 循環頂部 + 估值結構性偏離互相抵銷」。上修觸發為 HAMR 加速與 FY27 guidance 上修；下修觸發為任一單季 GM 跌回 40% 以下或 WDC HAMR ramp 提早追上。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K FY2025（period end 2025-06-27，accession via EDGAR）— Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A</li>
+      <li>10-Q FY26 Q3（period end 2026-04-03，filed 2026-04-30）— Item 2 MD&amp;A、segment update（Data Center / Edge IoT）</li>
+      <li>過去 12 個月 8-K：17 筆（4 筆財報 + 2 筆 Unregistered Sale of Equity + 多筆高管異動）</li>
+      <li>XBRL companyfacts via SEC EDGAR API（CIK 0001137789）</li>
+      <li>OHLC 行情（Stooq → Yahoo fallback）—樣本期間 2016-05 ~ 2026-05-19（~2,515 個交易日）</li>
+      <li>新聞合成：Finnhub /company-news（snapshot 2026-05-21，60 articles）</li>
+      <li>Finnhub /stock/profile2、/stock/peers、/stock/recommendation、/stock/earnings、/stock/insider-transactions、/stock/metric?metric=all（snapshot 2026-05-21）</li>
+      <li>analyst_consensus.json（4 個月 recommendation_trends + 4 季 EPS surprise）</li>
+      <li>ownership.json（lookback 2025-05-14 ~ 2026-05-21，664 transactions，14 unique insiders）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Yahoo Finance / Stooq 行情、Finnhub、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。HDD 儲存類股估值與資料中心循環、HAMR ramp、SSD 替代、美中管制高度連動，過去績效不代表未來表現，目標價與評等不保證實現。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>

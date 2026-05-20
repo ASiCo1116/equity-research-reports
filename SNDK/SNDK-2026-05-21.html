@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNDK Equity Research — 2026-05-21</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; color: var(--c-text); background: var(--c-bg); margin: 0; line-height: 1.65; font-size: 16px; }
+  .report { max-width: 760px; margin: 0 auto; padding: 48px 32px 80px; background: var(--c-panel); min-height: 100vh; border-left: 1px solid var(--c-line); border-right: 1px solid var(--c-line); }
+  header.report-head { border-bottom: 1px solid var(--c-line); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--c-line); vertical-align: top; }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; font-size: 14px; color: var(--c-muted); margin-top: 8px; }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; color: white; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; vertical-align: middle; margin-right: 10px; }
+  .rating-strong-buy { background: var(--c-buy-strong); }
+  .rating-buy { background: var(--c-buy); }
+  .rating-neutral { background: var(--c-neutral); }
+  .rating-sell { background: var(--c-sell); }
+  .target-block { display: inline-block; margin-left: 6px; color: var(--c-text); font-size: 14px; }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier { font-size: 13.5px; color: var(--c-muted); margin-left: 4px; margin-top: 4px; }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta { font-size: 12.5px; color: var(--c-muted); margin-left: 4px; }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag { display: inline; font-size: 11px; color: var(--c-muted); margin-left: 2px; font-weight: 400; vertical-align: super; }
+  .audience-note { margin-top: 12px; padding: 10px 14px; background: #f6f5f0; border-radius: 6px; font-size: 14px; color: var(--c-text); }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge { background: #f0f9ff; border-left: 3px solid var(--c-accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .belief-bridge h4 { margin: 0 0 8px; font-size: 14px; color: var(--c-accent); }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer { margin-top: 40px; padding: 16px; background: #f6f5f0; border-left: 3px solid var(--c-muted); font-size: 13.5px; color: var(--c-muted); line-height: 1.55; }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  @media (max-width: 640px) {
+    body { font-size: 15px; line-height: 1.6; }
+    .report { padding: 24px 14px 56px; border-left: none; border-right: none; }
+    header.report-head { padding-bottom: 18px; margin-bottom: 24px; }
+    h1 { font-size: 21px; line-height: 1.3; }
+    h2 { font-size: 17px; margin: 30px 0 10px; }
+    h3 { font-size: 14.5px; }
+    .rating-badge { font-size: 13px; padding: 5px 12px; margin-right: 6px; }
+    .target-block { display: block; margin-left: 0; margin-top: 8px; line-height: 1.5; }
+    .target-block b { font-size: 17px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 0; font-size: 13.5px; }
+    .meta-grid span:nth-child(odd) { margin-top: 6px; color: var(--c-muted); font-size: 12px; }
+    table { display: block; overflow-x: auto; max-width: 100%; font-size: 13px; -webkit-overflow-scrolling: touch; }
+    th, td { padding: 6px 8px; }
+    th { font-size: 12.5px; }
+    .src-tag { font-size: 10px; }
+    .pillar, .risk { margin: 12px 0; }
+    .pillar-falsifier, .risk-meta { font-size: 12.5px; }
+    .audience-note { padding: 9px 12px; font-size: 13.5px; }
+    .belief-bridge { padding: 10px 12px; }
+    .belief-bridge h4 { font-size: 13.5px; }
+    .disclaimer { padding: 12px; font-size: 12.5px; }
+    ul, ol { padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "SNDK",
+  "company_name": "Sandisk Corporation",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 1383.29,
+  "currency": "USD",
+  "rating": "NEUTRAL",
+  "target_price": 1420,
+  "target_price_low": 850,
+  "target_price_high": 1800,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 2.7,
+  "qualitative_score": 0,
+  "confidence": 0.40,
+  "data_freshness": {
+    "financials_period_end": "2026-04-03",
+    "latest_10q_filing_date": "2026-05-01",
+    "latest_8k_date": "2026-05-15",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>Sandisk Corporation (SNDK) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-neutral">中立</span>
+      <span class="target-block">6M 目標價 <b>$1,420</b> (+2.7%) · 信心 0.40（低）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$1,383.29</b>
+      <span>最新 10-Q</span><b>2026-05-01 提交（涵蓋至 2026-04-03，Q3 FY26）</b>
+      <span>最近 8-K</span><b>2026-05-15</b>
+      <span>資料來源</span><b>SEC EDGAR · Yahoo / Stooq 行情 · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>SanDisk 為 NAND flash 儲存解決方案供應商（SSD、嵌入式產品、記憶卡、晶圓），2025-02-21 自 Western Digital 完成 spin-off 獨立上市<span class="src-tag">[來源:10-Q]</span>，與 Kioxia 持有 Flash Ventures 共同營運主流 NAND 製造產能。三大終端市場：Datacenter（雲端/AI）、Edge（PC、行動、汽車）、Consumer（零售）<span class="src-tag">[來源:10-Q]</span>。Q3 FY26（截至 2026-04-03）營收 $5,950M、年增 +251%<span class="src-tag">[來源:10-Q]</span>，GAAP 毛利率跳升至 78.4%、營業利潤率 69.1%<span class="src-tag">[來源:10-Q]</span>——反映 NAND ASP 在 AI 雲端訓練/推論需求驅動下的歷史性循環峰值。</p>
+    <p>論點核心：(1) Q3 FY26 adj EPS $23.41 較共識 $14.83 高 +57.9%<span class="src-tag">[來源:Finnhub]</span>，連 4 季 beat 且驚奇規模逐季放大；(2) 估值 PE_TTM 45.5、PE_fwd 10.06、PEG_fwd 在 NAND 同業中最低<span class="src-tag">[來源:Finnhub]</span>——但 forward EPS 隱含 $137.5（vs TTM $28.77 須 +378%）<span class="src-tag">[來源:推算]</span>，市場假設 NAND 循環峰維持 4+ 季；(3) 52 週報酬 +3,467% 來自 spin-off 初始低基期 $35.79（2025-05-23）<span class="src-tag">[來源:Finnhub]</span>，難以視為標準動能訊號。</p>
+    <p>給予 <b>中立</b>、6M 目標 $1,420（區間 $850–1,800）。最大單一觸發點為 2026-08 中下旬 Q4 FY26 + FY27 guidance：若 NAND 合約價在 H2 CY26 維持 +30%+ YoY、Q4 GM 守 ≥ 65% → 升 BUY；若 NAND 合約價已出現 -10% QoQ 修正或 Datacenter 客戶下訂量縮減 → 降 SELL。</p>
+    <div class="audience-note">適合相信「AI 訓練/推論 NAND 儲存需求驅動 3-5 年超循環」、能承受 95% 年波動度（3M ADR std 95.1）的高 beta 週期投資人；不適合對 PE 急升、循環頂部風險敏感或要求歷史 5y 估值錨點的價值投資人。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>全名</td><td>Sandisk Corporation（2025-02-24 自 Western Digital spin-off 上市）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>產業</td><td>Semiconductor / NAND Flash 儲存</td></tr>
+        <tr><td>市值（粗估）</td><td>$205B（流通股 ~148M × $1,383.29）<span class="src-tag">[來源:推算]</span></td></tr>
+        <tr><td>主要產品</td><td>SSD（client / 企業級 / 資料中心 NVMe）、嵌入式產品、記憶卡、universal serial bus、wafer<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>終端市場</td><td>Datacenter（雲端/AI 訓練推論）、Edge（PC/行動/汽車/AR）、Consumer（零售）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>關鍵製造合資</td><td>Flash Ventures（與 Kioxia 合資 NAND 晶圓代工）<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>會計年度結束</td><td>6 月最近週五（FY26 = 2026-07-03，53 週）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>CIK</td><td>0002023554</td></tr>
+        <tr><td>交易所</td><td>NASDAQ-GS</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>SNDK 屬 NAND flash 寡占產業（全球 5 大供應商：Samsung、SK Hynix、Kioxia、Micron、SanDisk）；與 Kioxia 共有 Flash Ventures 製造產能，採 50/50 分工<span class="src-tag">[來源:10-K]</span>。10-Q MD&amp;A 明示「AI infrastructure 快速成長驅動高效能儲存需求，預期條件延續至 calendar 2026 及之後」<span class="src-tag">[來源:10-Q]</span>。NAND 是繼 HBM 之後 AI 雲端最受惠的記憶體類別——AI 推論工作負載對快速 NAND SSD 容量需求遠超傳統雲端應用。</p>
+    <p>NAND 半導體 KPI（Q3 FY26）：<b>ASP / 合約價趨勢</b>—10-Q MD&amp;A 描述「pricing shifts positively impacted business, expect favorable pricing trends」<span class="src-tag">[來源:10-Q]</span>，市場估 NAND 合約價 QoQ +30-50%<span class="src-tag">[來源:推算]</span>；<b>DRAM/NAND mix</b>—純 NAND 產品線；<b>客戶集中度</b>—Datacenter（雲端/AI）營收占比快速擴大；<b>capex intensity</b>—FY25 capex $204M / 營收 $7.36B = 2.8%（spin-off 過渡期偏低），全週期歷史 8-12%<span class="src-tag">[來源:10-K]</span>。10 年週期脈絡（spin-off 前歷史合併數據）：FY23 NI -$2.14B 深谷（NAND 大谷底）→ FY24 NI -$672M（庫存修正）→ FY25 NI -$1.64B（spin-off 一次性費用 + 早期復甦不穩）→ FY26 9M NI $4.53B（突破歷史 / AI 加速）<span class="src-tag">[來源:10-K]</span>。Headwinds：(1) NAND 屬循環性極強產業，過去 3 個循環頂峰平均維持 4-6 季；(2) Kioxia 合資結構限制獨立產能擴張節奏；(3) Trump Administration 關稅政策—10-Q 明示「目前美國境內銷售產品多數豁免，但若取消可能影響毛利率」<span class="src-tag">[來源:10-Q]</span>。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角（FY23-25 為 spin-off 前合併呈報）</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">毛利率</th><th class="num">稀釋 EPS</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY23</td><td class="num">$6.09B</td><td class="num">7.1%</td><td class="num">-$14.78</td><td>深谷（NAND 大跌價）</td></tr>
+        <tr><td>FY24</td><td class="num">$6.66B</td><td class="num">16.1%</td><td class="num">-$4.63</td><td>消化年</td></tr>
+        <tr><td>FY25</td><td class="num">$7.36B</td><td class="num">30.1%</td><td class="num">-$11.32</td><td>復甦（含 spin-off 一次費用）</td></tr>
+        <tr><td>FY26 (9M)</td><td class="num">$11.28B</td><td class="num">61.6%<span class="src-tag">[推算]</span></td><td class="num">$28.93</td><td>突破歷史 / AI 加速</td></tr>
+      </tbody>
+    </table>
+
+    <h3>最新季 (FY26 Q3，截至 2026-04-03)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ vs FY26 Q2</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$5,950M</td><td class="num">+251.0%</td><td class="num">+96.7%</td></tr>
+        <tr><td>毛利率（GAAP）</td><td class="num">78.4%</td><td class="num">+55.9 pp</td><td class="num">+27.5 pp</td></tr>
+        <tr><td>營業利潤</td><td class="num">$4,111M</td><td class="num">轉正<span class="src-tag">[推算]</span></td><td class="num">+286.0%</td></tr>
+        <tr><td>淨利</td><td class="num">$3,615M</td><td class="num">轉正</td><td class="num">+350.2%</td></tr>
+        <tr><td>稀釋 EPS（GAAP）</td><td class="num">$23.03</td><td class="num">轉正</td><td class="num">+347.2%</td></tr>
+        <tr><td>調整 EPS（共識口徑）</td><td class="num">$23.41</td><td class="num">轉正</td><td class="num">+277.6%</td></tr>
+        <tr><td>現金與約當現金</td><td class="num">$3,735M</td><td class="num">+147.8%</td><td class="num">+142.7%</td></tr>
+      </tbody>
+    </table>
+    <p>Q3 FY26 adj EPS $23.41 較共識 $14.83 高 +57.9%<span class="src-tag">[來源:Finnhub]</span>。連 4 季 beat 且驚奇規模逐季加大（Q4 FY25 +597%、Q1 FY26 +27.8%、Q2 FY26 +76.3%、Q3 FY26 +57.9%）<span class="src-tag">[來源:Finnhub]</span>。<b>成長</b>：Q3 營收 +96.7% QoQ 與 +251% YoY 為 NAND 業界近 10 年單季最快增速<span class="src-tag">[來源:推算]</span>，反映 AI 雲端訂單擴張 + ASP 大幅上行雙重驅動。<b>獲利</b>：GM 跳升至 78.4% 為記憶體類股歷史性高點（Micron FY18 峰值約 60%、SK Hynix FY24 峰值約 55%）<span class="src-tag">[來源:推算]</span>，反映多年 cost-down + Q3 ASP 顯著正向；該水位可持續性需後續財報驗證。<b>現金生成</b>：2026-03-04 提前清償 $2B Term Loan B（spin-off 過程承擔之債務）<span class="src-tag">[來源:10-Q]</span>、現金跳至 $3.74B、長期負債歸零<span class="src-tag">[來源:10-Q]</span>。對比 FY23 深谷淨損 -$14.78 EPS，當前 9M FY26 EPS $28.93 反映 NAND 自完整循環底部跳升至頂部。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 45.5 / PE_fwd 10.06 / PS_TTM 15.5</td><td>forward PE 極低反映市場預期 EPS 加速；隱含 forward EPS $137.5（vs TTM $28.77）為頂峰假設，PEG_fwd null 表現 NAND 循環不可比 PEG 框架</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 42.33% vs 5y 均 n/a</td><td>spin-off 後首度單獨呈報；4 季財務循環高峰 ROE，難代表全週期</td></tr>
+        <tr><td>利潤率</td><td>Gross 56.0% / Op 40.7% / Net 34.2% (TTM)</td><td>Q3 FY26 已跳至 GM 78% / Op 69%，TTM 仍含 FY25 早期低水位平均</td></tr>
+        <tr><td>成長</td><td>Rev YoY +82.76% / Q YoY +251.0%</td><td>單季增速為 NAND 業界 10 年最高；3y CAGR -8.98% 反映 FY23-24 連續下行</td></tr>
+        <tr><td>報酬</td><td>52w +3,467% / 相對 S&amp;P500 +3,444 pp</td><td>52w 低點 $35.79 為 spin-off 初始定價；高點 $1,600（5/11）至 $1,383 已修正 -13.5%</td></tr>
+        <tr><td>風險（波動）</td><td>Beta 2.78 / 3M ADR std 95.1</td><td>S&amp;P500 級最高之一；單日 ±10-20% 已屬常態</td></tr>
+        <tr><td>股利</td><td>$0（不配發）</td><td>FCF 重建中，現金優先清償 spin-off 過渡債務<span class="src-tag">[來源:10-Q]</span></td></tr>
+      </tbody>
+    </table>
+    <p>估值方法主要錨定 PE_forward 10.06 隱含 forward EPS $137.5<span class="src-tag">[來源:推算]</span> 與 9M FY26 EPS $28.93 之間的中位 EPS 假設；NAND 循環 5y 均值不適用因 spin-off 過渡。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. AI NAND 超循環：Datacenter 訓練/推論驅動需求</div>
+      <div>10-Q MD&amp;A 明示「rapid growth of AI infrastructure is driving demand」、「expect these conditions to persist through calendar 2026 and beyond」<span class="src-tag">[來源:10-Q]</span>。Q3 FY26 +251% YoY 為觀察證據<span class="src-tag">[來源:10-Q]</span>。</div>
+      <div class="pillar-falsifier">若 Q4 FY26（2026-04-2026-07）營收年增跌破 +150%，或 FY27 Q1 NAND 合約價 QoQ -10%，超循環論破裂。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. GM 78% / Op margin 69% 為歷史性高點</div>
+      <div>Q3 FY26 GM 78.4%、Op margin 69.1%<span class="src-tag">[來源:10-Q]</span>——遠超 NAND 業界歷史峰值（Micron FY18 GM 60%）<span class="src-tag">[來源:推算]</span>。即使 H2 修正至 60%，仍代表多年最佳結構性獲利能力。</div>
+      <div class="pillar-falsifier">若任一季 GM 跌破 60%，或 Op margin 跌破 45%，獲利能力結構性論點動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 4 連季 EPS beat、驚奇逐季放大</div>
+      <div>Q4 FY25 +597%、Q1 FY26 +27.8%、Q2 FY26 +76.3%、Q3 FY26 +57.9%<span class="src-tag">[來源:Finnhub]</span>，管理層 guidance 與賣方共識同步追不上實際表現。</div>
+      <div class="pillar-falsifier">若 Q4 FY26 共識 EPS miss 或單一賣方下修 FY27 預估 &gt;15%，動能信號破裂。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. 資產負債表清理完成、$3.74B 現金</div>
+      <div>2026-03-04 提前清償 $2B Term Loan B、長期負債歸零<span class="src-tag">[來源:10-Q]</span>；現金自 spin-off 時 $1.48B 增至 Q3 FY26 $3.74B<span class="src-tag">[來源:10-Q]</span>，提供未來資本支出 / 庫藏空間。</div>
+      <div class="pillar-falsifier">若 H2 FY26 capex 上升至 &gt;10% 營收、現金消耗加速，論點略弱化。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. NAND 循環頂部風險</div>
+      <div>NAND 屬循環性極強產業（10-K Item 1A 列首要風險）<span class="src-tag">[來源:10-K]</span>；過去 3 個循環頂峰維持 4-6 季後翻轉。當前 GM 78% 已超歷史峰值（Micron FY18 60%），統計上接近頂部。Q4 FY26 / FY27 H1 為頂部驗證關鍵。</div>
+      <div class="risk-meta">機率：中-高 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. forward EPS $137.5 假設極端</div>
+      <div>$1,383.29 / PE_fwd 10.06 = forward EPS $137.5<span class="src-tag">[來源:推算]</span>。即使 Q3 FY26 全年化（$23 × 4 = $92）也不及 forward EPS。要達到，需 H1 FY27 平均單季 EPS $30+，依賴 NAND 合約價持續上漲。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. WDC spin-off 過渡尚未結束</div>
+      <div>2025-02-21 自 WDC spin-off，2026-02-18 WDC 再處分 5.82M 股<span class="src-tag">[來源:10-Q]</span>，2026-03-19 起 WDC 餘股無轉讓限制。WDC 仍持 1.69M 股理論上可隨時釋出，造成潛在賣壓。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：低-中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. 美國關稅政策不確定</div>
+      <div>10-Q 明示 Trump Administration 關稅政策變動風險，目前多數美國銷售豁免但未來可能取消<span class="src-tag">[來源:10-Q]</span>；NAND 製造主要在亞洲（日韓中）。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">5. Kioxia 合資結構限制獨立決策</div>
+      <div>Flash Ventures 50/50 結構意味產能擴張需與 Kioxia 共識<span class="src-tag">[來源:10-K]</span>；Kioxia 自身已上市，兩股東利益不必然完全一致。</div>
+      <div class="risk-meta">機率：低-中 · 嚴重度：中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-08 中下旬（估）</td><td>Q4 FY26 / 全年財報 + FY27 guidance<span class="src-tag">[來源:8-K]</span></td><td>高</td></tr>
+        <tr><td>2026-Q3 CY</td><td>NAND 合約價 Q3 CY26 議定（市場觀察重點）</td><td>高</td></tr>
+        <tr><td>2026-11 初（估）</td><td>Q1 FY27 季報，反映 NAND 循環是否延續</td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>Samsung / SK Hynix / Micron NAND capex / capacity 公告</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-04-30</td><td>Q3 FY26 財報 + Other Material Event</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/2023554/000162828026028879/sndk-20260430.htm">SEC</a></td></tr>
+        <tr><td>2026-01-29</td><td>Q2 FY26 財報</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/2023554/000162828026004121/sndk-20260129.htm">SEC</a></td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K 主軸為 spin-off 後首 3 次季報——每次都大幅 beat 市場共識。未來 6 個月最可能觸發評等升降的事件為 2026-08 Q4 FY26 + FY27 guidance：將驗證 NAND 循環頂部是否延續或開始翻轉。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易筆數 / 不同內部人</td><td>185 筆 / 14 位（含 WDC 機構性出脫）</td></tr>
+        <tr><td>WDC 處分</td><td>2025-06-09 處分 21.3M 股、2026-02-18 處分 5.82M 股<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>+$0 vs -$246M<span class="src-tag">[來源:推算]</span></td></tr>
+        <tr><td>淨值（買 - 賣）</td><td><b>-$246M</b><span class="src-tag">[推算]</span></td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月淨值約 -$246M 為顯著賣出，主要來自 WDC（前母公司）兩次次級出售以清償自身債務（2025-06 共 21.3M 股、2026-02 共 5.82M 股）<span class="src-tag">[來源:10-Q]</span>。剔除 WDC 機構性出脫，純內部人（高管 + 董事）的類型 S 賣出規模較小。注意：WDC 2026-03-19 後對餘額 1.69M 股的轉讓限制已解除，理論上可隨時出售。對 thesis 屬中性偏負，但機構性出脫不應與管理層 directional 賣出畫等號。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成目標價，需要相信什麼</h4>
+      <ul>
+        <li>Q4 FY26（2026-04~2026-07）營收 ≥ $5.5B（QoQ ≥ -10%）。</li>
+        <li>NAND 合約價 Q3 CY26 維持 QoQ +0% 或正成長。</li>
+        <li>FY27 全年 adj EPS ≥ $80（即 H2 持續高位）。</li>
+        <li>WDC 對餘額 1.69M 股不在 6M 內全數釋出形成顯著賣壓。</li>
+        <li>美中半導體 / NAND 出口管制無新增限制。</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1（多倍乘 forward EPS）</b>：Finnhub 隱含 forward EPS $137.5<span class="src-tag">[來源:推算]</span>。對 NAND 循環頂部適用 PE 8–12x（cyclical peak multiple）→ $1,100–$1,650，中位 <b>$1,375</b>。</p>
+    <p><b>方法 2（mid-cycle EPS × normalized PE）</b>：估全週期平均 adj EPS $40-60（介於 FY23-25 虧損與 FY26 cycle peak 之間）；適用 normalized PE 15-20x → $600–$1,200，中位 $900。但 NAND 在 AI 推論時代是否仍適用傳統循環框架存疑，故給予較低權重。</p>
+    <p><b>方法 3（賣方共識）</b>：27 位賣方買入占比 81.5%（4 月內 71% → 81%、上升趨勢）<span class="src-tag">[來源:Finnhub]</span>。假設 12 個月共識 mid-point 約 $1,500，6M 折現 = $1,383 + 0.95×($1,500-$1,383) = <b>$1,494</b>。</p>
+    <p>三方法區間 $900–$1,494、平均 $1,256；加權考慮 forward EPS 假設極端 + GM 78% 可持續性未驗證，<b>結論目標 $1,420、區間 $850–$1,800</b>，對應潛在報酬 +2.7%（區間 -39% ~ +30%）。上修觸發：Q4 FY26 維持 GM ≥ 65% + FY27 guidance ≥ $20B → 升 BUY；下修觸發：Q4 GM 跌破 55% 或 NAND 合約價首次 QoQ 修正 → 降 SELL。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>8</td><td>14</td><td>5</td><td>0</td><td>0</td><td>27</td><td>81.5%</td></tr>
+        <tr><td>2026-04</td><td>8</td><td>13</td><td>5</td><td>0</td><td>0</td><td>26</td><td>80.8%</td></tr>
+        <tr><td>2026-03</td><td>6</td><td>13</td><td>6</td><td>0</td><td>0</td><td>25</td><td>76.0%</td></tr>
+        <tr><td>2026-02</td><td>7</td><td>13</td><td>8</td><td>0</td><td>0</td><td>28</td><td>71.4%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>FY26 Q3</td><td>$14.83</td><td>$23.41</td><td>+$8.58</td><td style="color:#0a8a3a">+57.88%</td></tr>
+        <tr><td>FY26 Q2</td><td>$3.52</td><td>$6.20</td><td>+$2.68</td><td style="color:#0a8a3a">+76.28%</td></tr>
+        <tr><td>FY26 Q1</td><td>$0.95</td><td>$1.22</td><td>+$0.27</td><td style="color:#0a8a3a">+27.84%</td></tr>
+        <tr><td>FY25 Q4</td><td>$0.04</td><td>$0.29</td><td>+$0.25</td><td style="color:#0a8a3a">+597.12%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識偏多（買入占比 81.5%、超 strongly bullish 80% 門檻、4 月內由 71% 升至 82%、+10 pp 顯著上修）。過去 4 季 4/4 beats、平均驚奇 +189.8%（含 Q4 FY25 +597%、Q2 FY26 +76%）反映賣方對 NAND 循環頂部速度顯著低估。本報告中立評等與賣方偏多存在分歧—主因為本報告對「forward EPS $137.5 之兌現可能性」與「GM 78% 可持續性」給予較大風險折扣。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 $1,420、最新收盤 $1,383.29，潛在報酬 +2.7%。對應評等規則為 <b>中立</b>。若目標價上修至 $1,591 以上則升 BUY；若下修至 $1,176 以下則降 SELL。</p>
+    <p>信心 0.40（低）：三方法價差 $900–$1,494（66%）、5y 自身均值不適用（spin-off 不足 16 個月）、NAND 循環頂部位置具高度不確定性、forward EPS $137.5 為單一最大假設——符合 SKILL「方法價差 &gt; 25% + 多重關鍵假設驅動」之低門檻。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th>分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">+2</td><td>ROE_TTM 42.3%、9M FY26 NI $4.53B、現金 $3.74B、零長期負債（已清償）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>估值合理性</td><td class="score">-1</td><td>PE_TTM 45.5、PS 15.5；PE_fwd 10 看似低但隱含極高 forward EPS<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr><td>催化劑</td><td class="score">+1</td><td>Q4 FY26 + FY27 guidance、NAND 合約價 Q3 CY26 議定、AI 雲端推論需求<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>風險水平</td><td class="score">-2</td><td>NAND 循環頂部位置、forward EPS 假設極端、WDC 餘股風險、關稅<span class="src-tag">[來源:10-K][來源:10-Q]</span></td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">0</td><td>52w +3,467% 但起點為 spin-off 低基期；buy 占比 71% → 82% 上升中；近 5 日 -4.4% 已現轉折<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr class="total"><td>合計</td><td class="score">0</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 0 對應目標價 +2.7%，反映「強勁營運被循環頂部位置與估值假設極端化抵銷」。上修觸發為循環延續且 NAND 合約價持續上行；下修觸發為任一單季 GM 顯著回落或 NAND 合約價首次 QoQ 修正。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K FY2025（period end 2025-06-27，accession via EDGAR）— Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A</li>
+      <li>10-Q FY26 Q3（period end 2026-04-03，filed 2026-05-01）— Item 2 MD&amp;A、spin-off 詳述、Term Loan B 清償</li>
+      <li>過去 12 個月 8-K：8 筆（3 筆季報 + 5 筆其他）</li>
+      <li>XBRL companyfacts via SEC EDGAR API（CIK 0002023554）</li>
+      <li>OHLC 行情（Stooq → Yahoo fallback）—樣本期間 2025-02-24 ~ 2026-05-19（318 個交易日，spin-off 後）</li>
+      <li>新聞合成：Finnhub /company-news（snapshot 2026-05-21，60 articles）</li>
+      <li>Finnhub /stock/profile2、/stock/peers、/stock/recommendation、/stock/earnings、/stock/insider-transactions、/stock/metric?metric=all（snapshot 2026-05-21）</li>
+      <li>analyst_consensus.json（4 個月 recommendation_trends + 4 季 EPS surprise）</li>
+      <li>ownership.json（lookback 2025-05-14 ~ 2026-05-21，185 transactions，14 unique insiders）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Yahoo Finance / Stooq 行情、Finnhub、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。NAND 記憶體類股估值與半導體循環、合約價、AI 雲端 capex 高度連動，過去績效不代表未來表現，目標價與評等不保證實現。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>
