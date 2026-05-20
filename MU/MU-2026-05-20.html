@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MU Equity Research — 2026-05-20</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                 "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    color: var(--c-text);
+    background: var(--c-bg);
+    margin: 0;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .report {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    background: var(--c-panel);
+    min-height: 100vh;
+    border-left: 1px solid var(--c-line);
+    border-right: 1px solid var(--c-line);
+  }
+  header.report-head {
+    border-bottom: 1px solid var(--c-line);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14.5px;
+  }
+  th, td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--c-line);
+    vertical-align: top;
+  }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 6px 18px;
+    font-size: 14px;
+    color: var(--c-muted);
+    margin-top: 8px;
+  }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .rating-strong-buy  { background: var(--c-buy-strong); }
+  .rating-buy         { background: var(--c-buy); }
+  .rating-neutral     { background: var(--c-neutral); }
+  .rating-sell        { background: var(--c-sell); }
+  .target-block {
+    display: inline-block;
+    margin-left: 6px;
+    color: var(--c-text);
+    font-size: 14px;
+  }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier {
+    font-size: 13.5px;
+    color: var(--c-muted);
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta {
+    font-size: 12.5px;
+    color: var(--c-muted);
+    margin-left: 4px;
+  }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag {
+    display: inline;
+    font-size: 11px;
+    color: var(--c-muted);
+    margin-left: 2px;
+    font-weight: 400;
+    vertical-align: super;
+  }
+  .audience-note {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #f6f5f0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--c-text);
+  }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge {
+    background: #f0f9ff;
+    border-left: 3px solid var(--c-accent);
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .belief-bridge h4 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--c-accent);
+  }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer {
+    margin-top: 40px;
+    padding: 16px;
+    background: #f6f5f0;
+    border-left: 3px solid var(--c-muted);
+    font-size: 13.5px;
+    color: var(--c-muted);
+    line-height: 1.55;
+  }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  .placeholder { color: var(--c-muted); font-style: italic; }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "MU",
+  "company_name": "Micron Technology Inc",
+  "generated_at": "2026-05-20",
+  "price_at_generation": 698.74,
+  "currency": "USD",
+  "rating": "BUY",
+  "target_price": 820,
+  "target_price_low": 650,
+  "target_price_high": 950,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 17.35,
+  "qualitative_score": 4,
+  "confidence": 0.55,
+  "data_freshness": {
+    "financials_period_end": "2026-02-26",
+    "latest_10q_filing_date": "2026-03-19",
+    "latest_8k_date": "2026-04-01",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>Micron Technology Inc (MU) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-buy">買入</span>
+      <span class="target-block">6M 目標價 <b>$820</b> (+17.4%) · 信心 0.55（偏低）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-20</b>
+      <span>當前股價</span><b>$698.74</b>
+      <span>最新 10-Q</span><b>2026-03-19 提交（涵蓋至 2026-02-26）</b>
+      <span>最近 8-K</span><b>2026-04-01</b>
+      <span>資料來源</span><b>SEC EDGAR · Stooq · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>Micron 是全球三大記憶體（DRAM/NAND）IDM 之一，FY25 完成事業群重組為 CMBU（雲端記憶體與 HBM）、CDBU（核心資料中心）、MCBU（行動與終端）、AEBU（車用與嵌入式）四線。在 AI HBM 超循環推動下，營收從 FY23 谷底 $15.5B<span class="src-tag">[來源:XBRL]</span>放大至 FY25 $37.4B<span class="src-tag">[來源:XBRL]</span>，H1 FY26 $37.5B<span class="src-tag">[來源:10-Q]</span>已等同整個 FY25 全年；最新 Q2 FY26 毛利率衝上 74%<span class="src-tag">[來源:10-Q]</span>、EPS $12.07<span class="src-tag">[來源:XBRL]</span>創歷史新高。</p>
+    <p>論點核心：HBM3E 12-high 已是出貨主力<span class="src-tag">[來源:10-K]</span>、HBM4 36GB 已 sample<span class="src-tag">[來源:10-K]</span>，加上 Samsung 罷工催化短期 DRAM 合約價，53 位分析師中 92.5% 評為 buy<span class="src-tag">[來源:推算]</span>，連續 4 季 EPS beat（最新季驚奇 +27.3%<span class="src-tag">[來源:推算]</span>）。但 52 週 +608% 漲幅<span class="src-tag">[來源:推算]</span>已 price in 多數樂觀情境，內部人 12 個月淨賣出 $347M<span class="src-tag">[來源:推算]</span>為顯著預警。</p>
+    <p>給予 <b>買入</b> 評等，6M 目標價 $820（區間 $650-$950），潛在報酬 +17.4%。下一個觸發點是 2026-06-15（估）發布的 Q3 FY26 財報——若延續 beat 並維持環比成長，本評等可升 STRONG_BUY；若 guidance 顯露 ASP 趨緩或 HBM4 延後，本評等下修至 NEUTRAL。</p>
+    <div class="audience-note">適合能承受高週期波動（beta 1.96<span class="src-tag">[來源:推算]</span>、3 個月日報酬標準差 78%<span class="src-tag">[來源:推算]</span>）、信念可獨立持有的中期投資人；不適合追求穩定股利或本金保護的保守族群（殖利率僅 0.07%<span class="src-tag">[來源:推算]</span>）。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>公司全名</td><td>Micron Technology Inc</td></tr>
+        <tr><td>產業 / SIC</td><td>Semiconductors（半導體記憶體）/ 3674</td></tr>
+        <tr><td>交易所 / 代號</td><td>NASDAQ NMS · MU</td></tr>
+        <tr><td>市值（粗估）</td><td>$788B（流通股 1,128M × $698.74）</td></tr>
+        <tr><td>主要業務</td><td>DRAM（含 HBM、DDR5、LPDDR、GDDR）· NAND（含 SSD、Managed NAND、MCP）· NOR</td></tr>
+        <tr><td>四大事業群</td><td>CMBU（Cloud Memory + HBM）· CDBU（Core Data Center）· MCBU（Mobile & Client）· AEBU（Auto & Embedded）</td></tr>
+        <tr><td>主要客戶（10-K 揭露）</td><td>大型雲端 hyperscaler、OEM 資料中心、智慧型手機 OEM、車廠</td></tr>
+        <tr><td>CEO</td><td>Sanjay Mehrotra（公司董事長兼 CEO，依 Form 4 申報資料）</td></tr>
+        <tr><td>會計年度結束</td><td>每年最接近 8/31 的星期四（FY26 為 53 週）</td></tr>
+        <tr><td>CIK</td><td>0000723125</td></tr>
+        <tr><td>IPO 年份</td><td>1984</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>Micron 屬於高度寡占的記憶體 IDM 產業，全球 DRAM 市場由 Samsung、SK Hynix、Micron 三家瓜分超過 95% 份額，NAND 玩家略多但 Micron 同樣位列 top 6。價值鏈上游覆蓋自有晶圓廠（美國、台灣、新加坡、日本）與後段封裝，下游直接對 hyperscaler、PC OEM、手機 OEM 出貨。FY25 segment 結構：CMBU $13.52B、CDBU $7.23B、MCBU $11.86B、AEBU $4.75B<span class="src-tag">[來源:10-K]</span>，其中 CMBU 對比 FY24 $3.79B 暴增 +257%<span class="src-tag">[來源:推算]</span>，反映 HBM3E 12-high 在 Q4 FY25 已是出貨主力<span class="src-tag">[來源:10-K]</span>。</p>
+    <p>關鍵 sector KPI（記憶體類）：</p>
+    <ul>
+      <li><b>HBM revenue share</b>：Q4 FY25 HBM3E 12-high 已佔出貨主力<span class="src-tag">[來源:10-K]</span>，HBM4 36GB 12-high 已 sample 多個關鍵客戶<span class="src-tag">[來源:10-K]</span>；總 DRAM 收入 FY25 $28.58B 中估計 HBM 佔比超過 30%。</li>
+      <li><b>DRAM/NAND mix</b>：FY25 DRAM 收入 $28.58B、NAND $8.50B<span class="src-tag">[來源:10-K]</span>，DRAM 佔比 77%（vs FY23 71%），結構性朝 DRAM/HBM 集中。</li>
+      <li><b>Capex intensity</b>：FY25 capex $15.86B、營收 $37.4B<span class="src-tag">[來源:XBRL]</span>，capex 強度 42%，5 年 capex CAGR 14%<span class="src-tag">[來源:推算]</span>，反映擴 HBM 與 1γ EUV 節點。</li>
+    </ul>
+    <p>10 年週期脈絡：上一波 DRAM 峰值在 FY18（營收 $30.4B、EPS $11.51<span class="src-tag">[來源:XBRL]</span>），FY19-20 谷底（FY20 EPS $2.37）；第二波小峰 FY21-22；FY23 為近 10 年最深谷（營收 $15.5B、GM -9%、EPS -$5.34<span class="src-tag">[來源:XBRL]</span>）；當前 AI 循環 H1 FY26 已突破 FY18 全年水平。Headwind：中國 CAC 自 2023 起禁止 critical infrastructure 採購 Micron 產品<span class="src-tag">[來源:10-K]</span>、客戶集中度高（前 4 大客戶營收佔比顯著）、ASP 高度波動。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">毛利率</th><th class="num">稀釋 EPS</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY17</td><td class="num">$20.3B</td><td class="num">42%</td><td class="num">$4.41</td><td>復甦中段</td></tr>
+        <tr><td>FY18</td><td class="num">$30.4B</td><td class="num">59%</td><td class="num">$11.51</td><td>前峰（上一輪 DRAM 峰）</td></tr>
+        <tr><td>FY19</td><td class="num">$23.4B</td><td class="num">46%</td><td class="num">$5.51</td><td>下行</td></tr>
+        <tr><td>FY20</td><td class="num">$21.4B</td><td class="num">31%</td><td class="num">$2.37</td><td>谷底</td></tr>
+        <tr><td>FY21</td><td class="num">$27.7B</td><td class="num">38%</td><td class="num">$5.14</td><td>復甦</td></tr>
+        <tr><td>FY22</td><td class="num">$30.8B</td><td class="num">45%</td><td class="num">$7.75</td><td>第二小峰</td></tr>
+        <tr><td>FY23</td><td class="num">$15.5B</td><td class="num">-9%</td><td class="num">-$5.34</td><td>深谷</td></tr>
+        <tr><td>FY24</td><td class="num">$25.1B</td><td class="num">22%</td><td class="num">$0.70</td><td>復甦</td></tr>
+        <tr><td>FY25</td><td class="num">$37.4B</td><td class="num">40%</td><td class="num">$7.59</td><td>加速（AI 循環首年）</td></tr>
+        <tr><td>FY26 H1 年化*</td><td class="num">$75.0B</td><td class="num">68%</td><td class="num">$33.4</td><td>突破歷史峰值</td></tr>
+      </tbody>
+    </table>
+    <p class="src">* H1 年化 = (Q1 + Q2 FY26) × 2，僅供視覺對照，非實際全年預測。</p>
+
+    <h3>最新季 (FY26Q2，截至 2026-02-26)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$23.86B</td><td class="num">+196%</td><td class="num">+75%</td></tr>
+        <tr><td>毛利率</td><td class="num">74%</td><td class="num">+37pp</td><td class="num">+18pp</td></tr>
+        <tr><td>營業利潤</td><td class="num">$16.14B</td><td class="num">+810%</td><td class="num">+163%</td></tr>
+        <tr><td>淨利</td><td class="num">$13.79B</td><td class="num">+770%</td><td class="num">+163%</td></tr>
+        <tr><td>稀釋 EPS</td><td class="num">$12.07</td><td class="num">+756%</td><td class="num">+162%</td></tr>
+        <tr><td>現金與約當現金</td><td class="num">$13.91B</td><td class="num">+84%</td><td class="num">+43%</td></tr>
+      </tbody>
+    </table>
+    <p>Q2 FY26 EPS $12.07<span class="src-tag">[來源:XBRL]</span>較賣方共識 $9.58<span class="src-tag">[來源:推算]</span>大幅 beat +27.3%，是過去 4 季最強驚奇（前三季依序 +15.8%、+2.8%、+17.4%<span class="src-tag">[來源:推算]</span>）。三方面解讀：(1) 成長端極端強勁，營收 YoY +196% 反映 DRAM 合約價跳升疊加 HBM ramp，非靠基期效應；(2) 獲利端毛利率 74% 已突破上一輪 FY18 峰值 59%<span class="src-tag">[來源:XBRL]</span>，反映 HBM 高 ASP 結構性放大全產品線利潤率；(3) 現金生成端 H1 FY26 OCF $8.41B<span class="src-tag">[來源:10-Q]</span> + capex $5.39B<span class="src-tag">[來源:10-Q]</span>，FCF 已轉正且累計 $3B+，下行緩衝充足。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 33.75 · PE_fwd 6.40 · PEG_TTM 0.16</td><td>Forward PE 大幅低於 TTM，反映賣方預期 EPS 持續加速；PEG 0.16 顯示成長充分支撐多倍。</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 40.8% · ROE 5y avg 7.0%</td><td>資本回報為長期均值的 6 倍，明確顯示處於週期峰位區間。</td></tr>
+        <tr><td>利潤率</td><td>GM 58% · OPM 48% · NM 41%（TTM）</td><td>三項 TTM 利潤率均為歷史新高（5y avg 分別 27% / 10% / 8%），HBM 與 DRAM 合約價共振推升。</td></tr>
+        <tr><td>成長</td><td>營收 YoY TTM +85.5% · EPS YoY TTM +412%</td><td>營收增速為 5y 均值 11.8% 的 7 倍，極度週期性、不可外推。</td></tr>
+        <tr><td>報酬</td><td>52w +608% · 相對 S&P500 52w +585%</td><td>相對市場大幅超漲，多數樂觀情境已被定價。</td></tr>
+        <tr><td>風險</td><td>beta 1.96 · 3M ADR 標準差 78%</td><td>波動度極高，半導體疊加 cyclical double whammy。</td></tr>
+        <tr><td>股利</td><td>殖利率 0.07%（指示性年股利 $0.60）</td><td>股利象徵性，投資邏輯應以資本利得為主。</td></tr>
+      </tbody>
+    </table>
+    <p>關鍵 takeaway：所有 TTM 獲利指標皆顯著偏離 5 年自身均值（ROE 6 倍、GM 2 倍），佐證當前處於週期峰位。Forward PE 6.4 與 PEG 0.16 為支撐我評等 Step 3 估值的核心 anchor——只要 EPS 加速軌跡延續一季以上，TTM PE 自然在股價橫盤中被「成長」消化。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. AI 記憶體超循環仍在 ramp 早段</div>
+      <div>H1 FY26 營收 $37.5B<span class="src-tag">[來源:10-Q]</span>等同整個 FY25 全年；HBM3E 12-high 已是 Q4 FY25 出貨主力<span class="src-tag">[來源:10-K]</span>，HBM4 36GB 12-high 已 sample 多客戶<span class="src-tag">[來源:10-K]</span>。Seeking Alpha 5/20 文章描述「HBM sold out through 2026，multi-year contracts」<span class="src-tag">[來源:news]</span>。</div>
+      <div class="pillar-falsifier">若 Q3 FY26（6 月發布）營收環比 -10% 以上或 HBM4 量產時程延後超過一季，此論點被推翻。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. Samsung 罷工為短期供給催化</div>
+      <div>5/20 多家媒體報導 Samsung 工人罷工逼近、勞資談判破裂<span class="src-tag">[來源:news]</span>，已推動 MU 與 SanDisk 盤前 +3-4%。DRAM 三寡占下任一玩家供給受擾，立即傳導至合約價。</div>
+      <div class="pillar-falsifier">若 5 月底前 Samsung 與工會和解或宣布加速其他廠房產能調度抵消，此催化失效。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 賣方共識持續上修、4 季連續 beat</div>
+      <div>53 位分析師<span class="src-tag">[來源:推算]</span>中 92.5% 評 buy/strongBuy，比例由 2026-02 的 90.7% 升至 2026-05 的 92.5%；EPS 驚奇連續 4 季為正（+15.8%、+2.8%、+17.4%、+27.3%<span class="src-tag">[來源:推算]</span>），且最新季驚奇放大反映共識仍偏保守。</div>
+      <div class="pillar-falsifier">若下一季 EPS 驚奇轉負，或單月 buy_pct 跌破 85%，論點減弱。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. Forward 估值不貴 + 強現金緩衝</div>
+      <div>PE forward 6.40 / PEG 0.16<span class="src-tag">[來源:推算]</span>反映市場已 price in 多倍 EPS 成長，但 FY25 OCF $17.5B<span class="src-tag">[來源:XBRL]</span>與當前現金 $13.9B<span class="src-tag">[來源:XBRL]</span>提供下行緩衝；若 EPS 加速兌現，估值在股價橫盤中即被自然壓縮。</div>
+      <div class="pillar-falsifier">若 FY27 EPS 預估從目前共識下修 30% 以上、或自由現金流轉負兩季，論點被推翻。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. 內部人 12 個月淨賣出 $347M，CEO 與高管集中拋售</div>
+      <div>過去 12 個月 417 筆內部人交易、18 位內部人，賣出金額 $354.6M vs 買入僅 $7.8M<span class="src-tag">[來源:推算]</span>。CEO Sanjay Mehrotra 於 5/1 以 $543-545 賣出多筆、Steven Gomo 於 5/11 以 $787 高位賣出<span class="src-tag">[來源:推算]</span>。Gomo 賣出時點正是 52 週高 $818<span class="src-tag">[來源:推算]</span>前後，警示意義強。</div>
+      <div class="risk-meta">機率：高（已發生）· 嚴重度：中（可能領先 6-12M 股價）</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. 短期見頂跡象 + 週期股回檔幅度歷史可觀</div>
+      <div>5/11 創 52 週高 $818.67<span class="src-tag">[來源:推算]</span>後 5 日內回檔 -13%<span class="src-tag">[來源:推算]</span>至 $698.74<span class="src-tag">[來源:OHLC]</span>，2 年股價漲幅 +608% 已 price in 多數樂觀情境。對照 FY23 谷底 EPS -$5.34<span class="src-tag">[來源:XBRL]</span>、營收較 FY22 腰斬，週期反轉幅度歷史可觀。</div>
+      <div class="risk-meta">機率：中（短期回檔）/ 中（中期 cyclical 反轉）· 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. 中國 CAC 禁令未解、地緣風險擴大</div>
+      <div>10-K Item 7 揭露中國 CAC 自 2023 起禁止 critical infrastructure 採購 Micron<span class="src-tag">[來源:10-K]</span>，影響中國 data center 與 networking 市場，至今未解。若擴大至消費電子或汽車品類，將額外侵蝕 MCBU / AEBU 營收。</div>
+      <div class="risk-meta">機率：高（已發生）/ 中（擴大）· 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. HBM 競爭加劇、SK Hynix 與 Samsung 追趕</div>
+      <div>SK Hynix 為當前 HBM 龍頭、Samsung 大舉投入 HBM4，MU 雖在 HBM3E 12-high 與 HBM4 sample 取得進展<span class="src-tag">[來源:10-K]</span>，但客戶分散採購策略可能限制 MU 市占擴張。10-K Item 1A 將「客戶集中」與「競爭高度激烈」列為前段風險<span class="src-tag">[來源:10-K]</span>。</div>
+      <div class="risk-meta">機率：中（24 個月內）· 嚴重度：中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-06-15（估）</td><td>Q3 FY26 財報（10-Q），市場關注 HBM 訂單能見度、毛利率延續性、Samsung 罷工影響 ASP</td><td>高</td></tr>
+        <tr><td>2026-07~09</td><td>HBM4 36GB 量產進度更新（量產時程 / 客戶導入名單）</td><td>高</td></tr>
+        <tr><td>進行中</td><td>Samsung 罷工進展（罷工規模、和解時程、DRAM 合約價傳導）</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-03-25</td><td>Other Material Event</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/723125/000110465926034174/tm269755d1_8k.htm">8-K</a></td></tr>
+        <tr><td>2026-03-18</td><td>Q2 FY26 Earnings</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/mu-20260318.htm">8-K</a></td></tr>
+        <tr><td>2025-12-17</td><td>Q1 FY26 Earnings</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/mu-20251217.htm">8-K</a></td></tr>
+        <tr><td>2025-10-21</td><td>Officer / Director Change / Compensation</td><td>中</td><td><a href="https://www.sec.gov/Archives/edgar/data/723125/000110465925101237/tm2529116d1_8k.htm">8-K</a></td></tr>
+        <tr><td>2025-09-23</td><td>Q4 FY25 Earnings</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/mu-20250923.htm">8-K</a></td></tr>
+        <tr><td>2025-06-25</td><td>Q3 FY25 Earnings</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/mu-20250625.htm">8-K</a></td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K pattern：4 場財報全為高影響<span class="src-tag">[來源:8-K]</span>、另有 1 場高管變動與 1 場「重大事件」公告，反映管理層對外溝通主軸圍繞單季業績。未來 6 個月最大評等升降觸發點為 2026-06-15 估發布的 Q3 FY26 財報，是檢驗 Samsung 罷工 ASP 傳導與 HBM4 進度的第一個官方節點。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易次數 / 不同內部人數</td><td>417 筆 / 18 人</td></tr>
+        <tr><td>內部人買入 vs 賣出股數</td><td>1,979,866 vs 2,052,976</td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>$7.82M vs $354.57M</td></tr>
+        <tr><td>淨值（買 − 賣）</td><td><b style="color:#d1242f">−$346,745,205</b></td></tr>
+      </tbody>
+    </table>
+    <h3>最近顯著交易（前 5 筆）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>內部人</th><th>動作</th><th>股數</th><th>價格</th><th>類型</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-11</td><td>GOMO STEVEN J</td><td style="color:#d1242f">賣</td><td class="num">−1,000</td><td class="num">$787.60</td><td>S（公開市場）</td></tr>
+        <tr><td>2026-05-11</td><td>GOMO STEVEN J</td><td style="color:#d1242f">賣</td><td class="num">−1,000</td><td class="num">$786.47</td><td>S</td></tr>
+        <tr><td>2026-05-01</td><td>MEHROTRA SANJAY (CEO)</td><td style="color:#d1242f">賣</td><td class="num">−1,439</td><td class="num">$543.22</td><td>S</td></tr>
+        <tr><td>2026-05-01</td><td>MEHROTRA SANJAY (CEO)</td><td style="color:#d1242f">賣</td><td class="num">−672</td><td class="num">$544.58</td><td>S</td></tr>
+        <tr><td>2026-05-01</td><td>RAY MICHAEL CHARLES</td><td style="color:#d1242f">賣</td><td class="num">多筆共約 −5,500</td><td class="num">$510-$545</td><td>S</td></tr>
+      </tbody>
+    </table>
+    <p>解讀：內部人 12 個月淨賣 $347M、買入金額僅佔賣出 2.2%，且賣方集中於 CEO Sanjay Mehrotra 與獨董/高管，全部為 S（公開市場主動賣出）非 F（代繳稅）或 M（選擇權行使），代表強 directional signal。特別值得注意：Steven Gomo 於 5/11 以 $787 賣出，正值 52 週高 $818 前後，high-information insider 在峰位附近落袋的訊號意義強，對 Bull 論點構成顯著反證——管理層自身對「估值已過熱」的觀感比公開言論更直白。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成 6M 目標價 $820，需要相信什麼</h4>
+      <ul>
+        <li>Q3 FY26（六月中發布）營收環比 ≥ Q2 持平、毛利率維持 70% 以上</li>
+        <li>HBM4 36GB 量產時程不延後，2026 下半年開始貢獻營收</li>
+        <li>賣方共識 buy_pct 維持 90% 以上不下修</li>
+        <li>DRAM 合約價（Samsung 罷工催化）續漲，至少維持當前水位至 2026-Q3 末</li>
+        <li>中國 CAC 不再擴大限制範圍至消費電子或汽車品類</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1 — Multiple × forward EPS。</b>當前 PE_forward 6.40<span class="src-tag">[來源:推算]</span>對應 forward 12M EPS 約 $109，反映賣方對 FY26-27 連續高 EPS 預期。我採較保守設定：以 Q1+Q2 FY26 實際 EPS $16.67<span class="src-tag">[來源:XBRL]</span>加上 H2 FY26 兩季各 $11（介於 Q1 $4.60 與 Q2 $12.07 之間、考慮可能環比放緩）推算 FY26 EPS ≈ $39，給予 22x 早段循環 PE（上一輪 FY18 峰前 18-22x），對應 $858。</p>
+    <p><b>方法 2 — 簡化 DCF 敘述。</b>H1 FY26 OCF $8.41B<span class="src-tag">[來源:10-Q]</span>，年化 $16.8B 對標 FY25 OCF $17.5B<span class="src-tag">[來源:XBRL]</span>，FY26 全年 OCF 估 $32B、扣 capex 估 $25B 後 FCF $7B<span class="src-tag">[來源:推算]</span>；給 30x peak FCF（cyclical 折扣後）= $210B 隱含估值，加上現金 $13.9B<span class="src-tag">[來源:XBRL]</span>後對應每股約 $198——明顯低於 multiple 法，反映 FCF 受 capex 壓抑。賣方共識顯然不從 FCF 為錨。</p>
+    <p><b>方法 3 — 賣方共識方向校準。</b>92.5% buy + 連 4 季 beat 強烈支持上行，但 finnhub /stock/price-target 為付費鎖無法直接取得共識目標價數字；新聞 5/20 Seeking Alpha 文章引用「MU could rise 38%」<span class="src-tag">[來源:news]</span>對應 12M 目標 ~$965，6M 折半 ~$835，與方法 1 收斂。</p>
+    <p><b>結論</b>：6M 目標價 <b>$820</b>（區間 $650-$950），對應潛在報酬 <b>+17.4%</b>。上修觸發：Q3 FY26 EPS 再 beat ≥ 15% 且 guidance 顯示 H2 加速，上修至 $900+；下修觸發：guidance 顯示 ASP 趨緩或 HBM4 延後，下修至 $620。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>17</td><td>32</td><td>3</td><td>1</td><td>0</td><td>53</td><td><b>92.5%</b></td></tr>
+        <tr><td>2026-04</td><td>17</td><td>31</td><td>3</td><td>1</td><td>0</td><td>52</td><td>92.3%</td></tr>
+        <tr><td>2026-03</td><td>17</td><td>32</td><td>3</td><td>2</td><td>0</td><td>54</td><td>90.7%</td></tr>
+        <tr><td>2026-02</td><td>17</td><td>32</td><td>3</td><td>2</td><td>0</td><td>54</td><td>90.7%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>2026-Q1 calendar (FY26 Q2)</td><td>$9.58</td><td>$12.20</td><td>+$2.62</td><td style="color:#0a8a3a">+27.3%</td></tr>
+        <tr><td>2025-Q4 calendar (FY26 Q1)</td><td>$4.07</td><td>$4.78</td><td>+$0.71</td><td style="color:#0a8a3a">+17.4%</td></tr>
+        <tr><td>2025-Q3 calendar (FY25 Q4)</td><td>$2.95</td><td>$3.03</td><td>+$0.08</td><td style="color:#0a8a3a">+2.8%</td></tr>
+        <tr><td>2025-Q2 calendar (FY25 Q3)</td><td>$1.65</td><td>$1.91</td><td>+$0.26</td><td style="color:#0a8a3a">+15.8%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識 strongly bullish——買入占比 90%+ 且持續上行，幾無 strongSell 評等。連 4 季 EPS beat 且驚奇% 趨勢放大（+15.8% → +2.8% → +17.4% → +27.3%），顯示管理層 guidance 偏保守、共識更新速度跟不上實際營運加速。我評等為 BUY（+17%）與賣方方向一致但相對保守——主要分歧在於賣方未充分計入內部人淨賣 $347M 與短期見頂跡象（5 日 -13%），時間框架上我更重視 6M 區間波動風險。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 <b>$820</b>、最新收盤 <b>$698.74</b><span class="src-tag">[來源:OHLC]</span>，潛在報酬 <b>+17.4%</b>。對應評等規則（>+30% 強烈買入 / +15%~+30% 買入 / -15%~+15% 中立 / <-15% 賣出）為 <b>買入</b>。若目標價上修到 $908 以上則升 STRONG_BUY；下修到 $593 以下則降 NEUTRAL。</p>
+    <p>信心 <b>0.55（偏低）</b>：方法 1（multiple × EPS）與方法 3（共識校準）收斂至 $830-860，但方法 2（FCF DCF）僅給 $198 因 capex 壓抑——三方法價差 > 25%，且結果由 forward EPS 假設單一變數驅動，符合「偏低」bucket criteria。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th class="score">分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">+2</td><td>FY25 OCF $17.5B<span class="src-tag">[來源:XBRL]</span>、現金 $13.9B<span class="src-tag">[來源:XBRL]</span>、Q2 FY26 淨利 $13.8B<span class="src-tag">[來源:XBRL]</span>，創歷史新高且加速。</td></tr>
+        <tr><td>估值合理性</td><td class="score">0</td><td>PE_TTM 33<span class="src-tag">[來源:推算]</span>高，但 PE_fwd 6.4 / PEG 0.16 反向支撐；綜合中性。</td></tr>
+        <tr><td>催化劑</td><td class="score">+2</td><td>Samsung 罷工 + Q3 FY26 財報 + HBM4 量產，3 個 6M 內高影響事件齊發。</td></tr>
+        <tr><td>風險水平</td><td class="score">-1</td><td>內部人淨賣 $347M<span class="src-tag">[來源:推算]</span>、中國 CAC 未解、週期反轉歷史幅度大（FY23 EPS -$5.34<span class="src-tag">[來源:XBRL]</span>）。</td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">+1</td><td>52w +608%<span class="src-tag">[來源:推算]</span>但 5 日 -13% 顯示動能短期透支；92.5% buy_pct 維持。</td></tr>
+        <tr class="total"><td>合計</td><td class="score">+4</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 +4 隱含 mildly bullish ~+15% 潛在報酬，與目標價 +17.4% 一致。潛在升降觸發：Q3 FY26 財報為主要升降節點——guidance 強則 +30%（升 STRONG_BUY）、guidance 弱則 +5%（降 NEUTRAL）。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K（FY25，period_end 2025-08-28，提交日 ~2025-09 季末）：<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-K">EDGAR 10-K Index</a> · Item 1 Business、Item 1A Risk Factors、Item 7 MD&A 已讀取</li>
+        <li>10-Q（FY26 Q2，period_end 2026-02-26，提交日 2026-03-19）：<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q">EDGAR 10-Q Index</a> · Item 2 MD&A 已讀取</li>
+      <li>過去 12 個月 8-K：共 11 件，重點 5 件已列入催化劑日曆表</li>
+      <li>XBRL companyfacts：<a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0000723125.json">data.sec.gov</a>（10y annual + 12q quarterly）</li>
+      <li>OHLC：Stooq <code>?s=mu.us&i=d</code>（2016-05-17 → 2026-05-19，共 2,516 個交易日）</li>
+      <li>新聞合成來源（snapshot_date 2026-05-20，window 90 天，60 篇）：Yahoo Finance、SeekingAlpha、ChartMill、Bloomberg 等</li>
+      <li>Finnhub <code>/stock/profile2</code>、<code>/stock/peers</code>、<code>/company-news</code>（snapshot 2026-05-20）</li>
+      <li>Finnhub <code>/stock/recommendation</code> + <code>/stock/earnings</code> → analyst_consensus.json（recommendation 4 個月：2026-02~05；EPS surprise 4 季：2025-Q2~2026-Q1 calendar）</li>
+      <li>Finnhub <code>/stock/insider-transactions</code> → ownership.json（lookback 2025-05-13 → 2026-05-20，417 筆交易、18 位內部人）</li>
+      <li>Finnhub <code>/stock/metric?metric=all</code> → key_metrics.json（snapshot 2026-05-20）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Stooq 行情、Finnhub 公開 API、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。記憶體產業具高度週期性，過去績效不代表未來表現，目標價與評等不保證實現。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>
