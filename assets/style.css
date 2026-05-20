@@ -150,3 +150,34 @@ table.report-list a {
   font-weight: 600;
 }
 table.report-list a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  body { font-size: 15px; line-height: 1.55; }
+  .site-head {
+    padding: 12px 14px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .site-title { font-size: 15px; }
+  .crumbs { font-size: 13px; }
+  .site-main { padding: 20px 14px; }
+  .site-foot { padding: 18px 14px 32px; font-size: 12.5px; }
+  h1 { font-size: 20px; margin-bottom: 14px; }
+  .disclaimer-banner { padding: 10px 12px; font-size: 13px; margin-bottom: 20px; }
+  .ticker-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .ticker-card { padding: 14px 14px; }
+  .ticker-symbol { font-size: 20px; }
+  .rating-badge { font-size: 12px; padding: 3px 9px; }
+  table.report-list {
+    display: block;
+    overflow-x: auto;
+    font-size: 13px;
+    -webkit-overflow-scrolling: touch;
+  }
+  table.report-list th,
+  table.report-list td { padding: 8px 10px; }
+  table.report-list th { font-size: 12px; }
+}

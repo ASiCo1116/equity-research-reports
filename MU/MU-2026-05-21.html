@@ -47,6 +47,58 @@
   a { color:var(--c-accent); }
   .src { font-size:12.5px; color:var(--c-muted); }
   .placeholder { color:var(--c-muted); font-style:italic; }
+  @media (max-width: 640px) {
+    body { font-size: 15px; line-height: 1.6; }
+    .report {
+      padding: 24px 14px 56px;
+      border-left: none;
+      border-right: none;
+    }
+    header.report-head { padding-bottom: 18px; margin-bottom: 24px; }
+    h1 { font-size: 21px; line-height: 1.3; }
+    h2 { font-size: 17px; margin: 30px 0 10px; }
+    h3 { font-size: 14.5px; }
+    .rating-badge {
+      font-size: 13px;
+      padding: 5px 12px;
+      margin-right: 6px;
+    }
+    .target-block {
+      display: block;
+      margin-left: 0;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    .target-block b { font-size: 17px; }
+    .meta-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+      font-size: 13.5px;
+    }
+    .meta-grid span:nth-child(odd) {
+      margin-top: 6px;
+      color: var(--c-muted);
+      font-size: 12px;
+    }
+    .meta-grid b { font-weight: 600; }
+    table {
+      display: block;
+      overflow-x: auto;
+      max-width: 100%;
+      font-size: 13px;
+      -webkit-overflow-scrolling: touch;
+    }
+    th, td { padding: 6px 8px; }
+    th { font-size: 12.5px; }
+    .src-tag { font-size: 10px; }
+    .pillar, .risk { margin: 12px 0; }
+    .pillar-falsifier, .risk-meta { font-size: 12.5px; }
+    .audience-note { padding: 9px 12px; font-size: 13.5px; }
+    .belief-bridge { padding: 10px 12px; }
+    .belief-bridge h4 { font-size: 13.5px; }
+    .disclaimer { padding: 12px; font-size: 12.5px; }
+    ul, ol { padding-left: 20px; }
+  }
 </style>
 </head>
 <body>
