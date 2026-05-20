@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLTR Equity Research — 2026-05-21</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                 "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    color: var(--c-text);
+    background: var(--c-bg);
+    margin: 0;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .report {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    background: var(--c-panel);
+    min-height: 100vh;
+    border-left: 1px solid var(--c-line);
+    border-right: 1px solid var(--c-line);
+  }
+  header.report-head {
+    border-bottom: 1px solid var(--c-line);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14.5px;
+  }
+  th, td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--c-line);
+    vertical-align: top;
+  }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 6px 18px;
+    font-size: 14px;
+    color: var(--c-muted);
+    margin-top: 8px;
+  }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .rating-strong-buy  { background: var(--c-buy-strong); }
+  .rating-buy         { background: var(--c-buy); }
+  .rating-neutral     { background: var(--c-neutral); }
+  .rating-sell        { background: var(--c-sell); }
+  .target-block {
+    display: inline-block;
+    margin-left: 6px;
+    color: var(--c-text);
+    font-size: 14px;
+  }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier {
+    font-size: 13.5px;
+    color: var(--c-muted);
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta {
+    font-size: 12.5px;
+    color: var(--c-muted);
+    margin-left: 4px;
+  }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag {
+    display: inline;
+    font-size: 11px;
+    color: var(--c-muted);
+    margin-left: 2px;
+    font-weight: 400;
+    vertical-align: super;
+  }
+  .audience-note {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #f6f5f0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--c-text);
+  }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge {
+    background: #f0f9ff;
+    border-left: 3px solid var(--c-accent);
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .belief-bridge h4 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--c-accent);
+  }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer {
+    margin-top: 40px;
+    padding: 16px;
+    background: #f6f5f0;
+    border-left: 3px solid var(--c-muted);
+    font-size: 13.5px;
+    color: var(--c-muted);
+    line-height: 1.55;
+  }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "PLTR",
+  "company_name": "Palantir Technologies Inc",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 135.26,
+  "currency": "USD",
+  "rating": "NEUTRAL",
+  "target_price": 145,
+  "target_price_low": 105,
+  "target_price_high": 180,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 7.2,
+  "qualitative_score": 0,
+  "confidence": 0.50,
+  "data_freshness": {
+    "financials_period_end": "2026-03-31",
+    "latest_10q_filing_date": "2026-05-06",
+    "latest_8k_date": "2026-05-04",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>Palantir Technologies Inc (PLTR) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-neutral">中立</span>
+      <span class="target-block">6M 目標價 <b>$145</b> (+7.2%) · 信心 0.50（偏低）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$135.26</b>
+      <span>最新 10-Q</span><b>2026-05-06 提交（涵蓋至 2026-03-31）</b>
+      <span>最近 8-K</span><b>2026-05-04</b>
+      <span>資料來源</span><b>SEC EDGAR · Yahoo / Stooq 行情 · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>Palantir 是企業與政府用的資料/AI 作業系統提供商，四大平台 Gotham（國防/情報）、Foundry（商業）、Apollo（持續交付）、AIP（生成式 AI 編排）。FY25 全年營收 $4.48B（年增 +56%）<span class="src-tag">[來源:10-K]</span>，Q1 FY26 加速至 $1.63B（年增 +85%）<span class="src-tag">[來源:10-Q]</span>。客戶數自 FY25 年底 954 增至 Q1 FY26 的 1,007（+31% YoY）<span class="src-tag">[來源:10-Q]</span>，前 20 大客戶 TTM 平均營收 $108M（+55% YoY）<span class="src-tag">[來源:10-Q]</span>，AIP 商業化動能明確。</p>
+    <p>論點核心：營業利潤率自 5 年均值 2.5% 跳升至 TTM 38.1%<span class="src-tag">[來源:Finnhub]</span>，連續 5 季 EPS 超出共識（平均驚奇 +14.6%）<span class="src-tag">[來源:Finnhub]</span>。但 PE_TTM 142、PS_TTM 62、EV/EBITDA 153<span class="src-tag">[來源:Finnhub]</span> 已是 S&amp;P500 軟體類最高之一；過去 12 個月內部人累計淨賣出金額達 -$1.06B<span class="src-tag">[來源:Finnhub]</span>，反映估值溢價已被高層持續實現。</p>
+    <p>給予 <b>中立</b>、6M 目標 $145（區間 $105–180）。最大單一觸發點為 2026-08-04 Q2 FY26 財報<span class="src-tag">[來源:8-K]</span>：若 Q2 營收年增持平 +80% 以上、商業客戶占比續升至 ≥50%，將上修 BUY；若營收年增跌破 +55% 或營業利潤率回落 5pp 以上則下修 SELL。</p>
+    <div class="audience-note">適合相信「資料/AI 作業系統具寡占性、AIP 商業化具長尾」、能承受 50%+ 年波動度（3M ADR std 49.0）的成長型投資人；不適合對估值溢價敏感、追求短期報酬確定性的價值型配置。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>全名</td><td>Palantir Technologies Inc</td></tr>
+        <tr><td>產業</td><td>Services-Prepackaged Software（企業資料平台、AI 編排）</td></tr>
+        <tr><td>市值（粗估）</td><td>$324B（流通股 2,397M × $135.26）</td></tr>
+        <tr><td>主要平台</td><td>Gotham、Foundry、Apollo、AIP（4 大平台）</td></tr>
+        <tr><td>客戶結構</td><td>Q1 FY26：政府 53% / 商業 47%；地理上 79% 美國 / 21% 海外<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>客戶數</td><td>Q1 FY26 共 1,007 家（YoY +31%）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>CEO</td><td>Alexander C. Karp（共同創辦人）</td></tr>
+        <tr><td>會計年度結束</td><td>12 月 31 日（FY25 = 2025-12-31）</td></tr>
+        <tr><td>CIK</td><td>0001321655</td></tr>
+        <tr><td>交易所</td><td>NASDAQ-GS（IPO 2020-09-30）</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>Palantir 業務拆解：<b>政府部門</b>（Gotham + AIP）占 Q1 FY26 營收 53%，主要客戶為美國國防部、情報社群、盟邦軍事/情報機構<span class="src-tag">[來源:10-K]</span>；<b>商業部門</b>（Foundry + AIP + Apollo）占 47%，覆蓋航空、太空、造船、保險、醫療、汽車等垂直<span class="src-tag">[來源:10-K]</span>。產業結構為集中——全球能在政府機密級資料處理 + 商業大規模本體論（Ontology）整合兩端皆有 referenceable 部署的供應商寥寥可數（IBM、Salesforce 部分覆蓋，但完整 stack 較少）。</p>
+    <p>SaaS 操作 KPI（Q1 FY26）：<b>ARR 替代指標</b>—營收按合約期間平均認列<span class="src-tag">[來源:10-Q]</span>，TTM 營收 $4.0B 美國客戶（+87% YoY）<span class="src-tag">[來源:10-Q]</span>；<b>客戶擴張</b>—前 20 大客戶平均 $108M TTM 營收（+55% YoY）<span class="src-tag">[來源:10-Q]</span>；<b>GAAP 毛利率</b> 87%（YoY +7pp）<span class="src-tag">[來源:10-Q]</span>，非 GAAP（剔除 SBC）達 88%<span class="src-tag">[來源:10-Q]</span>；研發強度由 FY22 $415M（22% of revenue）降至 FY25 約 $565M（13% of revenue）<span class="src-tag">[來源:推算]</span>。10 年週期脈絡：FY20 IPO 當年因 SBC 一次性費用淨損 $1.17B<span class="src-tag">[來源:10-K]</span>，FY21-22 持續虧損消化，FY23 開始 marginal 獲利 NI $210M<span class="src-tag">[來源:10-K]</span>，FY24 NI $462M，FY25 突破至 $1.63B<span class="src-tag">[來源:10-K]</span>——當前為「IPO 後第一次完整盈利擴張週期」。Headwind：客戶集中度高（10-K Item 1A 列首要風險「a limited number of customers account for a substantial portion of revenue」）<span class="src-tag">[來源:10-K]</span>、政府預算/政策波動（53% 政府客戶占比）<span class="src-tag">[來源:10-Q]</span>。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">毛利率</th><th class="num">稀釋 EPS</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY19</td><td class="num">$0.74B</td><td class="num">67.4%</td><td class="num">-$1.02</td><td>IPO 前燒錢</td></tr>
+        <tr><td>FY20</td><td class="num">$1.09B</td><td class="num">67.7%</td><td class="num">-$1.20</td><td>IPO 當年（SBC 一次性）</td></tr>
+        <tr><td>FY21</td><td class="num">$1.54B</td><td class="num">78.0%</td><td class="num">-$0.27</td><td>商業擴張、仍虧損</td></tr>
+        <tr><td>FY22</td><td class="num">$1.91B</td><td class="num">78.6%</td><td class="num">-$0.18</td><td>消化年</td></tr>
+        <tr><td>FY23</td><td class="num">$2.23B</td><td class="num">80.6%</td><td class="num">+$0.09</td><td>首次轉盈</td></tr>
+        <tr><td>FY24</td><td class="num">$2.87B</td><td class="num">80.2%</td><td class="num">+$0.19</td><td>盈利擴張</td></tr>
+        <tr><td>FY25</td><td class="num">$4.48B</td><td class="num">82.4%</td><td class="num">+$0.63</td><td>突破歷史</td></tr>
+      </tbody>
+    </table>
+
+    <h3>最新季 (FY26 Q1，截至 2026-03-31)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$1,632.6M</td><td class="num">+84.7%</td><td class="num">+38.2%</td></tr>
+        <tr><td>毛利率（GAAP）</td><td class="num">86.8%</td><td class="num">+6.4 pp</td><td class="num">+4.4 pp</td></tr>
+        <tr><td>營業利潤</td><td class="num">$754.0M</td><td class="num">+328.3%</td><td class="num">+91.7%</td></tr>
+        <tr><td>淨利</td><td class="num">$870.5M</td><td class="num">+306.7%</td><td class="num">+83.0%</td></tr>
+        <tr><td>稀釋 EPS</td><td class="num">$0.34</td><td class="num">+325.0%</td><td class="num">+88.9%</td></tr>
+        <tr><td>現金與約當現金</td><td class="num">$2,291.6M</td><td class="num">+130.7%</td><td class="num">+41.8%</td></tr>
+      </tbody>
+    </table>
+    <p>Q1 FY26 調整後 EPS $0.33 較共識 $0.28 高 +15.8%<span class="src-tag">[來源:Finnhub]</span>，連續 5 季 beat（Q4 FY25 +6.5%、Q3 FY25 +22.2%、Q2 FY25 +13.9%、Q1 FY25 +12.5%）<span class="src-tag">[來源:Finnhub]</span>。<b>成長</b>：營收年增 +85%、QoQ +38% 顯著加速，主因 AIP 商業化與美國商業營收 +87% YoY<span class="src-tag">[來源:10-Q]</span>。<b>獲利</b>：GAAP 營業利潤率自 Q1 FY25 19.9% 升至 46.2%（+26.3 pp）<span class="src-tag">[來源:推算]</span>，剔除 SBC 的調整 OI margin 60.3%<span class="src-tag">[來源:10-Q]</span>。<b>現金生成</b>：營運現金流 $899M、FCF $892M（FCF 率 55%），FY25 全年 FCF $2.10B<span class="src-tag">[來源:10-K]</span> 已遠超 FY24 $1.14B。對比 FY22 NI -$374M，當前 TTM EPS $0.89 反映三年內完整自虧損翻轉至 33% 淨利率<span class="src-tag">[來源:Finnhub]</span>。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 142.1 / PE_fwd 96.5 / PEG_TTM 4.68</td><td>forward 仍近 100x；PEG_fwd 1.98 屬高（&gt;1.5 視為偏貴）；PS_TTM 62 在大型軟體類為極端值</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 32.18% vs 5y 均 0%</td><td>由近 0 跳升至 32%，反映多年虧損積累後首度規模化盈利；5y 均值受 FY20-22 虧損拉低</td></tr>
+        <tr><td>利潤率</td><td>Gross 84.1% / Op 38.1% / Net 43.7%</td><td>SaaS 級毛利率、營業利潤率自 5y 均 2.5% 跳至 38%；淨利率含一次性遞延稅利益</td></tr>
+        <tr><td>成長</td><td>Rev YoY +67.7% / EPS YoY +287.8%</td><td>頂線在大型企業軟體中罕見、EPS 從低基期反彈；3y 營收 CAGR 32.9% 反映加速軌跡</td></tr>
+        <tr><td>報酬</td><td>52w +7.1% / 相對 S&amp;P500 -16.3%</td><td>過去一年弱於大盤；YTD -23.9% 反映年初以來估值多重壓縮，26w -29.2%</td></tr>
+        <tr><td>風險（波動）</td><td>Beta 1.51 / 3M ADR std 49.0</td><td>中高 beta + 高日波動；雙重股權結構（A/B/F 股）使內部人控制權集中</td></tr>
+        <tr><td>股利</td><td>$0（不配發）</td><td>FCF 全數投入研發與保留<span class="src-tag">[來源:10-K]</span></td></tr>
+      </tbody>
+    </table>
+    <p>5 年自身偏離最顯著兩個指標：營業利潤率 38% vs 5y 均 2.5%（+35.6 pp 正偏離）與 ROE_TTM 32% vs 5y 均 0%（+32 pp 正偏離）；估值方法主要錨定 PE_forward 96.5 與隱含 forward EPS $1.40<span class="src-tag">[來源:推算]</span>，假設 AIP 商業化動能延續至 FY27。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. AIP 推動商業營收加速與客戶數倍增</div>
+      <div>Q1 FY26 營收年增 +85%、QoQ +38%<span class="src-tag">[來源:10-Q]</span>；客戶數 1,007（YoY +31%）<span class="src-tag">[來源:10-Q]</span>；前 20 大客戶平均 TTM 營收 $108M（+55% YoY）<span class="src-tag">[來源:10-Q]</span>，顯示既有客戶擴張 + 新客戶導入同步加速。</div>
+      <div class="pillar-falsifier">若 Q2 FY26 營收年增跌破 +55%，或客戶數年增低於 +20%，AIP 商業化故事弱化。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. 多年期 GAAP 獲利能力結構性轉折</div>
+      <div>營業利潤率自 5y 均 2.5% 跳至 TTM 38%<span class="src-tag">[來源:Finnhub]</span>；FY25 FCF $2.10B 較 FY24 $1.14B 倍增<span class="src-tag">[來源:10-K]</span>；現金 $2.29B、零長期負債<span class="src-tag">[來源:10-Q]</span>。</div>
+      <div class="pillar-falsifier">若任一季 GAAP 營業利潤率回落 &gt; 5pp，或 SBC 對營業利潤率稀釋擴大至 30pp 以上，結構性論點動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 5 連季 EPS beat 鞏固管理層 guidance 可信度</div>
+      <div>連續 5 季 EPS 超出共識，平均驚奇 +14.6%；分析師買入占比由 2026-02 的 39.4% 升至 2026-05 的 68.4%<span class="src-tag">[來源:Finnhub]</span>。</div>
+      <div class="pillar-falsifier">若 Q2 FY26（2026-08-04）EPS miss 或管理層下修 full-year guidance，動能信號破裂。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. 美國政府 AI / 國防支出長尾</div>
+      <div>53% Q1 FY26 營收來自政府客戶<span class="src-tag">[來源:10-Q]</span>；Gotham 已在情報社群部署逾 10 年<span class="src-tag">[來源:10-K]</span>；MD&amp;A 述美國國防 AI 支出環境持續支持<span class="src-tag">[來源:10-Q]</span>。</div>
+      <div class="pillar-falsifier">若任一美國國防部級別客戶終止合約，或美國國防 AI 預算遭刪減，政府支柱受衝擊。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. 估值極端化</div>
+      <div>PE_TTM 142.1、EV/EBITDA 153.5、PS_TTM 62.1<span class="src-tag">[來源:Finnhub]</span>——皆位於 S&amp;P500 軟體類最高之一。Forward PE 96.5 仍隱含 forward EPS $1.40<span class="src-tag">[來源:推算]</span>，較 TTM $0.89 需再 +58%；任何 guidance 下修都可能帶動 -20%–30% 估值修正（26w 報酬 -29% 已是預演）。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. 內部人 12 個月淨賣出 -$1.06B</div>
+      <div>過去 12 個月 586 筆交易、11 位內部人，累計淨值 -$1.06B<span class="src-tag">[來源:Finnhub]</span>，主要為類型 S（公開市場賣出）；近期董事 Alexander Moore 連續以 S 在 $130-145 區間出售<span class="src-tag">[來源:Finnhub]</span>。雖 Class A 雙重股權結構限制控制權影響，但金額規模屬 directional 訊號。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. 客戶集中度高</div>
+      <div>10-K Item 1A 將「少數客戶占顯著營收比重」列為主要風險<span class="src-tag">[來源:10-K]</span>；前 20 大客戶 TTM 平均 $108M、合計 $2.16B，約 = TTM 營收的 48%<span class="src-tag">[來源:推算]</span>。任一大客戶縮減或解約對單季衝擊放大。</div>
+      <div class="risk-meta">機率：低 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. 政府預算與政策不確定性</div>
+      <div>53% Q1 FY26 營收來自政府<span class="src-tag">[來源:10-Q]</span>；10-Q MD&amp;A 明示「政府客戶受預算 / 政策變動影響」<span class="src-tag">[來源:10-Q]</span>。美國新政府或國會預算審查週期都可能延後核發合約。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">5. AI 主題輪動風險</div>
+      <div>當前 PLTR 估值已隱含 AI 編排平台之長期壟斷溢價；若 hyperscaler（OpenAI、Anthropic）或 Snowflake / Databricks 推出可比的本體論 + Agent 解決方案，產品差異化縮小將直接壓縮估值。10-K Item 1A 列「市場開發速度可能慢於預期」<span class="src-tag">[來源:10-K]</span>。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：高</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-08-04（估）</td><td>Q2 FY26 季報（10-Q）<span class="src-tag">[來源:8-K]</span></td><td>高</td></tr>
+        <tr><td>2026-11 初（估）</td><td>Q3 FY26 季報，反映 AIP 商業化第 6 個完整季</td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>FY27 美國國防預算 / NDAA 結案<span class="src-tag">[來源:10-K]</span></td><td>中</td></tr>
+        <tr><td>2026-H2</td><td>AIP 大型客戶 logo 公告（從 enterprise 轉至 megacap）</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-04</td><td>Q1 FY26 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/pltr-20260504.htm">SEC</a></td></tr>
+        <tr><td>2026-02-02</td><td>Q4/FY25 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/pltr-20260202.htm">SEC</a></td></tr>
+        <tr><td>2025-11-03</td><td>Q3 FY25 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/pltr-20251103.htm">SEC</a></td></tr>
+        <tr><td>2025-08-04</td><td>Q2 FY25 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1321655/000132165525000105/pltr-20250804.htm">SEC</a></td></tr>
+        <tr><td>2025-06-09</td><td>股東會結果</td><td>低</td><td><a href="https://www.sec.gov/Archives/edgar/data/1321655/000132165525000084/pltr-20250605.htm">SEC</a></td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K 全部為週期性財報與股東會，無重大 M&amp;A 或重組事件——反映管理層當前主軸為「自然成長 + 獲利擴張」，無顯著外延併購或重整動作。未來 6 個月最可能觸發評等升降的事件為 2026-08-04 Q2 FY26 財報：將驗證營收 +85% YoY 是否能延續、營業利潤率是否守住 38%+。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易筆數 / 不同內部人</td><td>586 筆 / 11 位</td></tr>
+        <tr><td>內部人買入 vs 賣出股數</td><td>+13.6M vs -21.0M（淨 -7.3M）</td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>+$0.5M vs -$1,061.5M</td></tr>
+        <tr><td>淨值（買 - 賣）</td><td><b>-$1,061M</b>（顯著淨賣出）</td></tr>
+      </tbody>
+    </table>
+    <h3>最近顯著交易（前 5 筆）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>內部人</th><th>動作</th><th>股數</th><th>價格</th><th>類型</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-15</td><td>Alexander D. Moore (董事)</td><td>賣</td><td>16,000（彙總）</td><td>$133.05–135.46</td><td>S</td></tr>
+        <tr><td>2026-04-26</td><td>Jeffrey Buckley</td><td>授與</td><td>21,141</td><td>—</td><td>A</td></tr>
+        <tr><td>2026-04-15</td><td>Alexander D. Moore</td><td>賣</td><td>216</td><td>$142.41</td><td>S</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月淨值 -$1.06B 為顯著賣出訊號——買入金額僅 $0.5M，幾乎全部交易為類型 S（公開市場賣出）<span class="src-tag">[來源:Finnhub]</span>。賣出價格區間（$130–207）橫跨整個 52 週區間<span class="src-tag">[來源:推算]</span>，並非單一窗口性質。對 thesis 屬反證——多名核心管理層與董事在當前估值區間持續減持。注意：本表所列 11 位內部人僅涵蓋 Section 16 申報者，創辦人 Karp / Thiel / Cohen 等多透過 10b5-1 計畫或 family trust 賣出，未必全數出現於此匯總。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成目標價，需要相信什麼</h4>
+      <ul>
+        <li>Q2 FY26（2026-08-04）營收年增率維持 ≥ +70%。</li>
+        <li>商業客戶占比於 FY26 底突破 50%（目前 47%）<span class="src-tag">[來源:10-Q]</span>。</li>
+        <li>GAAP 營業利潤率 FY26 H2 維持 ≥ 38%，剔除 SBC 的調整 OI margin ≥ 55%。</li>
+        <li>美國國防 AI 預算（NDAA）FY27 編列不下修，至少維持 FY26 水準。</li>
+        <li>賣方買入占比延續 2026-02 → 05 的上升趨勢（39% → 68%），FY26 底前突破 75%。</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1（multiple × forward EPS）</b>：Finnhub 隱含 forward EPS $1.40（$135.26 / PE_fwd 96.5）<span class="src-tag">[來源:推算]</span>。對大型 AI 軟體類採 80–100x 區間（peer ADBE / CRM 25–30x，但 PLTR rule-of-40 為 105%+，溢價合理）→ $112–$140，中位 <b>$126</b>。</p>
+    <p><b>方法 2（DCF / FCF 敘述）</b>：FY25 FCF $2.10B、Q1 FY26 FCF $892M 年化 $3.5B+，FY26 FCF 估 $3.8–4.5B<span class="src-tag">[來源:推算]</span>。EV $322B 對 FY26 FCF 中位 $4.1B = 79x；對大型成長 AI 軟體類採 60–80x FCF 區間 → EV $246–328B → 每股 <b>$103–137</b>，中位 $120。</p>
+    <p><b>方法 3（賣方共識）</b>：38 位賣方買入占比 68.4%<span class="src-tag">[來源:Finnhub]</span> 且 4 月內由 39% 顯著上升至 68%。假設 12 個月共識 mid-point 約 $175，6M 折現 = $135.26 + 0.95×($175-$135.26) = <b>$173</b>。</p>
+    <p>三方法區間 $103–$173、平均 $140，加權考慮估值溢價已屬極端、Q2 ramp 兌現的時間風險，<b>結論目標 $145、區間 $105–$180</b>，對應潛在報酬 +7.2%（區間 -22% ~ +33%）。上修觸發：Q2 FY26 營收年增 ≥ +85% + 商業占比 ≥ 50% → 升 BUY；下修觸發：Q2 營收年增 &lt; +55% 或 GAAP 營業利潤率回落 &gt; 5pp → 降 SELL。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>11</td><td>15</td><td>10</td><td>1</td><td>1</td><td>38</td><td>68.4%</td></tr>
+        <tr><td>2026-04</td><td>9</td><td>15</td><td>10</td><td>1</td><td>1</td><td>36</td><td>66.7%</td></tr>
+        <tr><td>2026-03</td><td>8</td><td>14</td><td>10</td><td>1</td><td>1</td><td>34</td><td>64.7%</td></tr>
+        <tr><td>2026-02</td><td>5</td><td>8</td><td>17</td><td>2</td><td>1</td><td>33</td><td>39.4%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>FY26 Q1</td><td>$0.28</td><td>$0.33</td><td>+$0.05</td><td style="color:#0a8a3a">+15.83%</td></tr>
+        <tr><td>FY25 Q4</td><td>$0.23</td><td>$0.25</td><td>+$0.02</td><td style="color:#0a8a3a">+6.47%</td></tr>
+        <tr><td>FY25 Q3</td><td>$0.17</td><td>$0.21</td><td>+$0.04</td><td style="color:#0a8a3a">+22.24%</td></tr>
+        <tr><td>FY25 Q2</td><td>$0.14</td><td>$0.16</td><td>+$0.02</td><td style="color:#0a8a3a">+13.88%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識方向：buy 占比由 2026-02 39.4% 顯著上升至 2026-05 68.4%（中等偏多，升勢明確；尚未到 strongly bullish &gt;80%）。過去 4 季 4/4 beats，平均驚奇 +14.6%，反映管理層 guidance 風格偏保守。本報告中立評等 vs 賣方主流偏多存在分歧：分歧主因為時間框架（賣方 12M、本報告 6M）與估值錨點（賣方對 forward EPS 給予更高 multiple，本報告對極端估值溢價給予較大風險折扣）。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 $145、最新收盤 $135.26，潛在報酬 +7.2%。對應評等規則（&gt;+30% 強買 / +15%–+30% 買入 / -15%–+15% 中立 / &lt;-15% 賣出）為 <b>中立</b>。若目標價上修至 $156 以上則升 BUY；若下修至 $115 以下則降 SELL。</p>
+    <p>信心 0.50（偏低）：三方法價差達 68%（$103–$173），且 2026-08-04 Q2 FY26 財報為 6M 內最大單一變數——符合 SKILL「方法價差 &gt; 25% + 單一假設驅動」之偏低門檻。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th>分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">+2</td><td>ROE_TTM 32%（5y 均 0%）、FCF FY25 $2.1B、現金 $2.3B、零長期負債<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>估值合理性</td><td class="score">-2</td><td>PE_TTM 142、PS 62、EV/EBITDA 153 為 S&amp;P500 軟體類最高之一<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr><td>催化劑</td><td class="score">+1</td><td>5 連季 EPS beat、AIP 商業化加速、Q2 財報 8 月初<span class="src-tag">[來源:Finnhub][來源:8-K]</span></td></tr>
+        <tr><td>風險水平</td><td class="score">-1</td><td>內部人 12M 淨賣出 -$1.06B、客戶集中、政府預算風險<span class="src-tag">[來源:Finnhub][來源:10-K]</span></td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">0</td><td>52w +7%（弱於 S&amp;P500 -16pp）、26w -29%、但賣方買入占比 4 個月內 39% → 68%<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr class="total"><td>合計</td><td class="score">0</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 0 對應目標價 +7.2%——財務體質強 + 估值極端互相抵銷，與評等中立一致。上修觸發為估值不再擴張且營收續加速；下修觸發為 Q2 任何成長放緩訊號或內部人賣出強度擴大。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K FY2025（period end 2025-12-31，accession via EDGAR）— Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A</li>
+      <li>10-Q FY26 Q1（period end 2026-03-31，filed ~2026-05-06）— Item 2 MD&amp;A、segment data、Non-GAAP Reconciliations</li>
+      <li>過去 12 個月 8-K：5 筆（4 筆財報 + 1 筆股東會結果）</li>
+      <li>XBRL companyfacts via SEC EDGAR API（CIK 0001321655）</li>
+      <li>OHLC 行情（Stooq → Yahoo fallback）—樣本期間 2020-09 ~ 2026-05-19（IPO 後 ~1,416 個交易日）</li>
+      <li>新聞合成：Finnhub /company-news（snapshot 2026-05-21，60 articles）</li>
+      <li>Finnhub /stock/profile2、/stock/peers、/stock/recommendation、/stock/earnings、/stock/insider-transactions、/stock/metric?metric=all（snapshot 2026-05-21）</li>
+      <li>analyst_consensus.json（4 個月 recommendation_trends + 4 季 EPS surprise）</li>
+      <li>ownership.json（lookback 2025-05-14 ~ 2026-05-21，586 transactions，11 unique insiders）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Yahoo Finance / Stooq 行情、Finnhub、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。企業軟體 / AI 編排類股估值波動劇烈，過去績效不代表未來表現，目標價與評等不保證實現。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>
