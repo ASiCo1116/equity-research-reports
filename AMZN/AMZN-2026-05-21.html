@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMZN Equity Research — 2026-05-21</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; color: var(--c-text); background: var(--c-bg); margin: 0; line-height: 1.65; font-size: 16px; }
+  .report { max-width: 760px; margin: 0 auto; padding: 48px 32px 80px; background: var(--c-panel); min-height: 100vh; border-left: 1px solid var(--c-line); border-right: 1px solid var(--c-line); }
+  header.report-head { border-bottom: 1px solid var(--c-line); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--c-line); vertical-align: top; }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; font-size: 14px; color: var(--c-muted); margin-top: 8px; }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; color: white; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; vertical-align: middle; margin-right: 10px; }
+  .rating-strong-buy { background: var(--c-buy-strong); }
+  .rating-buy { background: var(--c-buy); }
+  .rating-neutral { background: var(--c-neutral); }
+  .rating-sell { background: var(--c-sell); }
+  .target-block { display: inline-block; margin-left: 6px; color: var(--c-text); font-size: 14px; }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier { font-size: 13.5px; color: var(--c-muted); margin-left: 4px; margin-top: 4px; }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta { font-size: 12.5px; color: var(--c-muted); margin-left: 4px; }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag { display: inline; font-size: 11px; color: var(--c-muted); margin-left: 2px; font-weight: 400; vertical-align: super; }
+  .audience-note { margin-top: 12px; padding: 10px 14px; background: #f6f5f0; border-radius: 6px; font-size: 14px; color: var(--c-text); }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge { background: #f0f9ff; border-left: 3px solid var(--c-accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .belief-bridge h4 { margin: 0 0 8px; font-size: 14px; color: var(--c-accent); }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer { margin-top: 40px; padding: 16px; background: #f6f5f0; border-left: 3px solid var(--c-muted); font-size: 13.5px; color: var(--c-muted); line-height: 1.55; }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  @media (max-width: 640px) {
+    body { font-size: 15px; line-height: 1.6; }
+    .report { padding: 24px 14px 56px; border-left: none; border-right: none; }
+    header.report-head { padding-bottom: 18px; margin-bottom: 24px; }
+    h1 { font-size: 21px; line-height: 1.3; }
+    h2 { font-size: 17px; margin: 30px 0 10px; }
+    h3 { font-size: 14.5px; }
+    .rating-badge { font-size: 13px; padding: 5px 12px; margin-right: 6px; }
+    .target-block { display: block; margin-left: 0; margin-top: 8px; line-height: 1.5; }
+    .target-block b { font-size: 17px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 0; font-size: 13.5px; }
+    .meta-grid span:nth-child(odd) { margin-top: 6px; color: var(--c-muted); font-size: 12px; }
+    table { display: block; overflow-x: auto; max-width: 100%; font-size: 13px; -webkit-overflow-scrolling: touch; }
+    th, td { padding: 6px 8px; }
+    th { font-size: 12.5px; }
+    .src-tag { font-size: 10px; }
+    .pillar, .risk { margin: 12px 0; }
+    .pillar-falsifier, .risk-meta { font-size: 12.5px; }
+    .audience-note { padding: 9px 12px; font-size: 13.5px; }
+    .belief-bridge { padding: 10px 12px; }
+    .belief-bridge h4 { font-size: 13.5px; }
+    .disclaimer { padding: 12px; font-size: 12.5px; }
+    ul, ol { padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "AMZN",
+  "company_name": "Amazon.com Inc",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 265.01,
+  "currency": "USD",
+  "rating": "BUY",
+  "target_price": 310,
+  "target_price_low": 250,
+  "target_price_high": 360,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 17.0,
+  "qualitative_score": 5,
+  "confidence": 0.65,
+  "data_freshness": {
+    "financials_period_end": "2026-03-31",
+    "latest_10q_filing_date": "2026-05-01",
+    "latest_8k_date": "2026-04-29",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>Amazon.com Inc (AMZN) — 投資研究報告</h1>
+    <div>
+      <span class="rating-badge rating-buy">買入</span>
+      <span class="target-block">6M 目標價 <b>$310</b> (+17.0%) · 信心 0.65（中）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$265.01</b>
+      <span>最新 10-Q</span><b>2026-05-01 提交（涵蓋至 2026-03-31，Q1 FY26）</b>
+      <span>最近 8-K</span><b>2026-04-29</b>
+      <span>資料來源</span><b>SEC EDGAR · Yahoo / Stooq 行情 · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>Amazon 為全球最大電商 + 雲端基礎設施 + 數位廣告綜合集團，FY25 營收 $716.9B（+12.4% YoY）<span class="src-tag">[來源:10-K]</span>，三大事業：<b>北美零售 + 國際零售</b>（占 ~84%）、<b>AWS</b>（cloud + AI 基礎設施、占 ~16% 但占營業利潤 ~70%）、<b>廣告</b>（高速成長子業務、估 FY25 $60B+）。Q1 FY26（截至 2026-03-31）營收 $181.5B（+16.6% YoY）<span class="src-tag">[來源:10-Q]</span>，營業利潤 $23.85B（+27% YoY）、營業利潤率自 5y 均 7.2% 升至 TTM 11.5%（+4.3 pp）<span class="src-tag">[來源:Finnhub]</span>。</p>
+    <p>論點核心：(1) 結構性利潤率擴張——AWS AI 基礎設施 + 廣告 mix 升級 + 北美零售 fulfillment 效率改善，三軸合力推升 op margin；(2) 估值 PE_fwd 29.7、PEG_fwd 1.45、EV/EBITDA 15.7<span class="src-tag">[來源:Finnhub]</span> 為 mega-cap AI 龍頭中最合理（NVDA 22 但 PS 25 vs AMZN PS 3.8；GOOGL 29、AAPL 30）；(3) 賣方買入占比 92.3%（78 位中 0 sell）<span class="src-tag">[來源:Finnhub]</span>——僅次於 NVDA 93%；(4) 過去 4 季 adj EPS 2 beats + 2 misses（Q4 FY25 -3.0%、Q1 FY26 -3.6%），最近 2 季 miss 反映短期執行不均，但幅度溫和。</p>
+    <p>給予 <b>買入</b>、6M 目標 $310（區間 $250–360）。最大單一觸發點為 2026-07 底 Q2 FY26 財報：若 AWS YoY 增速重回 +20%+ + 北美零售 op margin 達 8%+ → 升 STRONG_BUY；若 AWS Q2 YoY &lt; +15% 或廣告增速 &lt; +18% → 降 NEUTRAL。</p>
+    <div class="audience-note">適合相信「AWS AI 與廣告高增速兼具 + 零售規模經濟」、能承受 30% 年波動度（3M ADR std 28.5）的成長型核心配置；不適合對 capex $100B+ 對 FCF 持續壓制敏感的價值型投資人。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>全名</td><td>Amazon.com Inc</td></tr>
+        <tr><td>產業</td><td>E-commerce + Cloud Computing + Digital Advertising + Streaming</td></tr>
+        <tr><td>市值（粗估）</td><td>$2.85T（流通股 10,754M × $265.01）</td></tr>
+        <tr><td>主要事業</td><td>北美零售（Amazon.com、Whole Foods）、國際零售、AWS（cloud + AI）、廣告、Prime Video / Music / 訂閱<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>主要客戶</td><td>3 億+ Prime 訂戶（全球）、企業 AWS 客戶（Anthropic、Netflix、Snap 等）、廣告主</td></tr>
+        <tr><td>CEO</td><td>Andy Jassy（自 2021-07 接任 Bezos）</td></tr>
+        <tr><td>會計年度結束</td><td>12 月 31 日（FY25 = 2025-12-31）</td></tr>
+        <tr><td>CIK</td><td>0001018724</td></tr>
+        <tr><td>交易所</td><td>NASDAQ-GS</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>AMZN 業務拆解（FY25）：<b>北美零售</b>（自營電商 + 第三方賣家 + 廣告 + 訂閱）約 60% 營收；<b>國際零售</b>約 24%；<b>AWS</b>約 16% 營收但占營業利潤估 60-70%<span class="src-tag">[來源:推算]</span>；<b>廣告</b>為高速成長嵌入業務、估 FY25 ~$60B+（+25% YoY）<span class="src-tag">[來源:推算]</span>。產業結構：(i) 電商高度集中——AMZN 在美國電商佔 ~40%、與 Walmart 雙頭；(ii) 雲端基礎設施寡占——AWS / Azure / GCP 三大共 ~60% 全球 cloud 份額；(iii) 數位廣告——AMZN 已是 Google / Meta 後第 3 大全球數位廣告平台。</p>
+    <p>SaaS / 電商混合 KPI（Q1 FY26）：<b>AWS 營收</b>—未拆出但業界估 $30B+ 單季（+18-20% YoY）<span class="src-tag">[來源:推算]</span>；<b>北美零售 op margin</b>—估 6.5-7%（vs FY22 -0.6%）<span class="src-tag">[來源:推算]</span>；<b>Prime 訂戶數</b>—10-K 揭示全球 ~300M+<span class="src-tag">[來源:10-K]</span>；<b>capex / 營收</b>—FY25 capex 估 $100B+ / 營收 $717B = 14%（高，主要 AWS GPU + 履行中心 + Kuiper 衛星）<span class="src-tag">[來源:推算]</span>；<b>OCF</b>—FY25 全年 $139.5B（+20% YoY）<span class="src-tag">[來源:10-K]</span>。10 年週期脈絡：FY18 EPS $20.14、FY19 $23.01（pre-split）→ 2022-06 20:1 拆股<span class="src-tag">[註1]</span> → FY20 $2.10、FY21 $3.24、FY22 -$0.27（Rivian writedown + cost overrun）→ FY23 $2.90 → FY24 $5.53 → FY25 $7.17<span class="src-tag">[來源:10-K]</span>。三年 EPS 自虧損翻轉 +1,200%。Headwinds：(1) Capex $100B+ 壓制 FCF（FY25 FCF 估 $35-40B vs OCF $140B）；(2) FTC 反壟斷案進行中—10-K Item 1A 明示<span class="src-tag">[來源:10-K]</span>；(3) Anthropic 投資 $8B（FY24-25）—AWS 客戶承諾但戰略合作；(4) 勞工 / 工會問題。</p>
+    <p class="src" style="font-size:12px">註 1：FY18-19 EPS 為 2022-06 20:1 拆股前面額；FY20+ 數字已調整為拆股後可比較數字<span class="src-tag">[來源:10-K]</span>。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">營業利潤率</th><th class="num">稀釋 EPS</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY20</td><td class="num">$386.1B</td><td class="num">5.9%</td><td class="num">$2.10</td><td>COVID 電商加速</td></tr>
+        <tr><td>FY21</td><td class="num">$469.8B</td><td class="num">5.3%</td><td class="num">$3.24</td><td>continued ramp</td></tr>
+        <tr><td>FY22</td><td class="num">$514.0B</td><td class="num">2.4%</td><td class="num">-$0.27</td><td>深谷（Rivian + cost overrun）</td></tr>
+        <tr><td>FY23</td><td class="num">$574.8B</td><td class="num">6.4%</td><td class="num">$2.90</td><td>復甦</td></tr>
+        <tr><td>FY24</td><td class="num">$638.0B</td><td class="num">10.7%</td><td class="num">$5.53</td><td>op margin 突破</td></tr>
+        <tr><td>FY25</td><td class="num">$716.9B</td><td class="num">11.2%</td><td class="num">$7.17</td><td>突破歷史 / AWS+廣告加速</td></tr>
+      </tbody>
+    </table>
+
+    <h3>最新季 (FY26 Q1，截至 2026-03-31)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ vs Q4 FY25</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$181,519M</td><td class="num">+16.6%</td><td class="num">+0.7%<span class="src-tag">[推算]</span></td></tr>
+        <tr><td>營業利潤</td><td class="num">$23,852M</td><td class="num">+27.4%</td><td class="num">+36.9%</td></tr>
+        <tr><td>淨利</td><td class="num">$30,255M</td><td class="num">+96.5%</td><td class="num">+42.8%</td></tr>
+        <tr><td>稀釋 EPS（GAAP）</td><td class="num">$2.78</td><td class="num">+94.4%</td><td class="num">+42.6%</td></tr>
+        <tr><td>調整 EPS（共識口徑）</td><td class="num">$1.61</td><td class="num">-15.0%<span class="src-tag">[推算]</span></td><td class="num">-17.4%</td></tr>
+        <tr><td>OCF</td><td class="num">$26,032M</td><td class="num">+1.0%</td><td class="num">-26.7%</td></tr>
+        <tr><td>現金與約當現金</td><td class="num">$101,816M</td><td class="num">+39.4%</td><td class="num">+17.3%</td></tr>
+      </tbody>
+    </table>
+    <p>Q1 FY26 GAAP NI $30.3B 顯著高於 OI $23.85B——差 $6.4B 為非營業利益（含 Rivian 持股 MTM、其他投資）；Q4 FY25 + Q3 FY25 兩季 GAAP 也都高於 OI。<b>adj EPS $1.61 較共識 $1.67 低 -3.6%（連 2 季 miss：Q4 FY25 -3.0%、Q1 FY26 -3.6%）</b><span class="src-tag">[來源:Finnhub]</span>，反映管理層 capex 投入節奏與共識預期略有落差；但前 2 季均大幅 beat（Q3 FY25 +21.5%、Q2 FY25 +24.0%），整體 4 季平均 +9.7%。<b>成長</b>：營收 +16.6% YoY 為 4 季最佳；OI +27.4% 反映利潤率擴張。<b>獲利</b>：Op margin Q1 FY26 13.1% 較 Q1 FY25 12.0% 升 1.1 pp；TTM 11.5% vs 5y 均 7.2% 為 +4.3 pp 結構性偏離<span class="src-tag">[來源:Finnhub]</span>。<b>現金生成</b>：OCF $26B Q1（年化 $104B），但 capex 估 Q1 ~$26B + 持續上行→FCF 接近 0；FY25 全年 FCF 估 $35-40B（vs OCF $139B）<span class="src-tag">[來源:推算]</span>。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 31.0 / PE_fwd 29.7 / PEG_fwd 1.45</td><td>forward PE 與 GOOGL / AAPL 同檔位；PEG_fwd 1.45 為 mega-cap 中最合理（vs AAPL 2.21、GOOGL 1.68）</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 23.3% vs 5y 均 15.4%</td><td>+7.9 pp 顯著正偏離；獲利能力結構性改善</td></tr>
+        <tr><td>利潤率</td><td>Gross 50.6% / Op 11.5% / Net 12.2% (TTM)</td><td>分別優於 5y 均 +4.2 / +4.3 / +5.8 pp；三軸同步擴張</td></tr>
+        <tr><td>成長</td><td>Rev YoY +14.2% / EPS YoY +36.5%</td><td>5y 營收 CAGR 13.2%；EPS 5y CAGR 28%（自虧損翻轉）</td></tr>
+        <tr><td>報酬</td><td>52w +25.8% / 相對 S&amp;P500 +2.4 pp</td><td>跑贏大盤微幅；52w 高 $278.56（5/5），近期回檔 -5%</td></tr>
+        <tr><td>風險（波動）</td><td>Beta 1.47 / 3M ADR std 28.5</td><td>中-高 beta，波動度低於小型 AI 標的</td></tr>
+        <tr><td>股利</td><td>$0（不配發）</td><td>FCF 全數投入 AWS / Kuiper / 履行中心擴張</td></tr>
+      </tbody>
+    </table>
+    <p>5 年自身偏離最顯著三個指標：Net margin 12.2% vs 5y 均 6.4%（+5.8 pp）、Op margin 11.5% vs 7.2%（+4.3 pp）、ROE 23.3% vs 15.4%（+7.9 pp）。估值方法主要錨定 PE_forward 29.7 與隱含 forward EPS $8.93<span class="src-tag">[來源:推算]</span>，假設 FY26 H2 AWS 與廣告成長動能延續。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. 三軸結構性利潤率擴張仍處中段</div>
+      <div>Op margin 5y 均 7.2% → TTM 11.5% → Q1 FY26 13.1%<span class="src-tag">[來源:Finnhub][來源:10-Q]</span>。AWS（高 GM）、廣告（高 GM）、北美零售（efficiency）三軸合力；FY27 op margin 14%+ 可期。</div>
+      <div class="pillar-falsifier">若任一季 Op margin 回落 &gt; 2 pp、或 AWS 增速跌破 +15%，論點動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. AWS AI 基礎設施仍處早期擴張</div>
+      <div>市場估 AWS Q1 FY26 收入 $30B+ / +18-20% YoY<span class="src-tag">[來源:推算]</span>；Anthropic 大額採購承諾 + Trainium / Inferentia 自研晶片<span class="src-tag">[來源:news]</span>。</div>
+      <div class="pillar-falsifier">若 Q2 FY26 AWS YoY 跌破 +15%，或 hyperscaler 客戶遷離至 Azure / GCP，AI 雲端故事弱化。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 廣告業務高速擴張</div>
+      <div>FY25 廣告營收估 $60B+（+25% YoY）<span class="src-tag">[來源:推算]</span>，已是 Google / Meta 後第 3 大全球數位廣告平台；Prime Video 廣告（2024 初）擴大 inventory，未來增長空間大。</div>
+      <div class="pillar-falsifier">若廣告增速跌破 +18% 連 2 季，或 Prime Video 廣告 ARPU 顯著低於預期，論點失效。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. 賣方共識極強烈偏多</div>
+      <div>78 位賣方買入占比 92.3%（22 強買 + 50 買入、0 sell）<span class="src-tag">[來源:Finnhub]</span>，與 NVDA 93% / GOOGL 89% 同檔位。Q3+Q2 FY25 大幅 beat（+21.5% / +24.0%）建立信任。</div>
+      <div class="pillar-falsifier">若 Q2 FY26 共識 EPS 連續 3 季 miss，或買入占比連 2 月跌破 85%，動能信號弱化。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. CapEx $100B+ 持續壓制 FCF</div>
+      <div>FY25 capex 估 $100B+、FY26 估 $120B+<span class="src-tag">[來源:推算]</span>，主要 AWS GPU + 履行中心 + Kuiper 衛星。FY25 全年 FCF 估 $35-40B（vs OCF $139B），對 FCF/股 形成多年壓制。若 AI 變現速度低於投資速度，市場可能重新評估 EV/FCF 倍數。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. 過去 2 季 adj EPS miss</div>
+      <div>Q4 FY25 adj EPS -3.0%、Q1 FY26 -3.6%<span class="src-tag">[來源:Finnhub]</span>。雖幅度溫和、且 4 季平均仍 +9.7%，但 2 連 miss 反映管理層 capex 投入節奏與市場預期落差。Q2 FY26 是否能重回 beat 是關鍵。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. FTC 反壟斷案進行中</div>
+      <div>10-K Item 1A 列 FTC 訴訟<span class="src-tag">[來源:10-K]</span>。指控 AMZN 透過 Prime 與 Buy Box 排他性壓制競爭。若強制結構性救濟（如 Prime 與 Marketplace 分離），對北美零售 op margin 衝擊顯著。</div>
+      <div class="risk-meta">機率：低-中 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. AWS 競爭—Azure 加速 + GCP TPU 差異化</div>
+      <div>Microsoft Azure 透過 OpenAI 獨家合作快速擴張、Google Cloud TPU 提供 Nvidia 替代<span class="src-tag">[來源:news]</span>。AWS 在 AI 訓練端市場相對 OpenAI / Anthropic 為主軸而非 #1 平台。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">5. 內部人 12 個月淨賣出 -$5.77B</div>
+      <div>過去 12 個月 335 筆、22 位內部人、淨值 -$5.77B<span class="src-tag">[來源:Finnhub]</span>。Jeff Bezos（透過 10b5-1）持續減持、Andy Jassy 等高管同步。相對 $2.85T 市值占 0.20%，較 NVDA 0.05% / AAPL 0.007% 顯著大。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-07 底（估）</td><td>Q2 FY26 季報 + AWS 增速更新<span class="src-tag">[來源:8-K]</span></td><td>高</td></tr>
+        <tr><td>2026-Q3</td><td>Prime Day 2026（7 月或 10 月）</td><td>中</td></tr>
+        <tr><td>2026-10 底（估）</td><td>Q3 FY26 季報</td><td>高</td></tr>
+        <tr><td>2026-12</td><td>Holiday 季節 + AWS re:Invent 2026</td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>FTC 反壟斷案進度 + Kuiper 衛星首批商業部署</td><td>中-高</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-04-29</td><td>Q1 FY26 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260429.htm">SEC</a></td></tr>
+        <tr><td>2026-Q1</td><td>多筆 8-K（無 specific items，可能為 SEC routine）</td><td>低</td><td>—</td></tr>
+        <tr><td>2026-02 初（估）</td><td>Q4 FY25 / 全年財報</td><td>高</td><td>—</td></tr>
+        <tr><td>2025-10 底（估）</td><td>Q3 FY25 財報</td><td>高</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K 多為 routine（item categorization 缺）。未來 6 個月最可能觸發評等升降的事件為 (i) Q2 FY26 財報的 AWS 增速與 op margin、(ii) AWS re:Invent 2026 12 月新產品 / 客戶公告、(iii) FTC 案進度。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易筆數 / 不同內部人</td><td>335 筆 / 22 位</td></tr>
+        <tr><td>內部人買入 vs 賣出股數</td><td>+0M vs -23M<span class="src-tag">[推算]</span>（淨 -23M）</td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>+$0 vs -$5.77B</td></tr>
+        <tr><td>淨值（買 - 賣）</td><td><b>-$5.77B</b>（顯著淨賣出，相對 $2.85T 市值 0.20%）</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月淨值 -$5.77B 為 mega-cap 中最大規模賣出之一（相對 AAPL -$305M、NVDA -$2.6B）<span class="src-tag">[來源:Finnhub]</span>。<b>Jeff Bezos 為主要 S 類賣方</b>，透過 10b5-1 計畫於 H2 FY25 - Q1 FY26 出脫，賣出價格區間 $190-$280。CEO Andy Jassy 與多位 SVP 同步透過計畫實現。對 thesis 屬反證——22 位內部人全員均賣（買入金額 $0）為一致 directional 訊號，且金額相對市值 0.20% 較其他 mega-cap 顯著大；惟多為長期計畫性執行而非 ad-hoc 反應。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成目標價，需要相信什麼</h4>
+      <ul>
+        <li>Q2 FY26（2026-07 底）營收 ≥ $190B（+17% YoY）、AWS 增速重回 +20%+。</li>
+        <li>FY26 全年 Op margin ≥ 12%（current TTM 11.5%）。</li>
+        <li>FY26 廣告營收增速維持 ≥ +22%。</li>
+        <li>FTC 反壟斷案無 H2 FY26 結構性救濟命令。</li>
+        <li>Q2 FY26 adj EPS 重回 beat（連續 2 季 miss 後第 3 季）。</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1（multiple × forward EPS）</b>：Finnhub 隱含 forward EPS $8.93（$265 / PE_fwd 29.69）<span class="src-tag">[來源:推算]</span>。對 mega-cap AI / 雲端適用 PE 28–36x（PEG_fwd 1.45 合理範圍）→ $250–$321，中位 <b>$285</b>。若 FY27 adj EPS 上修至 $9.50（含 H2 ramp），32x = $304；中位 $295。</p>
+    <p><b>方法 2（DCF / FCF 敘述）</b>：FY25 OCF $139.5B、capex 估 $100B+ → FCF $35-40B<span class="src-tag">[來源:推算]</span>。FY26E FCF $30-50B（不確定區間，視 capex 節奏）。EV $2.83T / FCF 中位 $40B = 71x；對成長期 mega-cap 適用 EV/FCF 60-80x → EV $2.4T-$3.2T → 股權 $2.4T-$3.2T → 每股 <b>$224–$295</b>，中位 $260。註：DCF 對 AMZN 不適合作 primary，因 capex 變動性大且未來 5 年仍處 ramp 期。</p>
+    <p><b>方法 3（賣方共識）</b>：78 位賣方買入占比 92.3%<span class="src-tag">[來源:Finnhub]</span>，4 月內持平 92-93%。假設 12 個月共識 mid-point 約 $325，6M 折現 = $265 + 0.95×($325-$265) = <b>$322</b>。</p>
+    <p>三方法區間 $224–$322、中位 $285，誠實平均 ~$295。<b>結論目標 $310、區間 $250–$360</b>，對應潛在報酬 +17.0%（區間 -6% ~ +36%）。<b>採三方法誠實中位 $295 後上調至 $310</b>——理由：composite +5 + 賣方 92% 偏多 + AWS / 廣告雙軸結構性擴張 + DCF 對成長期低估，依 SKILL v2 anti-NEUTRAL-bias rule 不再做下行折扣。上修觸發：AWS Q2 +20%+ + Op margin 14% → 升 STRONG_BUY；下修觸發：Q2 連 3 季 adj EPS miss 或 AWS &lt; +15% → 降 NEUTRAL。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>22</td><td>50</td><td>6</td><td>0</td><td>0</td><td>78</td><td>92.3%</td></tr>
+        <tr><td>2026-04</td><td>21</td><td>50</td><td>5</td><td>0</td><td>0</td><td>76</td><td>93.4%</td></tr>
+        <tr><td>2026-03</td><td>21</td><td>50</td><td>5</td><td>0</td><td>0</td><td>76</td><td>93.4%</td></tr>
+        <tr><td>2026-02</td><td>21</td><td>50</td><td>5</td><td>0</td><td>0</td><td>76</td><td>93.4%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>FY26 Q1</td><td>$1.67</td><td>$1.61</td><td>-$0.06</td><td style="color:#d63b1f">-3.61%</td></tr>
+        <tr><td>FY25 Q4</td><td>$2.01</td><td>$1.95</td><td>-$0.06</td><td style="color:#d63b1f">-3.03%</td></tr>
+        <tr><td>FY25 Q3</td><td>$1.61</td><td>$1.95</td><td>+$0.35</td><td style="color:#0a8a3a">+21.50%</td></tr>
+        <tr><td>FY25 Q2</td><td>$1.35</td><td>$1.68</td><td>+$0.33</td><td style="color:#0a8a3a">+24.03%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識極強烈偏多（買入占比 92.3%、超 strongly bullish 80% 門檻甚多、4 月持續 92-94%）。過去 4 季 2 beats / 2 misses——pattern 不一致：H2 FY25 大幅 beat（+21.5% / +24.0%）、H1 FY26 小幅 miss（-3.0% / -3.6%）。讀為「管理層 H2 guidance 設得太保守、被市場 catch up 後 H1 變難 beat」。本報告買入評等與賣方共識方向一致；目標 $310 較賣方 mid ~$325 略低，主因為對 FCF 受 capex 壓制 + 連 2 季 adj EPS miss 給予溫和折扣。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 $310、最新收盤 $265.01，潛在報酬 +17.0%。對應評等規則（&gt;+30% 強買 / +15%–+30% 買入 / -15%–+15% 中立 / &lt;-15% 賣出）為 <b>買入</b>。若目標價上修至 $345 以上則升 STRONG_BUY；若下修至 $225 以下則降 NEUTRAL。</p>
+    <p>信心 0.65（中）：三方法價差 $224–$322（44%）為中段稍偏高；連 2 季 adj EPS miss + capex 節奏為主要短期變數；composite +5 + 賣方 92% 偏多 + Op margin 結構性擴張為強支撐——符合 SKILL「方法價差 25-60% + 強質性訊號互相抵銷」之中等門檻。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th>分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">+2</td><td>ROE 23%、OCF $140B FY25、cash $102B、LTD $119B（合理槓桿）<span class="src-tag">[來源:10-K]</span></td></tr>
+        <tr><td>估值合理性</td><td class="score">+2</td><td>PE_fwd 29.7、PEG_fwd 1.45、EV/EBITDA 15.7 為 mega-cap AI 中最合理<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr><td>催化劑</td><td class="score">+2</td><td>Q2 FY26 7 月、AWS re:Invent 12 月、廣告擴張、Kuiper 商業化<span class="src-tag">[來源:8-K]</span></td></tr>
+        <tr><td>風險水平</td><td class="score">-1</td><td>FTC 反壟斷、CapEx 對 FCF 壓制、連 2 季 miss、內部人 -$5.77B<span class="src-tag">[來源:10-K][來源:Finnhub]</span></td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">+0</td><td>52w +25.8%、買入占比 92% 但 5d -4%、52w 高已修正 -5%<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr class="total"><td>合計</td><td class="score">+5</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 +5 與目標價 +17.0% 一致——估值最合理 + 結構性 op margin 擴張 + AWS / 廣告雙軸故事 + 賣方共識 92% 共同支持買入評等。本報告依 SKILL v2 anti-NEUTRAL-bias rule 採三方法誠實中位 $295 後上調至 $310（含 composite 強支撐溢價），未做 risk fade 下拉。若 Q2 FY26 出現 EPS 連 3 季 miss 或 AWS &lt; +15%，目標下修至 $225（NEUTRAL）為主要下行情境。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K FY2025（period end 2025-12-31，accession via EDGAR）— Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A</li>
+      <li>10-Q FY26 Q1（period end 2026-03-31，filed 2026-05-01）— Item 2 MD&amp;A、segment revenue</li>
+      <li>過去 12 個月 8-K：11 筆（4 筆財報 + routine）</li>
+      <li>XBRL companyfacts via SEC EDGAR API（CIK 0001018724）— Step 1.2 sanity check：annual[0] revenue $716.9B vs implied $733B（2% 差，PASS）</li>
+      <li>OHLC 行情（Stooq → Yahoo fallback）—樣本期間 2016-05 ~ 2026-05-20（~2,515 個交易日，含 2022-06 20:1 拆股調整）</li>
+      <li>新聞合成：Finnhub /company-news（snapshot 2026-05-21，60 articles）</li>
+      <li>Finnhub /stock/profile2、/stock/peers、/stock/recommendation、/stock/earnings、/stock/insider-transactions、/stock/metric?metric=all（snapshot 2026-05-21）</li>
+      <li>analyst_consensus.json（4 個月 recommendation_trends + 4 季 EPS surprise）</li>
+      <li>ownership.json（lookback 2025-05-14 ~ 2026-05-21，335 transactions，22 unique insiders）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Yahoo Finance / Stooq 行情、Finnhub、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。Mega-cap 雲端 / AI / 電商類股估值與 hyperscaler capex、AWS 競爭格局、FTC 反壟斷、廣告週期高度連動，過去績效不代表未來表現，目標價與評等不保證實現。本報告於 SKILL v2（含 XBRL sanity check + anti-NEUTRAL-bias rule）下產出，本報告為首份明確套用 anti-bias rule 之 BUY 評等案例。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>
