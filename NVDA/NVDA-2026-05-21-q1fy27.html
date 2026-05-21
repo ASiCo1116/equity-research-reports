@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVDA Equity Research — 2026-05-21 (Q1 FY27 update)</title>
+<style>
+  :root {
+    --c-bg: #fbfaf7;
+    --c-panel: #ffffff;
+    --c-text: #1f2328;
+    --c-muted: #6e7781;
+    --c-line: #e6e6e0;
+    --c-accent: #2c5cb0;
+    --c-buy-strong: #1a7f37;
+    --c-buy: #44a755;
+    --c-neutral: #9a9a9a;
+    --c-sell: #d1242f;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; color: var(--c-text); background: var(--c-bg); margin: 0; line-height: 1.65; font-size: 16px; }
+  .report { max-width: 760px; margin: 0 auto; padding: 48px 32px 80px; background: var(--c-panel); min-height: 100vh; border-left: 1px solid var(--c-line); border-right: 1px solid var(--c-line); }
+  header.report-head { border-bottom: 1px solid var(--c-line); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--c-muted); }
+  p, ul, ol { margin: 12px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--c-line); vertical-align: top; }
+  th { background: #f6f5f0; font-weight: 600; font-size: 13.5px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta-grid { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; font-size: 14px; color: var(--c-muted); margin-top: 8px; }
+  .meta-grid b { color: var(--c-text); font-weight: 600; }
+  .rating-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; color: white; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; vertical-align: middle; margin-right: 10px; }
+  .rating-strong-buy { background: var(--c-buy-strong); }
+  .rating-buy { background: var(--c-buy); }
+  .rating-neutral { background: var(--c-neutral); }
+  .rating-sell { background: var(--c-sell); }
+  .target-block { display: inline-block; margin-left: 6px; color: var(--c-text); font-size: 14px; }
+  .target-block b { font-size: 18px; color: var(--c-accent); }
+  .pillar { margin: 14px 0; }
+  .pillar-title { font-weight: 600; color: var(--c-text); }
+  .pillar-falsifier { font-size: 13.5px; color: var(--c-muted); margin-left: 4px; margin-top: 4px; }
+  .pillar-falsifier::before { content: "🪤 "; }
+  .risk { margin: 14px 0; }
+  .risk-meta { font-size: 12.5px; color: var(--c-muted); margin-left: 4px; }
+  .rubric-table td.score { text-align: center; font-weight: 600; }
+  .rubric-table tr.total td { border-top: 2px solid var(--c-text); font-weight: 700; }
+  .src-tag { display: inline; font-size: 11px; color: var(--c-muted); margin-left: 2px; font-weight: 400; vertical-align: super; }
+  .audience-note { margin-top: 12px; padding: 10px 14px; background: #f6f5f0; border-radius: 6px; font-size: 14px; color: var(--c-text); }
+  .audience-note::before { content: "👤 "; }
+  .belief-bridge { background: #f0f9ff; border-left: 3px solid var(--c-accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .belief-bridge h4 { margin: 0 0 8px; font-size: 14px; color: var(--c-accent); }
+  .belief-bridge ul { margin: 0; padding-left: 22px; }
+  .disclaimer { margin-top: 40px; padding: 16px; background: #f6f5f0; border-left: 3px solid var(--c-muted); font-size: 13.5px; color: var(--c-muted); line-height: 1.55; }
+  a { color: var(--c-accent); }
+  .src { font-size: 12.5px; color: var(--c-muted); }
+  @media (max-width: 640px) {
+    body { font-size: 15px; line-height: 1.6; }
+    .report { padding: 24px 14px 56px; border-left: none; border-right: none; }
+    header.report-head { padding-bottom: 18px; margin-bottom: 24px; }
+    h1 { font-size: 21px; line-height: 1.3; }
+    h2 { font-size: 17px; margin: 30px 0 10px; }
+    h3 { font-size: 14.5px; }
+    .rating-badge { font-size: 13px; padding: 5px 12px; margin-right: 6px; }
+    .target-block { display: block; margin-left: 0; margin-top: 8px; line-height: 1.5; }
+    .target-block b { font-size: 17px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 0; font-size: 13.5px; }
+    .meta-grid span:nth-child(odd) { margin-top: 6px; color: var(--c-muted); font-size: 12px; }
+    table { display: block; overflow-x: auto; max-width: 100%; font-size: 13px; -webkit-overflow-scrolling: touch; }
+    th, td { padding: 6px 8px; }
+    th { font-size: 12.5px; }
+    .src-tag { font-size: 10px; }
+    .pillar, .risk { margin: 12px 0; }
+    .pillar-falsifier, .risk-meta { font-size: 12.5px; }
+    .audience-note { padding: 9px 12px; font-size: 13.5px; }
+    .belief-bridge { padding: 10px 12px; }
+    .belief-bridge h4 { font-size: 13.5px; }
+    .disclaimer { padding: 12px; font-size: 12.5px; }
+    ul, ol { padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<script type="application/json" id="report-metadata">
+{
+  "ticker": "NVDA",
+  "company_name": "NVIDIA Corporation",
+  "generated_at": "2026-05-21",
+  "price_at_generation": 223.33,
+  "currency": "USD",
+  "rating": "BUY",
+  "target_price": 260,
+  "target_price_low": 210,
+  "target_price_high": 310,
+  "target_price_horizon": "6M",
+  "potential_return_pct": 16.4,
+  "qualitative_score": 5,
+  "confidence": 0.65,
+  "data_freshness": {
+    "financials_period_end": "2026-04-26",
+    "latest_10q_filing_date": "2026-05-20",
+    "latest_8k_date": "2026-05-20",
+    "news_window": "90d"
+  }
+}
+</script>
+<article class="report">
+  <header class="report-head">
+    <h1>NVIDIA Corporation (NVDA) — 投資研究報告（Q1 FY27 更新）</h1>
+    <div>
+      <span class="rating-badge rating-buy">買入</span>
+      <span class="target-block">6M 目標價 <b>$260</b> (+16.4%) · 信心 0.65（中）</span>
+    </div>
+    <div class="meta-grid">
+      <span>產生時間</span><b>2026-05-21</b>
+      <span>當前股價</span><b>$223.33</b>
+      <span>最新 10-Q</span><b>2026-05-20 提交（涵蓋至 2026-04-26，Q1 FY27）</b>
+      <span>最近 8-K</span><b>2026-05-20（Q1 FY27 財報發布）</b>
+      <span>資料來源</span><b>SEC EDGAR · Yahoo / Stooq 行情 · Finnhub · 公開新聞</b>
+    </div>
+  </header>
+
+  <section id="executive-summary">
+    <h2>摘要</h2>
+    <p>NVIDIA 為全球 AI 加速計算 / GPU 主導者，Q1 FY27（截至 2026-04-26）為 2026-05-20 剛公佈的最新一季：營收 <b>$81.6B（+85% YoY、+20% QoQ）</b>、GAAP GM 74.9%（年增 +14.4 pp）、營業利潤 $53.5B（+147% YoY）、OCF 單季新高 $50.3B<span class="src-tag">[來源:10-Q]</span>。Blackwell 平台仍為系統出貨主力，下一代 Rubin 平台預定 FY27 H2 開始量產<span class="src-tag">[來源:10-Q]</span>。</p>
+    <p>論點核心：(1) Q1 FY27 adj EPS $1.87 較共識 $1.79 高 +4.3%（連 5 季 beat）<span class="src-tag">[來源:Finnhub]</span>；(2) 估值 PE_TTM 44.7 / PE_fwd 22.0 / PEG_fwd 0.56<span class="src-tag">[來源:Finnhub]</span>——在 AI 龍頭中相對合理；(3) 賣方買入占比 <b>93.0%</b>（71 位中僅 1 位 Sell，其餘 71 全買入或中立）<span class="src-tag">[來源:Finnhub]</span> 是 S&amp;P500 中最強烈的偏多訊號之一；(4) Q1 FY27 期間投資私募 AI 公司與基礎設施基金 $18.6B<span class="src-tag">[來源:10-Q]</span>——反映 ecosystem 護城河強化。</p>
+    <p>給予 <b>買入</b>、6M 目標 $260（區間 $210–310）。最大單一觸發點為 2026-08 下旬 Q2 FY27 財報與 Rubin 量產時程更新：若 Q2 營收 ≥ $90B + Rubin 確認 H2 ramp 不延後 → 升 STRONG_BUY；若 H2 FY27 出現 Blackwell→Rubin 轉換空檔（air pocket）或 H200 中國許可實際出貨持續為零 → 降 NEUTRAL。</p>
+    <div class="audience-note">適合相信「AI 基礎設施多年期擴張」、能承受 38% 年波動度（3M ADR std 37.4）的成長型核心配置；不適合對 PE 40+ 倍評價或單一客戶集中（hyperscaler）風險敏感的價值型投資人。</div>
+  </section>
+
+  <section id="basics">
+    <h2>基本資料</h2>
+    <table>
+      <tbody>
+        <tr><td>全名</td><td>NVIDIA Corporation（1993 California 創立、1998 Delaware 重新註冊）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>產業</td><td>Semiconductors / AI 加速運算與 GPU</td></tr>
+        <tr><td>市值（粗估）</td><td>$5.43T（流通股 24,304M × $223.33）</td></tr>
+        <tr><td>事業分部</td><td>Compute &amp; Networking（資料中心 AI GPU、DPU、NVLink、Networking）、Graphics（Gaming、Pro Vis、Automotive、Omniverse）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>主要客戶</td><td>Hyperscaler（AWS、Azure、Google Cloud、Oracle、Meta）、CSP（CoreWeave、Lambda）、企業 AI 客戶、OEM（Dell、HPE、Supermicro）</td></tr>
+        <tr><td>CEO</td><td>Jensen Huang（共同創辦人，自 1993 至今）</td></tr>
+        <tr><td>會計年度結束</td><td>1 月最後一個週日（FY26 結束於 2026-01-25、FY27 結束於 2027-01-31）<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>CIK</td><td>0001045810</td></tr>
+        <tr><td>交易所</td><td>NASDAQ-GS</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="industry">
+    <h2>產業與業務分析</h2>
+    <p>NVDA 業務拆解：<b>Compute &amp; Networking</b>（資料中心 AI GPU + InfiniBand/Spectrum-X 網路 + DGX/HGX 系統）為主力，FY26 占營收 ~88%<span class="src-tag">[來源:10-K]</span>；<b>Graphics</b>（GeForce gaming、Quadro / RTX Pro Vis、Automotive、Omniverse）占 ~12%。產業結構高度集中——資料中心 AI 加速器市場 NVIDIA 占約 80-90% 份額<span class="src-tag">[來源:推算]</span>，主要挑戰者為 AMD（Instinct MI 系列）、Google TPU、AWS Trainium / Inferentia、客製矽 ASIC（Meta MTIA、Anthropic 自研）。MD&amp;A 明示「Blackwell 持續占系統出貨大宗、Rubin 平台預定 FY27 H2 開始 ship」<span class="src-tag">[來源:10-Q]</span>。</p>
+    <p>半導體 KPI（Q1 FY27）：<b>資料中心營收</b>—未拆細但業界估超過 $70B 單季<span class="src-tag">[來源:推算]</span>；<b>毛利率</b> 74.9%（接近 5y 高位 + AI 產品 mix 紅利）<span class="src-tag">[來源:10-Q]</span>；<b>capex intensity</b>—FY25 全年 capex ~$3-4B / 營收 $215.9B（&lt;2%，fabless 模式）<span class="src-tag">[來源:10-K]</span>；<b>客戶集中度</b>—10-K Item 1A 揭示少數客戶占顯著比重，4 家 hyperscaler 估占資料中心營收 50%+<span class="src-tag">[來源:推算]</span>；<b>ecosystem 投資</b>—Q1 FY27 對私募 AI 公司與基礎設施基金投資 $18.6B<span class="src-tag">[來源:10-Q]</span>。10 年週期脈絡：FY22 NI $9.75B（pre-AI 高峰，crypto mining 受惠）→ FY23 NI $4.37B（crypto 修正）→ FY24 NI $29.8B（ChatGPT 引爆 AI capex）→ FY25 NI $72.9B → FY26 NI $120.1B → Q1 FY27 NI $58.3B 單季<span class="src-tag">[來源:10-K][來源:10-Q]</span>。三年 NI 成長 +1,800%。Headwinds：(1) 美中 H200 出口管制——目前 H200 對中國許可需 25% 關稅 + 美國境內檢驗，未有實際出貨<span class="src-tag">[來源:10-Q]</span>；(2) Open-source 基礎模型可能侵蝕 GPU 依賴<span class="src-tag">[來源:10-Q]</span>；(3) Blackwell→Rubin 轉換期可能造成 H2 FY27 出貨空檔。</p>
+  </section>
+
+  <section id="financials">
+    <h2>財務摘要</h2>
+    <h3>多年週期視角</h3>
+    <table>
+      <thead><tr><th>會計年度</th><th class="num">營收</th><th class="num">營業利潤率</th><th class="num">稀釋 EPS</th><th>週期位置</th></tr></thead>
+      <tbody>
+        <tr><td>FY22</td><td class="num">$26.9B</td><td class="num">37.3%</td><td class="num">$3.85<span class="src-tag">[註1]</span></td><td>crypto mining 高峰</td></tr>
+        <tr><td>FY23</td><td class="num">$27.0B</td><td class="num">15.7%</td><td class="num">$0.17</td><td>crypto 修正</td></tr>
+        <tr><td>FY24</td><td class="num">$60.9B</td><td class="num">54.1%</td><td class="num">$1.19</td><td>AI 引爆</td></tr>
+        <tr><td>FY25</td><td class="num">$130.5B</td><td class="num">62.4%</td><td class="num">$2.94</td><td>AI 加速</td></tr>
+        <tr><td>FY26</td><td class="num">$215.9B</td><td class="num">60.4%</td><td class="num">$4.90</td><td>Blackwell ramp</td></tr>
+        <tr><td>FY27 (Q1 ann.)</td><td class="num">$326.5B<span class="src-tag">[推算]</span></td><td class="num">65.6%<span class="src-tag">[推算]</span></td><td class="num">~$9.56<span class="src-tag">[推算]</span></td><td>Blackwell 主力 + Rubin H2</td></tr>
+      </tbody>
+    </table>
+    <p class="src" style="font-size:12px">註 1：FY22 之前 EPS 為 2024-06 10:1 拆股後可比較數字；FY27 為 Q1 年化估計。</p>
+
+    <h3>最新季 (FY27 Q1，截至 2026-04-26)</h3>
+    <table>
+      <thead><tr><th>指標</th><th class="num">最新季</th><th class="num">YoY</th><th class="num">QoQ vs Q4 FY26</th></tr></thead>
+      <tbody>
+        <tr><td>營收</td><td class="num">$81,615M</td><td class="num">+85.2%</td><td class="num">+19.8%</td></tr>
+        <tr><td>毛利率（GAAP）</td><td class="num">74.9%</td><td class="num">+14.4 pp</td><td class="num">-0.1 pp</td></tr>
+        <tr><td>營運費用</td><td class="num">$7,621M</td><td class="num">+51.5%</td><td class="num">+12.2%</td></tr>
+        <tr><td>營業利潤</td><td class="num">$53,536M</td><td class="num">+147.4%</td><td class="num">+20.8%</td></tr>
+        <tr><td>淨利（含投資 MTM）</td><td class="num">$58,321M</td><td class="num">+210.6%</td><td class="num">+35.5%</td></tr>
+        <tr><td>稀釋 EPS（GAAP）</td><td class="num">$2.39</td><td class="num">+214.5%</td><td class="num">+35.8%</td></tr>
+        <tr><td>調整 EPS（共識口徑）</td><td class="num">$1.87</td><td class="num">+76.4%<span class="src-tag">[推算]</span></td><td class="num">+15.4%</td></tr>
+        <tr><td>OCF</td><td class="num">$50,344M</td><td class="num">+83.7%</td><td class="num">創單季新高</td></tr>
+      </tbody>
+    </table>
+    <p>Q1 FY27 adj EPS $1.87 較共識 $1.79 高 +4.3%（連 5 季 beat：Q2 FY26 +2.1%、Q3 FY26 +2.0%、Q4 FY26 +3.6%、Q1 FY27 +4.3%）<span class="src-tag">[來源:Finnhub]</span>。<b>成長</b>：營收 +85% YoY 為近 3 年最大基期上展現的爆發增速；QoQ +20% 表示 Blackwell 出貨加速。<b>獲利</b>：GM 74.9% QoQ 持平（-0.1 pp）表示產品 mix 升級已可吸收 Blackwell 製造成本；Op 利潤率躍升至 65.6%（佳於 5y 均 46%）<span class="src-tag">[來源:Finnhub]</span>。<b>現金生成</b>：OCF 單季 $50.3B 為 NVDA 史上最強，但 Q1 投資 $18.6B 於私募 + AI 基金<span class="src-tag">[來源:10-Q]</span> 反映管理層用 cash 鞏固生態圈。對比 FY23 crypto 修正期，當前每季 EPS 已超越彼時全年。</p>
+  </section>
+
+  <section id="metrics-snapshot">
+    <h2>關鍵指標快照</h2>
+    <table>
+      <thead><tr><th>構面</th><th>數值</th><th>解讀</th></tr></thead>
+      <tbody>
+        <tr><td>估值</td><td>PE_TTM 44.7 / PE_fwd 22.0 / PEG_fwd 0.56</td><td>forward PE 接近 NVDA 5y 區間中段；PEG_fwd 0.56 顯示市場仍預期 EPS 高速成長</td></tr>
+        <tr><td>獲利能力</td><td>ROE_TTM 104.4% vs 5y 均 58.8%</td><td>+45 pp 顯著正偏離；持續創歷史新高</td></tr>
+        <tr><td>利潤率</td><td>Gross 71.2% / Op 60.4% / Net 55.6% (TTM)</td><td>5y 均分別為 69.4% / 46.0% / 42.5%；Op 與 Net 大幅躍升</td></tr>
+        <tr><td>成長</td><td>Rev YoY +65.5% / Q YoY +73.2%</td><td>3y CAGR 100%、5y CAGR 67%，半導體史上罕見維持率</td></tr>
+        <tr><td>報酬</td><td>52w +62.7% / 相對 S&amp;P500 +39 pp</td><td>跑贏大盤；2026-05-14 觸 52w 高 $236.54，後因 Q1 財報「buy rumor sell news」回落 -5.6%</td></tr>
+        <tr><td>風險（波動）</td><td>Beta 2.26 / 3M ADR std 37.4</td><td>高 beta 但波動度遠低於小型 AI 標的（如 SNDK 95、LITE 104）</td></tr>
+        <tr><td>股利</td><td>$0.04 年化 / yield 0.018%</td><td>象徵性殖利率；FCF 全數用於回購 + ecosystem 投資</td></tr>
+      </tbody>
+    </table>
+    <p>5 年自身偏離最顯著三個指標：Op margin 60.4% vs 5y 均 46%（+14.4 pp）、Net margin 55.6% vs 5y 均 42.5%（+13.1 pp）、ROE 104% vs 58.8%（+45.6 pp）。估值方法主要錨定 PE_forward 22.0 與隱含 forward EPS $10.15<span class="src-tag">[來源:推算]</span>，假設 Blackwell 與 Rubin 過渡順利。</p>
+  </section>
+
+  <section id="bull-case">
+    <h2>投資論點（Bull Case）</h2>
+    <div class="pillar">
+      <div class="pillar-title">1. Blackwell ramp 仍處中段、Rubin H2 FY27 接續</div>
+      <div>10-Q MD&amp;A 明示「Blackwell 仍占系統出貨大宗、Rubin 預定 FY27 H2 量產」<span class="src-tag">[來源:10-Q]</span>。Q1 FY27 營收 $81.6B、QoQ +20% 為 Blackwell 量產動能證明。Rubin 為下一代架構，提供 12-18 個月後的下一波成長軌跡。</div>
+      <div class="pillar-falsifier">若 Q2 FY27（2026-08 底）QoQ 增速跌破 +5%，或 Rubin 量產時程公開延後至 FY28，產品週期論動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">2. 賣方共識極端強烈 + 5 連季 EPS beat</div>
+      <div>71 位賣方買入占比 93.0%（24 強買 + 42 買入，僅 1 sell）<span class="src-tag">[來源:Finnhub]</span>，為 S&amp;P500 mega-cap 最高之一；連 5 季 adj EPS beat（平均驚奇 +2.9%）<span class="src-tag">[來源:Finnhub]</span>，管理層 guidance 風格穩健，beat 持續但驚奇規模不大反映預期已充分定價。</div>
+      <div class="pillar-falsifier">若 Q2 FY27 共識 EPS miss 或買入占比連兩月跌破 85%，動能信號弱化。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">3. 利潤率自循環高點維持</div>
+      <div>Q1 FY27 GM 74.9% QoQ -0.1 pp（基本持平）<span class="src-tag">[來源:10-Q]</span>；營業利潤率 65.6% 較 5y 均 46% 顯著正偏離<span class="src-tag">[來源:Finnhub]</span>。Blackwell 出貨組合升級已抵銷製造成本，反映 NVDA 對價值鏈的議價力。</div>
+      <div class="pillar-falsifier">若任一季 GM 跌破 72%，或 Op margin 跌破 55%，定價權論點動搖。</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-title">4. $18.6B ecosystem 投資強化護城河</div>
+      <div>Q1 FY27 投資私募公司 + AI 基礎設施基金 $18.6B<span class="src-tag">[來源:10-Q]</span>，含可能透過雲端間接購買 NVDA 產品的 AI 模型廠商。形成「投資 → 客戶 → 採購」循環，深化 ecosystem 鎖定。</div>
+      <div class="pillar-falsifier">若 ecosystem 投資對象集中破產 / 估值大幅回檔造成 MTM 損失 &gt; $10B 單季，市場可能質疑該模式。</div>
+    </div>
+  </section>
+
+  <section id="bear-case">
+    <h2>主要風險（Bear Case）</h2>
+    <div class="risk">
+      <div class="pillar-title">1. Blackwell → Rubin 轉換期 air pocket 風險</div>
+      <div>10-Q 警告「複雜架構轉換可能造成生產延後、供需失衡、庫存風險、yield 下降」<span class="src-tag">[來源:10-Q]</span>。客戶可能延後採購新架構或漸進採用，造成 FY27 H2 出現 Blackwell 訂單放緩但 Rubin 尚未起量的空窗。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中-高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">2. 中國 H200 出口管制細節未明朗</div>
+      <div>10-Q 明示「USG 自 2026-02 起准許 H200 對特定中國客戶許可發貨，但目前 0 收入、需經美國境內檢驗 + 25% 關稅」<span class="src-tag">[來源:10-Q]</span>。實際出貨延後機率高、且毛利率受 25% 關稅壓制。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">3. Open-source 基礎模型可能侵蝕 GPU 依賴</div>
+      <div>10-Q 列「high-quality open-source foundation models 使先進 AI 普及化；若部署於競爭對手平台，可能降低 NVDA 產品需求」<span class="src-tag">[來源:10-Q]</span>。DeepSeek / Llama / Gemma 等開源模型已大幅降低訓練算力門檻。</div>
+      <div class="risk-meta">機率：中 · 嚴重度：中-高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">4. 客戶集中度極高（hyperscaler）</div>
+      <div>10-K Item 1A 揭示少數客戶占顯著比重<span class="src-tag">[來源:10-K]</span>；4 大 hyperscaler（AWS、Azure、Google、Meta）合計估占資料中心營收 50%+<span class="src-tag">[來源:推算]</span>。任一家 capex 預算下修對單季營收衝擊放大。</div>
+      <div class="risk-meta">機率：低-中 · 嚴重度：高</div>
+    </div>
+    <div class="risk">
+      <div class="pillar-title">5. 內部人 12 個月淨賣出 -$2.63B</div>
+      <div>過去 12 個月 735 筆、12 位內部人、淨值 -$2.63B<span class="src-tag">[來源:Finnhub]</span>。Jensen Huang 透過 10b5-1 計畫持續出脫；雖佔個人持股微小、但金額規模顯著。</div>
+      <div class="risk-meta">機率：已實現 · 嚴重度：中</div>
+    </div>
+  </section>
+
+  <section id="catalyst-calendar">
+    <h2>催化劑日曆</h2>
+    <h3>未來 6 個月內預期</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>影響</th></tr></thead>
+      <tbody>
+        <tr><td>2026-08 下旬（估）</td><td>Q2 FY27 財報<span class="src-tag">[來源:8-K]</span></td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>Rubin 平台首批量產出貨<span class="src-tag">[來源:10-Q]</span></td><td>高</td></tr>
+        <tr><td>2026-11（估）</td><td>Q3 FY27 財報 + Rubin 首個完整季貢獻</td><td>高</td></tr>
+        <tr><td>2026-H2</td><td>H200 / B200 對中國實際出貨進度<span class="src-tag">[來源:10-Q]</span></td><td>中</td></tr>
+        <tr><td>2026-H2</td><td>GTC 2026 / CES 2027 產品 / 客戶 announcement</td><td>中</td></tr>
+      </tbody>
+    </table>
+    <h3>近期已發生（過去 12 個月 8-K 重點）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>事件類型</th><th>影響</th><th>原文</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05-20</td><td>Q1 FY27 財報發布（本報告依據）</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/nvda-20260520.htm">SEC</a></td></tr>
+        <tr><td>2026-02-25</td><td>Q4/FY26 財報發布</td><td>高</td><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/nvda-20260225.htm">SEC</a></td></tr>
+        <tr><td>2025-11-19（估）</td><td>Q3 FY26 財報</td><td>高</td><td>—</td></tr>
+        <tr><td>2025-08-27（估）</td><td>Q2 FY26 財報</td><td>高</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月 8-K 主軸為 4 次季報 + 多次高管異動。未來 6 個月最可能觸發評等升降的事件為 (i) Q2 FY27（2026-08）財報、(ii) Rubin 量產實際進度公告、(iii) H2 FY27 Blackwell → Rubin 過渡無 air pocket 驗證。</p>
+  </section>
+
+  <section id="ownership-signals">
+    <h2>內部人與法人動向</h2>
+    <table>
+      <thead><tr><th>項目</th><th>數值</th></tr></thead>
+      <tbody>
+        <tr><td>過去 12 個月交易筆數 / 不同內部人</td><td>735 筆 / 12 位</td></tr>
+        <tr><td>內部人買入 vs 賣出股數</td><td>+0M vs -19.0M（淨 -19.0M）<span class="src-tag">[推算]</span></td></tr>
+        <tr><td>內部人買入 vs 賣出金額（USD）</td><td>+$0 vs -$2.63B</td></tr>
+        <tr><td>淨值（買 - 賣）</td><td><b>-$2.63B</b>（顯著淨賣出，相對市值 $5.43T 為 0.05%）</td></tr>
+      </tbody>
+    </table>
+    <p>過去 12 個月淨值 -$2.63B 屬大規模賣出，全部 12 位內部人僅做出脫；買入金額 $0<span class="src-tag">[來源:Finnhub]</span>。CEO Jensen Huang 透過 10b5-1 計畫於 H2 FY26 - FY27 持續實現獲利。賣出價格區間涵蓋 $120-$236，反映管理層在當前股價區間之系統性減持。雖相對 $5.43T 市值僅占 0.05%，且為計畫性執行，但 12 位全員只賣不買為一致 directional 訊號。對 thesis 屬中性偏負——大型 mega-cap 內部人系統性賣出在當前估值區間相對常見。</p>
+  </section>
+
+  <section id="valuation">
+    <h2>估值與目標價</h2>
+    <div class="belief-bridge">
+      <h4>為達成目標價，需要相信什麼</h4>
+      <ul>
+        <li>Q2 FY27（2026-08 底）營收 ≥ $90B（QoQ ≥ +10%）。</li>
+        <li>FY27 全年營收 ≥ $360B（YoY ≥ +67%）、adj EPS ≥ $9.50。</li>
+        <li>Rubin 平台確認 FY27 Q3 或 Q4 開始量產出貨。</li>
+        <li>美中 H200 / B200 出口管制不進一步擴大限制。</li>
+        <li>FY27 H2 Op margin 維持 ≥ 60%（Rubin 過渡期 Yield 不大幅 ramp 下殺）。</li>
+      </ul>
+    </div>
+    <p>三角驗證 6 個月目標價：</p>
+    <p><b>方法 1（multiple × forward EPS）</b>：Q1 FY27 annualized adj EPS $7.48；估 FY27 全年 adj EPS $9.50-10.50（含 H2 Rubin ramp）<span class="src-tag">[來源:推算]</span>。對 AI 龍頭適用 PE 26–32x（介於 mega-cap 與高成長之間）→ $247–$336，中位 <b>$285</b>。</p>
+    <p><b>方法 2（DCF / FCF 敘述）</b>：Q1 FY27 OCF $50.3B 年化 $200B+；FY27 估 FCF $180-210B<span class="src-tag">[來源:推算]</span>。EV $5.37T 對 FY27 FCF 中位 $195B = 27.5x，對 AI 龍頭適用 EV/FCF 28-35x → EV $5.5T-$6.8T → 加現金 $13B 減 LTD $7.5B → 股權 $5.5T-$6.8T → 每股 <b>$226–$280</b>，中位 $253。</p>
+    <p><b>方法 3（賣方共識）</b>：71 位賣方買入占比 93.0%<span class="src-tag">[來源:Finnhub]</span>；新聞顯示主流投行 Q1 後上修目標價。假設 12 個月共識 mid-point 約 $290，6M 折現 = $223.33 + 0.95×($290-$223.33) = <b>$287</b>。</p>
+    <p>三方法區間 $226–$287、中位 $275、平均 $275；加權考慮 Blackwell→Rubin 過渡期短期空檔 + 中國 H200 不確定，<b>結論目標 $260、區間 $210–$310</b>，對應潛在報酬 +16.4%（區間 -6% ~ +39%）。上修觸發：Q2 FY27 營收 ≥ $90B + Rubin 確認 Q3 H2 早段 ramp → 升 STRONG_BUY；下修觸發：Q2 QoQ 增速跌破 +5% 或 H200 中國許可實質仍 0 出貨持續至 Q3 → 降 NEUTRAL。</p>
+  </section>
+
+  <section id="analyst-snapshot">
+    <h2>賣方共識對照</h2>
+    <table>
+      <thead><tr><th>月份</th><th>強買</th><th>買入</th><th>中立</th><th>賣出</th><th>強賣</th><th>合計</th><th>買入占比</th></tr></thead>
+      <tbody>
+        <tr><td>2026-05</td><td>24</td><td>42</td><td>4</td><td>1</td><td>0</td><td>71</td><td>93.0%</td></tr>
+        <tr><td>2026-04</td><td>24</td><td>42</td><td>4</td><td>1</td><td>0</td><td>71</td><td>93.0%</td></tr>
+        <tr><td>2026-03</td><td>25</td><td>42</td><td>5</td><td>1</td><td>0</td><td>73</td><td>91.8%</td></tr>
+        <tr><td>2026-02</td><td>25</td><td>40</td><td>6</td><td>1</td><td>0</td><td>72</td><td>90.3%</td></tr>
+      </tbody>
+    </table>
+    <h3>近 4 季 EPS 預估 vs 實際</h3>
+    <table>
+      <thead><tr><th>期別</th><th>預估</th><th>實際</th><th>驚奇</th><th>驚奇%</th></tr></thead>
+      <tbody>
+        <tr><td>FY27 Q1</td><td>$1.79</td><td>$1.87</td><td>+$0.08</td><td style="color:#0a8a3a">+4.31%</td></tr>
+        <tr><td>FY26 Q4</td><td>$1.56</td><td>$1.62</td><td>+$0.06</td><td style="color:#0a8a3a">+3.62%</td></tr>
+        <tr><td>FY26 Q3</td><td>$1.27</td><td>$1.30</td><td>+$0.03</td><td style="color:#0a8a3a">+1.99%</td></tr>
+        <tr><td>FY26 Q2</td><td>$1.03</td><td>$1.05</td><td>+$0.02</td><td style="color:#0a8a3a">+2.13%</td></tr>
+      </tbody>
+    </table>
+    <p>賣方共識極強烈偏多（買入占比 93%、超 strongly bullish 80% 門檻甚多、4 月持續 90%+）。過去 4 季 4/4 beats、平均驚奇 +3.0% 為「穩定可預期」型 beat，反映 NVDA guidance 風格與大型機構預期高度同步。本報告買入評等與賣方共識方向一致；目標 $260 較賣方 mid ~$290 略保守，主因為對 Blackwell→Rubin 過渡 air pocket 與中國 H200 不確定給予溫和折扣。</p>
+  </section>
+
+  <section id="rating">
+    <h2>評等與依據</h2>
+    <p>6 個月目標價 $260、最新收盤 $223.33，潛在報酬 +16.4%。對應評等規則（&gt;+30% 強買 / +15%–+30% 買入 / -15%–+15% 中立 / &lt;-15% 賣出）為 <b>買入</b>。若目標價上修至 $290 以上則升 STRONG_BUY；若下修至 $190 以下則降 NEUTRAL。</p>
+    <p>信心 0.65（中）：三方法價差 $226–$287（27%）為偏中等；NVDA 過往 5 季 EPS beat 軌跡穩定降低不確定性；Rubin 過渡與中國 H200 為主要單一變數但已透過區間 $210–$310 覆蓋——符合 SKILL「方法價差 10–25% 中段、單一事件主導不確定性」之中等門檻。</p>
+
+    <h3>質性評分（支持目標價的依據）</h3>
+    <table class="rubric-table">
+      <thead><tr><th>構面</th><th>分數</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>財務健康度</td><td class="score">+2</td><td>ROE_TTM 104%、Op margin 60%、OCF $50B 單季、cash $13B、LTD $7.5B<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>估值合理性</td><td class="score">+1</td><td>PE_fwd 22.0、PEG_fwd 0.56 在 AI 龍頭中相對合理；EV/EBITDA 38<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr><td>催化劑</td><td class="score">+2</td><td>Q2 FY27 8 月、Rubin H2 量產、$18.6B ecosystem 投資<span class="src-tag">[來源:10-Q]</span></td></tr>
+        <tr><td>風險水平</td><td class="score">-1</td><td>Blackwell→Rubin 過渡、中國 H200 不確定、Open-source 模型、客戶集中、內部人 -$2.63B<span class="src-tag">[來源:10-K][來源:10-Q]</span></td></tr>
+        <tr><td>動能 / 情緒</td><td class="score">+1</td><td>52w +63%、買入占比 93%；但 5d -2.3% 顯示財報後反應「meh」<span class="src-tag">[來源:Finnhub]</span></td></tr>
+        <tr class="total"><td>合計</td><td class="score">+5</td><td></td></tr>
+      </tbody>
+    </table>
+    <p>質性合計 +5 與目標價 +16.4% 一致——強勁營運 + 合理估值 + 強烈賣方共識共同支持買入評等。本報告與前一份 NVDA 報告（2026-05-20 NEUTRAL +11.1%、未含 Q1 FY27）的最大差異：(i) 採用 Q1 FY27 實際數據而非估計；(ii) PE_fwd 自 28x 修正至 22x（共識上修使分母上升）；(iii) 三方法中位由 $250 升至 $275；(iv) 重新檢視 NEUTRAL 偏誤——前報告將 sell-side mid 直接折半至 NEUTRAL，本報告改採與 sell-side 同方向但溫和折扣。</p>
+  </section>
+
+  <section id="sources">
+    <h2>資料來源</h2>
+    <ul class="src">
+      <li>10-K FY2026（period end 2026-01-25，accession via EDGAR）— Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A</li>
+      <li>10-Q FY27 Q1（period end 2026-04-26，<b>filed 2026-05-20</b>）— Item 2 MD&amp;A、segment data、Rubin 預告</li>
+      <li>過去 12 個月 8-K：11 筆（4 筆財報 + 多次高管異動 + 2026-05-20 Q1 FY27 財報通知）</li>
+      <li>XBRL companyfacts via SEC EDGAR API（CIK 0001045810）</li>
+      <li>OHLC 行情（Stooq → Yahoo fallback）—樣本期間 2016-05 ~ 2026-05-20（2,516 個交易日，含 2024-06 10:1 拆股調整）</li>
+      <li>新聞合成：Finnhub /company-news（snapshot 2026-05-21，60 articles，含 5/20 NVDA earnings、market reaction）</li>
+      <li>Finnhub /stock/profile2、/stock/peers、/stock/recommendation、/stock/earnings、/stock/insider-transactions、/stock/metric?metric=all（snapshot 2026-05-21）</li>
+      <li>analyst_consensus.json（4 個月 recommendation_trends + 4 季 EPS surprise 含 Q1 FY27）</li>
+      <li>ownership.json（lookback 2025-05-14 ~ 2026-05-21，735 transactions，12 unique insiders）</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">
+    本報告由 AI 模型根據公開資料（SEC EDGAR 10-K / 10-Q / 8-K、Yahoo Finance / Stooq 行情、Finnhub、公開新聞）自動產生，<b>不構成投資建議、招攬或要約</b>。報告所引用的所有財務數字均可在註明來源的公開文件中查證；但分析結論、估值假設、評等決定均含主觀判斷，可能因新資訊出現而失效。AI 半導體類股估值與 hyperscaler 資本支出、產品架構轉換、地緣政治出口管制高度連動，過去績效不代表未來表現，目標價與評等不保證實現。本報告為 Q1 FY27（2026-05-20 發布之 10-Q）更新版，與同日先前發布之 NVDA 報告平行存在以反映新財報資料；讀者應以發布時點較新者為準。投資人應自行查證、評估個人風險承受能力，並諮詢合格的財務顧問後再做投資決策。
+  </div>
+</article>
+</body>
+</html>
